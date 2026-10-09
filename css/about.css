@@ -155,7 +155,7 @@
 
     gap: 9px;
 
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 8px;
 
     font-family: var(--body-font);
@@ -182,12 +182,12 @@
 }
 
 .ag-about-hero-btn.primary {
-    background: var(--secondary-color);
-    color: var(--primary-color);
+    background: var(--primary-color);
+    color:white;
 }
 
 .ag-about-hero-btn.primary:hover {
-    background: var(--white-color);
+    background: var(--secondary-color);
     transform: translateY(-2px);
 }
 

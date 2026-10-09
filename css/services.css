@@ -1534,7 +1534,7 @@ html[dir="rtl"] .ag-services-hero-container {
 
 .ag-service-birth-chart-btn {
     opacity: 0;
-
+    color: white !important;
     transform: translateY(20px);
 
     animation:
@@ -2175,7 +2175,7 @@ body.dark-mode .ag-service-birth-chart {
     opacity: 0;
 
     transform: translateY(20px);
-
+    color: white;
     animation:
         matchmakingTextReveal
         0.7s
@@ -2960,14 +2960,14 @@ html[data-theme="dark"] .ag-service-matchmaking-feature-content span {
 .ag-service-birth-chart-btn,
 .ag-service-matchmaking-btn {
   background: var(--primary-color) !important;
-  color: var(--secondary-color) !important;
+  color: white !important;
   border: 1px solid var(--primary-color);
 }
 
 .ag-service-birth-chart-btn svg,
 .ag-service-matchmaking-btn svg {
-  color: var(--secondary-color) !important;
-  stroke: var(--secondary-color) !important;
+  color: white !important;
+  stroke: white !important;
 }
 
 /* Hover */
@@ -3261,7 +3261,7 @@ html[data-theme="dark"] .ag-service-matchmaking-feature-content span {
 
 .ag-service-career-btn {
   background: var(--primary-color);
-  color: var(--secondary-color);
+  color: white;
 
   border: 1px solid var(--primary-color);
 
@@ -3273,8 +3273,8 @@ html[data-theme="dark"] .ag-service-matchmaking-feature-content span {
 }
 
 .ag-service-career-btn svg {
-  color: var(--secondary-color);
-  stroke: var(--secondary-color);
+  color:white;
+  stroke: white;
 
   transition:
     transform 0.3s ease,
@@ -3284,7 +3284,7 @@ html[data-theme="dark"] .ag-service-matchmaking-feature-content span {
 
 .ag-service-career-btn:hover {
   background: var(--secondary-color);
-  color: var(--primary-color);
+  color: white;
 
   border-color: var(--secondary-color);
 
@@ -3820,7 +3820,7 @@ body.dark-mode .ag-service-career-feature:hover .ag-service-career-feature-icon 
 .ag-service-personal-btn {
   background: var(--primary-color);
 
-  color: var(--secondary-color);
+  color: white;
 
   border: 1px solid var(--primary-color);
 
@@ -3832,9 +3832,9 @@ body.dark-mode .ag-service-career-feature:hover .ag-service-career-feature-icon 
 }
 
 .ag-service-personal-btn svg {
-  color: var(--secondary-color);
+  color:white;
 
-  stroke: var(--secondary-color);
+  stroke: white;
 
   transition:
     transform 0.3s ease,
@@ -3845,7 +3845,7 @@ body.dark-mode .ag-service-career-feature:hover .ag-service-career-feature-icon 
 .ag-service-personal-btn:hover {
   background: var(--secondary-color);
 
-  color: var(--primary-color);
+  color: white;
 
   border-color: var(--secondary-color);
 

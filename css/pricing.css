@@ -133,9 +133,8 @@
 
 .ag-pricing-hero-btn {
   background: var(--primary-color);
-  color: var(--secondary-color);
-
-  border: 1px solid var(--secondary-color);
+  color: white;
+    border:1 px solid var(--primary-color) !important;
 }
 
 .ag-pricing-hero-btn svg {
@@ -147,8 +146,7 @@
 
 .ag-pricing-hero-btn:hover {
   background: var(--secondary-color);
-  color: var(--primary-color);
-
+  color:white;
   border-color: var(--secondary-color);
 }
 
@@ -275,8 +273,7 @@ body.dark-mode .ag-pricing-hero-note {
 
 body.dark-mode .ag-pricing-hero-btn {
   background: var(--primary-color);
-  color: var(--secondary-color);
-
+  color: white;
   border-color: var(--secondary-color);
 }
 
@@ -287,7 +284,7 @@ body.dark-mode .ag-pricing-hero-btn svg {
 
 body.dark-mode .ag-pricing-hero-btn:hover {
   background: var(--secondary-color);
-  color: var(--primary-color);
+  color: white;
 }
 
 body.dark-mode .ag-pricing-hero-btn:hover svg {
@@ -441,6 +438,7 @@ html[dir="rtl"] .ag-pricing-hero-btn-secondary:hover svg {
 
   .ag-pricing-hero-actions .st-btn {
     width: 100%;
+  
   }
 
   .ag-pricing-hero-note {
@@ -515,7 +513,7 @@ html[dir="rtl"] .ag-pricing-hero-btn-secondary:hover svg {
 
 .ag-pricing-sessions-label {
   margin: 0 0 14px;
-  color: var(--primary-color);
+  color:var(--secondary-color);
 }
 
 .ag-pricing-sessions-title {
@@ -1145,7 +1143,7 @@ html[dir="rtl"] .ag-pricing-card-btn:hover svg {
 
 .ag-pricing-finder-label {
   margin: 0 0 14px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ag-pricing-finder-title {
@@ -1800,7 +1798,7 @@ body.dark-mode .ag-pricing-finder {
 
 .ag-pricing-included-label {
   margin-bottom: 16px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ag-pricing-included-title {
@@ -2165,7 +2163,7 @@ body.dark-mode .ag-pricing-included {
 
 .ag-pricing-comparison-header .st-section-label {
   margin-bottom: 16px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ag-pricing-comparison-header .st-section-title {
@@ -2495,7 +2493,7 @@ html[dir="rtl"] .ag-pricing-comparison-table tbody th {
 
 .ag-pricing-faq-label {
   margin-bottom: 16px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ag-pricing-faq-title {
@@ -3070,4 +3068,118 @@ html[dir="rtl"] .ag-pricing-newsletter-form {
 }
 body.dark-mode .ag-pricing-newsletter {
   background: #21102D;
+}
+
+
+/* ==========================================================
+   PRICING CARDS — BACKGROUND AND ALIGNMENT
+   ========================================================== */
+
+/* Align all cards evenly */
+.ag-pricing-card,
+.ag-pricing-card-popular,
+.ag-pricing-card:hover,
+.ag-pricing-card-popular:hover {
+    transform: none !important;
+}
+
+/* White background for the first and third cards only */
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) {
+    background: #ffffff !important;
+}
+
+/* Keep the middle card in its original primary color */
+.ag-pricing-sessions-grid > .ag-pricing-card-popular {
+    background: var(--primary-color) !important;
+}
+
+/* Text colors on the white cards */
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-label,
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) h3,
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-description,
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-price strong,
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-currency,
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-duration,
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-features li,
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-time {
+    color: #000000 !important;
+}
+
+/* Keep dark mode cards consistent with the original theme */
+body.dark-mode .ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) {
+    background: var(--primary-color) !important;
+}
+
+body.dark-mode .ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-label,
+body.dark-mode .ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) h3,
+body.dark-mode .ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-description,
+body.dark-mode .ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-price strong,
+body.dark-mode .ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-currency,
+body.dark-mode .ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-duration,
+body.dark-mode .ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-features li,
+body.dark-mode .ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) .ag-pricing-card-time {
+    color: #ffffff !important;
+}
+
+/* ==========================================================
+   DARK MODE — OUTER PRICING CARDS
+   Black background with white text and gold highlights
+   ========================================================== */
+
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) {
+    background: #000000 !important;
+    border-color: var(--secondary-color) !important;
+}
+
+/* Gold headings and prices */
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-label,
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular) h3,
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-price strong,
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-currency {
+    color: var(--secondary-color) !important;
+}
+
+/* White descriptions, duration, features, and session time */
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-description,
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-duration,
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-features li,
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-time {
+    color: #ffffff !important;
+}
+
+/* Gold icons, numbers, and dividers */
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-number,
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-icon,
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-features li svg,
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-time svg,
+body.dark-mode
+.ag-pricing-sessions-grid > .ag-pricing-card:not(.ag-pricing-card-popular)
+.ag-pricing-card-divider {
+    color: var(--secondary-color) !important;
+    stroke: var(--secondary-color);
+    border-color: var(--secondary-color);
 }

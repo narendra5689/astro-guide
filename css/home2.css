@@ -2409,6 +2409,161 @@ body.dark-mode .ag-home2-newsletter {
         max-width: 440px;
     }
 }
+.ag-home2-review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.ag-home2-review-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   HOME 2 HERO — BACKGROUND IMAGE
+   ========================================================================== */
+
+.ag-home2-hero {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(248, 241, 235, 0.96) 0%,
+            rgba(248, 241, 235, 0.88) 40%,
+            rgba(248, 241, 235, 0.25) 100%
+        ),
+        url("../images/home2-hero1.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Dark mode */
+body.dark-mode .ag-home2-hero {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.94) 0%,
+            rgba(0, 0, 0, 0.82) 45%,
+            rgba(0, 0, 0, 0.35) 100%
+        ),
+        url("../images/home2-hero-background.jpg");
+
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Mobile background positioning */
+@media (max-width: 900px) {
+    .ag-home2-hero {
+        background-position: center;
+    }
+
+    body.dark-mode .ag-home2-hero {
+        background-position: center;
+    }
+}
+
+/* FIX: FORCE HOME 2 HERO BACKGROUND IMAGE IN DARK MODE */
+
+body.dark-mode .ag-home2-hero {
+    background: #000000 url("../images/home2-hero-background.jpg")
+        center center / cover no-repeat !important;
+    isolation: isolate;
+}
+
+/* Keep a subtle dark overlay without hiding the image */
+body.dark-mode .ag-home2-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.35) !important;
+    pointer-events: none;
+}
+
+/* Keep hero content above the background */
+body.dark-mode .ag-home2-hero-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure text remains readable */
+body.dark-mode .ag-home2-hero-title,
+body.dark-mode .ag-home2-hero-description,
+body.dark-mode .ag-home2-hero-trust-number {
+    color: #FFFFFF;
+}
+
+body.dark-mode .ag-home2-hero-title span {
+    color: #D4AF5A;
+}
 
 
+/* ==========================================================================
+   ASTROGUIDE HOME 2 — FORCE FIX HERO BACKGROUND IN DARK MODE
+   ========================================================================== */
 
+body.dark-mode .ag-home2-hero {
+    position: relative !important;
+    isolation: isolate !important;
+    background-color: #000000 !important;
+
+    background-image: url("../images/home2-hero1.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+}
+
+/* Remove the decorative overlay that may obscure the image */
+body.dark-mode .ag-home2-hero-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    background: transparent !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
+}
+
+/* Keep the hero content above the background */
+body.dark-mode .ag-home2-hero-container {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Preserve readable text */
+body.dark-mode .ag-home2-hero-eyebrow,
+body.dark-mode .ag-home2-hero-title,
+body.dark-mode .ag-home2-hero-description,
+body.dark-mode .ag-home2-hero-trust-number {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .ag-home2-hero-title span {
+    color: #D4AF5A !important;
+}
+
+body.dark-mode .ag-home2-hero-trust-label {
+    color: #FFFFFF !important;
+}
+
+/* Ensure the image itself is not hidden */
+body.dark-mode .ag-home2-hero-image {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    body.dark-mode .ag-home2-hero {
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+}
