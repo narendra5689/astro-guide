@@ -257,7 +257,8 @@ h1 em {
   box-shadow: 0 0 0 3px rgba(59, 31, 92, 0.12);
 }
 
-.input-wrap > svg {
+.input-wrap > svg,
+.input-wrap > i {
   width: 17px;
   height: 17px;
   flex: 0 0 auto;
@@ -293,18 +294,21 @@ h1 em {
   margin: 0 0 7px;
 }
 
-.password-label a,
+/* Forgot password (now below password field) */
+.forgot-password-row {
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px 0 0;
+}
+
+.forgot-password-row a,
 .signup-prompt a {
   color: var(--primary);
   font-size: 11px;
   font-weight: 700;
 }
 
-.password-label a {
-  margin-bottom: 7px;
-}
-
-.password-label a:hover,
+.forgot-password-row a:hover,
 .signup-prompt a:hover {
   color: var(--secondary);
 }
@@ -376,7 +380,8 @@ h1 em {
   transition: background 0.2s, border-color 0.2s, transform 0.2s;
 }
 
-.submit-button svg {
+.submit-button svg,
+.submit-button i {
   width: 16px;
   height: 16px;
 }
@@ -386,6 +391,63 @@ h1 em {
   border-color: var(--secondary);
   color: #FFFFFF;
   transform: translateY(-1px);
+}
+
+/* Social login */
+
+.social-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 16px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.social-divider span {
+  flex: 1;
+  height: 1px;
+  background: var(--field-border);
+}
+
+.social-divider p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.social-btn {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--field-border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.social-btn:hover {
+  border-color: var(--secondary);
+  transform: translateY(-1px);
+}
+
+.social-btn svg {
+  flex-shrink: 0;
+}
+
+.apple-btn {
+  color: var(--text);
 }
 
 /* Bottom text */
@@ -435,7 +497,7 @@ h1 em {
   font-style: italic;
 }
 
-/* Dark mode styles are ready to use if enabled elsewhere */
+/* Dark mode */
 
 body.dark-mode {
   --page-bg: #000000;
@@ -452,7 +514,7 @@ body.dark-mode .login-card {
 
 body.dark-mode h1,
 body.dark-mode .brand-name > span:first-child,
-body.dark-mode .password-label a,
+body.dark-mode .forgot-password-row a,
 body.dark-mode .signup-prompt a {
   color: #FFFFFF;
 }
@@ -468,7 +530,8 @@ body.dark-mode .icon-control {
   border-color: var(--primary);
 }
 
-body.dark-mode .input-wrap > svg {
+body.dark-mode .input-wrap > svg,
+body.dark-mode .input-wrap > i {
   color: var(--secondary);
 }
 
@@ -479,6 +542,20 @@ body.dark-mode .login-page::after {
 
 body.dark-mode .submit-button:hover {
   color: #000000;
+}
+
+body.dark-mode .social-btn {
+  background: #000000;
+  border-color: #3B1F5C;
+  color: #FFFFFF;
+}
+
+body.dark-mode .social-btn:hover {
+  border-color: var(--secondary);
+}
+
+body.dark-mode .apple-btn {
+  color: #FFFFFF;
 }
 
 /* RTL layout */
@@ -510,6 +587,10 @@ html[dir="rtl"] .brand-name {
 
 html[dir="rtl"] .submit-button {
   flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .forgot-password-row {
+  justify-content: flex-start;
 }
 
 /* Mobile */
@@ -726,35 +807,33 @@ html[dir="rtl"] .submit-button {
   }
 }
 
-
-
-/* ===== DARK MODE ===== */
+/* ===== Extra dark mode overrides ===== */
 
 body.dark-mode {
-    background: #000000;
-    color: #FFFFFF;
+  background: #000000;
+  color: #FFFFFF;
 }
 
 body.dark-mode .login-page {
-    background: #000000;
+  background: #000000;
 }
 
 body.dark-mode .login-card {
-    background: #000000;
-    color: #FFFFFF;
-    border-color: #3B1F5C;
+  background: #000000;
+  color: #FFFFFF;
+  border-color: #3B1F5C;
 }
 
 body.dark-mode h1,
 body.dark-mode .login-form label,
 body.dark-mode .brand-name span:first-child {
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 body.dark-mode h1 em,
 body.dark-mode .brand-name .brand-gold,
 body.dark-mode .eyebrow {
-    color: #D4AF5A;
+  color: #D4AF5A;
 }
 
 body.dark-mode .intro,
@@ -762,190 +841,187 @@ body.dark-mode .signup-prompt,
 body.dark-mode .card-bottom,
 body.dark-mode .page-note,
 body.dark-mode .remember-row {
-    color: #D4AF5A;
+  color: #D4AF5A;
 }
 
 body.dark-mode .input-wrap {
-    background: #000000;
-    border-color: #3B1F5C;
+  background: #000000;
+  border-color: #3B1F5C;
 }
 
 body.dark-mode .input-wrap input {
-    background: transparent;
-    color: #FFFFFF;
+  background: transparent;
+  color: #FFFFFF;
 }
 
 body.dark-mode .input-wrap input::placeholder {
-    color: #D4AF5A;
+  color: #D4AF5A;
 }
 
 body.dark-mode .icon-control {
-    background: #000000;
-    color: #D4AF5A;
-    border-color: #3B1F5C;
+  background: #000000;
+  color: #D4AF5A;
+  border-color: #3B1F5C;
 }
 
-body.dark-mode .password-label a,
+body.dark-mode .forgot-password-row a,
 body.dark-mode .signup-prompt a {
-    color: #D4AF5A;
+  color: #D4AF5A;
 }
 
 /* ===== RTL ===== */
 
 html[dir="rtl"] .utility-controls {
-    left: 24px;
-    right: auto;
+  left: 24px;
+  right: auto;
 }
 
 html[dir="rtl"] .login-form > label,
 html[dir="rtl"] .password-label {
-    text-align: right;
+  text-align: right;
 }
 
 html[dir="rtl"] .input-wrap {
-    direction: rtl;
+  direction: rtl;
 }
 
 html[dir="rtl"] .remember-row {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 html[dir="rtl"] .brand,
 html[dir="rtl"] .brand-name {
-    direction: ltr;
+  direction: ltr;
 }
 
 @media (max-width: 520px) {
-    html[dir="rtl"] .utility-controls {
-        left: 15px;
-        right: auto;
-    }
+  html[dir="rtl"] .utility-controls {
+    left: 15px;
+    right: auto;
+  }
 }
-
-
 
 /* Fix AstroGuide logo centering without moving it outside the card */
 
 .login-card > a#brand.st-navbar-brand {
-    position: static !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    transform: none !important;
-    float: none !important;
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  transform: none !important;
+  float: none !important;
 
-    display: flex !important;
-    width: fit-content !important;
-    max-width: 100% !important;
-    margin: 0 auto 22px !important;
-    padding: 0 !important;
+  display: flex !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: 0 auto 22px !important;
+  padding: 0 !important;
 
-    align-items: center !important;
-    justify-content: center !important;
-    flex-direction: row !important;
-    gap: 10px !important;
-    direction: ltr !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: row !important;
+  gap: 10px !important;
+  direction: ltr !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
 }
 
 .login-card > a#brand .st-navbar-brand-logo {
-    display: block !important;
-    width: 43px !important;
-    height: 43px !important;
-    max-width: 43px !important;
-    flex: 0 0 43px !important;
-    object-fit: contain;
+  display: block !important;
+  width: 43px !important;
+  height: 43px !important;
+  max-width: 43px !important;
+  flex: 0 0 43px !important;
+  object-fit: contain;
 }
 
 .login-card > a#brand .st-navbar-brand-name {
-    display: inline-flex !important;
-    flex: 0 1 auto !important;
-    align-items: baseline !important;
-    justify-content: center !important;
-    direction: ltr !important;
-    white-space: nowrap !important;
+  display: inline-flex !important;
+  flex: 0 1 auto !important;
+  align-items: baseline !important;
+  justify-content: center !important;
+  direction: ltr !important;
+  white-space: nowrap !important;
 }
 
 /* Keep the welcome heading centered */
 .login-card .card-heading {
-    width: 100%;
-    text-align: center !important;
+  width: 100%;
+  text-align: center !important;
 }
 
 .login-card .card-heading h1,
 .login-card .card-heading .eyebrow,
 .login-card .card-heading .intro {
-    text-align: center !important;
+  text-align: center !important;
 }
 
 /* RTL must not change the logo's positioning */
 html[dir="rtl"] .login-card > a#brand.st-navbar-brand {
-    position: static !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    direction: ltr !important;
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  direction: ltr !important;
 }
-
 
 /* Password visibility icon */
 .password-wrap {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .password-wrap input {
-    flex: 1;
-    min-width: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .password-toggle {
-    display: grid;
-    place-items: center;
-    flex: 0 0 24px;
-    width: 24px;
-    height: 28px;
-    padding: 0;
-    border: none;
-    background: transparent;
-    color: var(--muted);
-    cursor: pointer;
+  display: grid;
+  place-items: center;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
 }
 
-.password-toggle svg {
-    width: 18px;
-    height: 18px;
+.password-toggle svg,
+.password-toggle i {
+  width: 18px;
+  height: 18px;
 }
 
 .password-toggle:hover {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 body.dark-mode .password-toggle {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 html[dir="rtl"] .password-wrap {
-    direction: rtl;
+  direction: rtl;
 }
-
 
 /* Hide eye icon until password field is active */
 .password-toggle {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 /* Show when password field is focused or contains text */
 .password-wrap:focus-within .password-toggle,
 .password-wrap:has(input:not(:placeholder-shown)) .password-toggle {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }

@@ -984,3 +984,77 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+/* =========================================================
+   ASTROGUIDE — LUCIDE MOON / SUN THEME ICON FIX
+   ========================================================= */
+
+(function () {
+    function syncThemeIcon() {
+        const button = document.getElementById("themeToggle");
+
+        if (!button) return;
+
+        const isDark = document.body.classList.contains("dark-mode");
+
+        let icon = button.querySelector("i");
+
+        if (!icon) {
+            icon = document.createElement("i");
+            icon.setAttribute("aria-hidden", "true");
+            button.replaceChildren(icon);
+        }
+
+        // Use real Lucide icons
+        icon.setAttribute("data-lucide", isDark ? "sun" : "moon");
+
+        button.setAttribute(
+            "aria-label",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+        );
+
+        button.setAttribute(
+            "title",
+            isDark ? "Light mode" : "Dark mode"
+        );
+
+        // Render the selected Lucide icon
+        if (typeof lucide !== "undefined" && lucide.createIcons) {
+            lucide.createIcons();
+        }
+    }
+
+    // Initial icon
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", syncThemeIcon);
+    } else {
+        syncThemeIcon();
+    }
+
+    // Update after the existing theme toggle handler
+    document.getElementById("themeToggle")?.addEventListener("click", () => {
+        requestAnimationFrame(syncThemeIcon);
+    });
+
+    // Also respond when another script changes dark mode
+    const observer = new MutationObserver(syncThemeIcon);
+
+    function observeTheme() {
+        if (!document.body) return;
+
+        observer.observe(document.body, {
+            attributes: true,
+            attributeFilter: ["class"]
+        });
+
+        syncThemeIcon();
+    }
+
+    if (document.body) {
+        observeTheme();
+    } else {
+        document.addEventListener("DOMContentLoaded", observeTheme, {
+            once: true
+        });
+    }
+})();

@@ -1641,3 +1641,32 @@ body.dark-mode .st-navbar-menu-btn svg {
     color: #FFFFFF !important;
     stroke: #FFFFFF !important;
 }
+
+#ag-section-heroes{
+  color: var(--white-color);
+
+    font-family: var(--accent-font);
+    font-style: italic;
+    font-weight: 500 !important;
+}
+
+.white{
+  color: white !important;
+}
+
+
+/* Change moon icon to sun in dark mode without HTML changes */
+body.dark-mode #themeToggle svg {
+    display: none;
+}
+
+body.dark-mode #themeToggle::before {
+    content: "☀";
+    font-size: 21px;
+    line-height: 1;
+    color:white;
+}
+
+body:not(.dark-mode) #themeToggle::before {
+    content: none;
+}

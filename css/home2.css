@@ -53,13 +53,11 @@
 .ag-home2-hero-title {
   margin: 0;
   color: #380f52;
-          font-family: var(--accent-font);
-        font-style: italic;
-        font-weight: 500;
-  font-size: clamp(2.5rem, 4.6vw, 3.9rem);
-  font-weight: 600;
-  line-height: 1.14;
-  letter-spacing: -0.025em;
+   font-family: var(--accent-font);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
 }
 .ag-homes{
       display: block;
@@ -159,7 +157,7 @@
 
 .ag-home2-hero-trust-number {
   color: #380f52;
-  font-family: var(--heading-font);
+  font-family: var(--accent-font);
   font-size: 1.4rem;
   font-weight: 600;
 }
@@ -495,11 +493,11 @@ body.dark-mode .ag-home2-hero-decor-circle {
 .ag-home2-wisdom-title {
   margin: 0;
   color: #380f52;
-  font-family: var(--heading-font);
-  font-size: clamp(2.2rem, 3.8vw, 3.3rem);
-  font-weight: 600;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+   font-family: var(--accent-font);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
 }
 
 .ag-home2-wisdom-title span {
@@ -695,11 +693,11 @@ body.dark-mode .ag-home2-wisdom-accent {
 .ag-home2-chart-title {
   margin: 0;
   color: #380f52;
-  font-family: var(--heading-font);
-  font-size: clamp(2.2rem, 3.8vw, 3.3rem);
-  font-weight: 600;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+   font-family: var(--accent-font);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
 }
 
 .ag-home2-chart-title span {
@@ -1003,13 +1001,10 @@ body.dark-mode .ag-home2-chart-badge {
 
 .ag-home2-trusted-title {
     margin: 0;
-
     color: #3B1F5C;
-
-    font-family: var(--heading-font);
-    font-size: clamp(2.1rem, 3.5vw, 3.2rem);
+   font-family: var(--accent-font);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
     font-weight: 600;
-
     line-height: 1.15;
     letter-spacing: -0.02em;
 }
@@ -1157,7 +1152,7 @@ body.dark-mode .ag-home2-chart-badge {
 
     color: #3B1F5C;
 
-    font-family: var(--heading-font);
+   font-family: var(--accent-font);
     font-size: clamp(1.8rem, 2.6vw, 2.4rem);
     font-weight: 600;
 
@@ -1390,7 +1385,7 @@ body.dark-mode .ag-home2-trusted-stat-content span {
     margin: 0;
 
     color: #FFFFFF;
-    font-family: var(--heading-font);
+   font-family: var(--accent-font);
     font-size: clamp(2.2rem, 4vw, 3.5rem);
     font-weight: 600;
     line-height: 1.15;
@@ -1494,7 +1489,7 @@ body.dark-mode .ag-home2-trusted-stat-content span {
     margin: 0;
 
     color: #FFFFFF;
-    font-family: var(--heading-font);
+   font-family: var(--accent-font);
     font-size: 1.35rem;
     font-weight: 600;
     line-height: 1.25;
@@ -1694,7 +1689,7 @@ body.dark-mode .ag-home2-different-overlay {
 .ag-home2-reviews-title {
     margin: 0;
     color: #3B1F5C;
-    font-family: var(--heading-font);
+   font-family: var(--accent-font);
     font-size: clamp(2.2rem, 4vw, 3.4rem);
     font-weight: 600;
     line-height: 1.15;
@@ -1744,7 +1739,7 @@ body.dark-mode .ag-home2-different-overlay {
 
 .ag-home2-reviews-rating strong {
     color: #3B1F5C;
-    font-family: var(--heading-font);
+   font-family: var(--accent-font);
     font-size: 1.15rem;
     font-weight: 700;
 }
@@ -1822,7 +1817,7 @@ body.dark-mode .ag-home2-different-overlay {
     margin: 0;
 
     color: #3B1F5C;
-    font-family: var(--heading-font);
+   font-family: var(--accent-font);
     font-size: 1.15rem;
     font-weight: 600;
 }
@@ -2063,7 +2058,7 @@ body.dark-mode .ag-home2-review-card > p {
     margin: 0;
 
     color: #FFFFFF;
-    font-family: var(--heading-font);
+    font-family: var(--accent-font);
     font-size: clamp(2.2rem, 4vw, 3.4rem);
     font-weight: 600;
     line-height: 1.15;

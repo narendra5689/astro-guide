@@ -1,242 +1,223 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#F8F1EB">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F8F1EB">
+  <title>Create Account | AstroGuide</title>
 
-    <title>Create Account | AstroGuide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./css/signup.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./css/signup.css">
-<link rel="stylesheet" href="./css/global.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="icon" type="image/png" href="images/logo.png">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
-
-<main class="signup-page">
+  <main class="signup-page">
 
     <!-- Theme and RTL controls -->
     <div class="utility-controls">
+      <button
+        type="button"
+        class="icon-control"
+        id="themeToggle"
+        aria-label="Toggle dark mode"
+        title="Toggle dark mode">
+        <i data-lucide="moon"></i>
+      </button>
 
-        <button
-            type="button"
-            class="icon-control"
-            id="themeToggle"
-            aria-label="Toggle dark mode"
-            title="Toggle dark mode">
-
-            <i data-lucide="moon"></i>
-        </button>
-
-        <button
-            type="button"
-            class="icon-control"
-            id="rtlToggle"
-            aria-label="Toggle RTL"
-            title="Toggle RTL">
-
-            <i data-lucide="arrow-left-right"></i>
-        </button>
-
+      <button
+        type="button"
+        class="icon-control"
+        id="rtlToggle"
+        aria-label="Toggle RTL"
+        title="Toggle RTL">
+        <i data-lucide="arrow-left-right"></i>
+      </button>
     </div>
 
     <!-- Signup card -->
     <section class="signup-card">
-                <a href="./index.html"
-            id="brand"
-            class="st-navbar-brand"
-            aria-label="AstroGuide Home">
 
-            <img src="./images/logo.png"
-                alt="AstroGuide Logo"
-                class="st-navbar-brand-logo">
+      <a href="./index.html"
+         id="brand"
+         class="st-navbar-brand"
+         aria-label="AstroGuide Home">
 
-            <span class="st-navbar-brand-name">
-                <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
-            </span>
+        <img src="./images/logo.png"
+             alt="AstroGuide Logo"
+             class="st-navbar-brand-logo">
 
-        </a>
+        <span class="st-navbar-brand-name">
+          <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+        </span>
+      </a>
 
-        <!-- Heading -->
-        <div class="card-heading">
-
-            <p class="eyebrow">BEGIN YOUR COSMIC JOURNEY</p>
-
-            <h1 id="signupTitle">
-                Create your <em>account</em>
-            </h1>
-
-            <p class="intro">
-                Join AstroGuide and discover guidance written in the stars.
-            </p>
-
-        </div>
-
-        <!-- Signup form -->
-        <form class="signup-form" id="signupForm">
-
-            <!-- Full name -->
-            <div class="form-field">
-
-                <label for="fullName">Full name</label>
-
-                <div class="input-wrap">
-
-                    <i data-lucide="user-round" aria-hidden="true"></i>
-
-                    <input
-                        id="fullName"
-                        name="fullName"
-                        type="text"
-                        placeholder="Enter your full name"
-                        autocomplete="name"
-                        required>
-
-                </div>
-
-            </div>
-
-            <!-- Email -->
-            <div class="form-field">
-
-                <label for="email">Email address</label>
-
-                <div class="input-wrap">
-
-                    <i data-lucide="mail" aria-hidden="true"></i>
-
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="you@example.com"
-                        autocomplete="email"
-                        required>
-
-                </div>
-
-            </div>
-
-            <!-- Password -->
-            <div class="form-field">
-
-                <label for="password">Password</label>
-
-                <div class="input-wrap password-wrap">
-
-                    <i data-lucide="lock-keyhole" aria-hidden="true"></i>
-
-                    <input
-                        id="password"
-                        name="password"
-                        type="password"
-                        placeholder="Create a password"
-                        autocomplete="new-password"
-                        minlength="8"
-                        required>
-
-                    <button
-                        type="button"
-                        class="password-toggle"
-                        aria-label="Show password"
-                        title="Show password">
-
-                        <i data-lucide="eye" aria-hidden="true"></i>
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- Confirm password -->
-            <div class="form-field">
-
-                <label for="confirmPassword">Confirm password</label>
-
-                <div class="input-wrap password-wrap">
-
-                    <i data-lucide="shield-check" aria-hidden="true"></i>
-
-                    <input
-                        id="confirmPassword"
-                        name="confirmPassword"
-                        type="password"
-                        placeholder="Enter your password again"
-                        autocomplete="new-password"
-                        minlength="8"
-                        required>
-
-                    <button
-                        type="button"
-                        class="password-toggle"
-                        aria-label="Show password"
-                        title="Show password">
-
-                        <i data-lucide="eye" aria-hidden="true"></i>
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- Terms -->
-            <label class="terms-row">
-
-                <input type="checkbox" name="terms" required>
-
-                <span class="custom-check"></span>
-
-                <span>
-                    I agree to the
-                    <a href="./terms.html">Terms &amp; Conditions</a>
-                    and
-                    <a href="./privacy.html">Privacy Policy</a>.
-                </span>
-
-            </label>
-
-            <!-- Submit -->
-            <button class="submit-button" type="submit">
-
-                Create account
-
-                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-
-            </button>
-
-            <p class="form-message" id="formMessage" role="status"></p>
-
-        </form>
-
-        <!-- Login link -->
-        <p class="login-prompt">
-            Already have an account?
-            <a href="./login.html">Sign in</a>
+      <!-- Heading -->
+      <div class="card-heading">
+        <p class="eyebrow">BEGIN YOUR COSMIC JOURNEY</p>
+        <h1 id="signupTitle">
+          Create your <em>account</em>
+        </h1>
+        <p class="intro">
+          Join AstroGuide and discover guidance written in the stars.
         </p>
+      </div>
 
-        <!-- Card footer -->
-        <div class="card-bottom">
-            <span></span>
-            <p>Guidance written in the stars</p>
-            <span></span>
+      <!-- Signup form -->
+      <form class="signup-form" id="signupForm">
+
+        <!-- Full name -->
+        <div class="form-field">
+          <label for="fullName">Full name</label>
+          <div class="input-wrap">
+            <i data-lucide="user-round" aria-hidden="true"></i>
+            <input
+              id="fullName"
+              name="fullName"
+              type="text"
+              placeholder="Enter your full name"
+              autocomplete="name"
+              required>
+          </div>
         </div>
+
+        <!-- Email -->
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <div class="input-wrap">
+            <i data-lucide="mail" aria-hidden="true"></i>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required>
+          </div>
+        </div>
+
+        <!-- Password + Confirm password side by side -->
+        <div class="password-fields-row">
+
+          <div class="form-field">
+            <label for="password">Password</label>
+            <div class="input-wrap password-wrap">
+              <i data-lucide="lock-keyhole" aria-hidden="true"></i>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Create a password"
+                autocomplete="new-password"
+                minlength="8"
+                required>
+              <button
+                type="button"
+                class="password-toggle"
+                aria-label="Show password"
+                title="Show password">
+                <i data-lucide="eye" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="confirmPassword">Confirm password</label>
+            <div class="input-wrap password-wrap">
+              <i data-lucide="shield-check" aria-hidden="true"></i>
+              <input
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                placeholder="Enter your password again"
+                autocomplete="new-password"
+                minlength="8"
+                required>
+              <button
+                type="button"
+                class="password-toggle"
+                aria-label="Show password"
+                title="Show password">
+                <i data-lucide="eye" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Terms -->
+        <label class="terms-row">
+          <input type="checkbox" name="terms" required>
+          <span class="custom-check"></span>
+          <span>
+            I agree to the
+            <a href="./terms.html">Terms &amp; Conditions</a>
+            and
+            <a href="./privacy.html">Privacy Policy</a>.
+          </span>
+        </label>
+
+        <!-- Submit -->
+        <button class="submit-button" type="submit">
+          Create account
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </button>
+
+        <!-- Social login placeholders -->
+        <div class="social-divider">
+          <span></span>
+          <p>or continue with</p>
+          <span></span>
+        </div>
+
+        <div class="social-buttons">
+          <button type="button" class="social-btn google-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Google
+          </button>
+
+          <button type="button" class="social-btn apple-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            Apple
+          </button>
+        </div>
+
+        <p class="form-message" id="formMessage" role="status"></p>
+
+      </form>
+
+      <!-- Login link -->
+      <p class="login-prompt">
+        Already have an account?
+        <a href="./login.html">Sign in</a>
+      </p>
+
+      <!-- Card footer -->
+      <div class="card-bottom">
+        <span></span>
+        <p>Guidance written in the stars</p>
+        <span></span>
+      </div>
 
     </section>
 
-</main>
+  </main>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
 
     const root = document.documentElement;
     const body = document.body;
@@ -244,74 +225,64 @@ document.addEventListener("DOMContentLoaded", function () {
     const themeToggle = document.getElementById("themeToggle");
     const rtlToggle = document.getElementById("rtlToggle");
 
-    const passwordToggles =
-        document.querySelectorAll(".password-toggle");
+    const passwordToggles = document.querySelectorAll(".password-toggle");
 
     const signupForm = document.getElementById("signupForm");
     const password = document.getElementById("password");
-    const confirmPassword =
-        document.getElementById("confirmPassword");
-
+    const confirmPassword = document.getElementById("confirmPassword");
     const formMessage = document.getElementById("formMessage");
 
     const THEME_KEY = "astroguidE-theme";
     const RTL_KEY = "astroguidE-rtl";
 
     function refreshIcons() {
-        if (window.lucide) {
-            window.lucide.createIcons();
-        }
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
     }
 
     // Theme
     function applyTheme(isDark) {
+      body.classList.toggle("dark-mode", isDark);
 
-        body.classList.toggle("dark-mode", isDark);
+      themeToggle.innerHTML = isDark
+        ? '<i data-lucide="sun"></i>'
+        : '<i data-lucide="moon"></i>';
 
-        themeToggle.innerHTML = isDark
-            ? '<i data-lucide="sun"></i>'
-            : '<i data-lucide="moon"></i>';
+      themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light mode" : "Switch to dark mode"
+      );
 
-        themeToggle.setAttribute(
-            "aria-label",
-            isDark ? "Switch to light mode" : "Switch to dark mode"
-        );
+      themeToggle.title = isDark
+        ? "Switch to light mode"
+        : "Switch to dark mode";
 
-        themeToggle.title = isDark
-            ? "Switch to light mode"
-            : "Switch to dark mode";
+      document
+        .querySelector('meta[name="theme-color"]')
+        .setAttribute("content", isDark ? "#000000" : "#F8F1EB");
 
-        document
-            .querySelector('meta[name="theme-color"]')
-            .setAttribute("content", isDark ? "#000000" : "#F8F1EB");
+      try {
+        localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");
+      } catch (error) {}
 
-        try {
-            localStorage.setItem(
-                THEME_KEY,
-                isDark ? "dark" : "light"
-            );
-        } catch (error) {}
-
-        refreshIcons();
+      refreshIcons();
     }
 
     // RTL
     function applyRTL(isRTL) {
+      root.setAttribute("dir", isRTL ? "rtl" : "ltr");
 
-        root.setAttribute("dir", isRTL ? "rtl" : "ltr");
+      rtlToggle.setAttribute(
+        "aria-label",
+        isRTL ? "Switch to LTR" : "Switch to RTL"
+      );
 
-        rtlToggle.setAttribute(
-            "aria-label",
-            isRTL ? "Switch to LTR" : "Switch to RTL"
-        );
+      rtlToggle.title = isRTL ? "Switch to LTR" : "Switch to RTL";
 
-        rtlToggle.title = isRTL
-            ? "Switch to LTR"
-            : "Switch to RTL";
-
-        try {
-            localStorage.setItem(RTL_KEY, String(isRTL));
-        } catch (error) {}
+      try {
+        localStorage.setItem(RTL_KEY, String(isRTL));
+      } catch (error) {}
     }
 
     // Restore preferences
@@ -319,77 +290,54 @@ document.addEventListener("DOMContentLoaded", function () {
     let savedRTL = false;
 
     try {
-        savedTheme =
-            localStorage.getItem(THEME_KEY) || "light";
-
-        savedRTL =
-            localStorage.getItem(RTL_KEY) === "true";
+      savedTheme = localStorage.getItem(THEME_KEY) || "light";
+      savedRTL = localStorage.getItem(RTL_KEY) === "true";
     } catch (error) {}
 
     applyTheme(savedTheme === "dark");
     applyRTL(savedRTL);
 
     themeToggle.addEventListener("click", function () {
-
-        applyTheme(
-            !body.classList.contains("dark-mode")
-        );
-
+      applyTheme(!body.classList.contains("dark-mode"));
     });
 
     rtlToggle.addEventListener("click", function () {
-
-        applyRTL(
-            root.getAttribute("dir") !== "rtl"
-        );
-
+      applyRTL(root.getAttribute("dir") !== "rtl");
     });
 
     // Password visibility
     passwordToggles.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const input = button.parentElement.querySelector("input");
+        const show = input.type === "password";
 
-        button.addEventListener("click", function () {
+        input.type = show ? "text" : "password";
 
-            const input =
-                button.parentElement.querySelector("input");
+        button.innerHTML = show
+          ? '<i data-lucide="eye-off"></i>'
+          : '<i data-lucide="eye"></i>';
 
-            const show = input.type === "password";
+        button.setAttribute(
+          "aria-label",
+          show ? "Hide password" : "Show password"
+        );
 
-            input.type = show ? "text" : "password";
+        button.title = show ? "Hide password" : "Show password";
 
-            button.innerHTML = show
-                ? '<i data-lucide="eye-off"></i>'
-                : '<i data-lucide="eye"></i>';
-
-            button.setAttribute(
-                "aria-label",
-                show ? "Hide password" : "Show password"
-            );
-
-            button.title = show
-                ? "Hide password"
-                : "Show password";
-
-            refreshIcons();
-
-        });
-
+        refreshIcons();
+      });
     });
 
     // Confirm password
     function validatePasswordMatch() {
-
-        if (
-            confirmPassword.value &&
-            password.value !== confirmPassword.value
-        ) {
-            confirmPassword.setCustomValidity(
-                "Passwords do not match."
-            );
-        } else {
-            confirmPassword.setCustomValidity("");
-        }
-
+      if (
+        confirmPassword.value &&
+        password.value !== confirmPassword.value
+      ) {
+        confirmPassword.setCustomValidity("Passwords do not match.");
+      } else {
+        confirmPassword.setCustomValidity("");
+      }
     }
 
     password.addEventListener("input", validatePasswordMatch);
@@ -397,24 +345,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Frontend-only form validation
     signupForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      validatePasswordMatch();
 
-        event.preventDefault();
+      if (!signupForm.reportValidity()) {
+        return;
+      }
 
-        validatePasswordMatch();
-
-        if (!signupForm.reportValidity()) {
-            return;
-        }
-
-        formMessage.textContent =
-            "Your form is valid. No account has been created.";
-
+      formMessage.textContent =
+        "Your form is valid. No account has been created.";
     });
 
     refreshIcons();
-
-});
-</script>
-
+  });
+  </script>
 </body>
 </html>
