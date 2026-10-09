@@ -1,0 +1,581 @@
+
+/* ==========================================================================
+   ASTROGUIDE — 404 PAGE
+   ========================================================================== */
+
+body.error-page {
+    --error-primary: #3B1F5C;
+    --error-secondary: #D4AF5A;
+    --error-background: #F8F1EB;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    overflow-x: hidden;
+
+    color: var(--error-primary);
+    background: var(--error-background);
+    font-family: "Manrope", sans-serif;
+}
+
+.error-page *,
+.error-page *::before,
+.error-page *::after {
+    box-sizing: border-box;
+}
+
+.error-page a {
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Theme and RTL controls
+   Uses the same class and IDs as the existing AstroGuide navbar.
+   -------------------------------------------------------------------------- */
+
+.error-utilities {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Match global navbar icon dimensions */
+.error-page .error-utilities .st-navbar-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.error-page .error-utilities .st-navbar-icon-btn svg {
+    width: 19px;
+    height: 19px;
+}
+
+/* --------------------------------------------------------------------------
+   Layout
+   -------------------------------------------------------------------------- */
+
+.error-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 80px 24px 35px;
+}
+
+.error-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Brand
+   -------------------------------------------------------------------------- */
+
+.error-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    color: var(--error-primary);
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+.error-brand img {
+    display: block;
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.error-brand-name {
+    display: inline-flex;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.error-brand-astro {
+    color: var(--error-primary);
+}
+
+.error-brand-guide {
+    color: var(--error-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   404 Illustration
+   -------------------------------------------------------------------------- */
+
+.error-illustration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: min(100%, 420px);
+    height: 210px;
+    margin-bottom: 12px;
+}
+
+.error-number {
+    position: relative;
+    z-index: 2;
+
+    color: var(--error-primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(112px, 20vw, 170px);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.error-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid var(--error-secondary);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.error-orbit-one {
+    width: 240px;
+    height: 100px;
+    transform: translate(-50%, -50%) rotate(-25deg);
+}
+
+.error-orbit-two {
+    width: 290px;
+    height: 130px;
+    transform: translate(-50%, -50%) rotate(25deg);
+}
+
+.error-orbit-three {
+    width: 340px;
+    height: 160px;
+    border-style: dashed;
+    transform: translate(-50%, -50%) rotate(-8deg);
+}
+
+.error-star {
+    position: absolute;
+    z-index: 3;
+    color: var(--error-secondary);
+    line-height: 1;
+}
+
+.error-star-one {
+    top: 15px;
+    left: 17%;
+    font-size: 26px;
+}
+
+.error-star-two {
+    top: 28px;
+    right: 15%;
+    font-size: 30px;
+}
+
+.error-star-three {
+    bottom: 20px;
+    left: 20%;
+    font-size: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   Text
+   -------------------------------------------------------------------------- */
+
+.error-eyebrow {
+    margin: 10px 0;
+
+    color: var(--error-secondary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    line-height: 1.6;
+}
+
+.error-content h1 {
+    max-width: 600px;
+    margin: 0 0 14px;
+
+    color: var(--error-primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(32px, 5vw, 46px);
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.error-description {
+    max-width: 480px;
+    margin: 0 0 26px;
+
+    color: var(--error-primary);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   Home button
+   -------------------------------------------------------------------------- */
+
+.error-home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 48px;
+    padding: 12px 20px;
+
+    color: #FFFFFF;
+    background: var(--error-primary);
+    border: 1px solid var(--error-primary);
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.error-home-btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.error-home-btn:hover {
+    color: var(--error-primary);
+    background: var(--error-secondary);
+    border-color: var(--error-secondary);
+}
+
+.error-footer-note {
+    margin: 20px 0 0;
+    color: var(--error-primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Dark mode
+   The shared global.js adds body.dark-mode.
+   -------------------------------------------------------------------------- */
+
+body.error-page.dark-mode {
+    color: #FFFFFF;
+    background: #000000;
+}
+
+body.error-page.dark-mode .error-brand-astro {
+    color: #FFFFFF;
+}
+
+body.error-page.dark-mode .error-brand-guide {
+    color: var(--error-secondary);
+}
+
+body.error-page.dark-mode .error-content h1,
+body.error-page.dark-mode .error-description,
+body.error-page.dark-mode .error-footer-note {
+    color: #FFFFFF;
+}
+
+body.error-page.dark-mode .error-number {
+    color: #FFFFFF;
+}
+
+body.error-page.dark-mode .error-home-btn {
+    color: #FFFFFF;
+    background: var(--error-primary);
+    border-color: var(--error-secondary);
+}
+
+body.error-page.dark-mode .error-home-btn:hover {
+    color: #000000;
+    background: var(--error-secondary);
+    border-color: var(--error-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   RTL
+   The shared global.js sets html[dir="rtl"].
+   -------------------------------------------------------------------------- */
+
+html[dir="rtl"] body.error-page .error-utilities {
+    right: auto;
+    left: 28px;
+}
+
+html[dir="rtl"] body.error-page .error-content {
+    direction: rtl;
+    text-align: center;
+}
+
+html[dir="rtl"] body.error-page .error-brand {
+    direction: ltr;
+}
+
+html[dir="rtl"] body.error-page .error-brand-name {
+    direction: ltr;
+}
+
+html[dir="rtl"] body.error-page .error-home-btn {
+    direction: rtl;
+}
+
+html[dir="rtl"] body.error-page .error-home-arrow {
+    transform: scaleX(-1);
+}
+
+/* --------------------------------------------------------------------------
+   Tablet
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .error-main {
+        padding: 76px 22px 28px;
+    }
+
+    .error-utilities {
+        top: 18px;
+        right: 20px;
+        gap: 8px;
+    }
+
+    html[dir="rtl"] body.error-page .error-utilities {
+        right: auto;
+        left: 20px;
+    }
+
+    .error-page .error-utilities .st-navbar-icon-btn {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .error-illustration {
+        height: 180px;
+    }
+
+    .error-orbit-one {
+        width: 210px;
+        height: 90px;
+    }
+
+    .error-orbit-two {
+        width: 255px;
+        height: 115px;
+    }
+
+    .error-orbit-three {
+        width: 300px;
+        height: 140px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+    .error-main {
+        padding: 76px 20px 24px;
+    }
+
+    .error-brand {
+        margin-bottom: 14px;
+    }
+
+    .error-brand img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .error-brand-name {
+        font-size: 24px;
+    }
+
+    .error-illustration {
+        height: 150px;
+    }
+
+    .error-number {
+        font-size: clamp(96px, 27vw, 125px);
+    }
+
+    .error-orbit-one {
+        width: 175px;
+        height: 75px;
+    }
+
+    .error-orbit-two {
+        width: 215px;
+        height: 95px;
+    }
+
+    .error-orbit-three {
+        width: 255px;
+        height: 115px;
+    }
+
+    .error-content h1 {
+        font-size: clamp(30px, 8vw, 36px);
+    }
+
+    .error-description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .error-home-btn {
+        min-height: 44px;
+        padding: 11px 16px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Short landscape screens
+   -------------------------------------------------------------------------- */
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .error-main {
+        padding: 60px 24px 20px;
+    }
+
+    .error-brand {
+        margin-bottom: 6px;
+    }
+
+    .error-brand img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .error-illustration {
+        height: 95px;
+        margin-bottom: 4px;
+    }
+
+    .error-number {
+        font-size: 86px;
+    }
+
+    .error-orbit-one {
+        width: 170px;
+        height: 60px;
+    }
+
+    .error-orbit-two {
+        width: 205px;
+        height: 75px;
+    }
+
+    .error-orbit-three {
+        width: 240px;
+        height: 90px;
+    }
+
+    .error-eyebrow {
+        margin: 4px 0 6px;
+    }
+
+    .error-content h1 {
+        margin-bottom: 8px;
+        font-size: 30px;
+    }
+
+    .error-description {
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+
+    .error-footer-note {
+        margin-top: 8px;
+    }
+}
+
+/* ==========================================================
+   MAINTENANCE PAGE — DISABLE SCROLLING ON ALL DEVICES
+   ========================================================== */
+
+html,
+body.maintenance-page {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+
+body.maintenance-page {
+  position: fixed;
+  inset: 0;
+  box-sizing: border-box;
+}
+
+/* Keep all page content inside the visible viewport */
+body.maintenance-page *,
+body.maintenance-page *::before,
+body.maintenance-page *::after {
+  box-sizing: border-box;
+}
+
+/* Desktop and laptop */
+@media (min-width: 1025px) {
+  body.maintenance-page {
+    height: 100dvh;
+  }
+}
+
+/* Tablet and mobile portrait */
+@media (max-width: 1024px) {
+  body.maintenance-page {
+    height: 100dvh;
+    overflow: hidden !important;
+  }
+}
+
+/* Mobile landscape — short viewport */
+@media (max-height: 500px) {
+  body.maintenance-page {
+    height: 100dvh;
+    overflow: hidden !important;
+  }
+
+  body.maintenance-page .maintenance-container,
+  body.maintenance-page .maintenance-content,
+  body.maintenance-page .maintenance-visual {
+    min-height: 0;
+  }
+}

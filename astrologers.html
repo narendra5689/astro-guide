@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AstroGuide | Astrology & Horoscope Guidance</title>
+
+    <meta
+        name="description"
+        content="Explore personalized astrology, birth charts, horoscopes and compatibility guidance with AstroGuide."
+    >
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/astrologers.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="./js/global.js"></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+    <!-- navbar -->
+<header class="st-navbar">
+
+    <div class="st-navbar-inner">
+
+        <!-- Brand -->
+        <a href="./index.html"
+            class="st-navbar-brand"
+            aria-label="AstroGuide Home">
+
+            <img src="./images/logo.png"
+                alt="AstroGuide Logo"
+                class="st-navbar-brand-logo">
+
+            <span class="st-navbar-brand-name">
+                <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+            </span>
+
+        </a>
+
+
+        <!-- Desktop Navigation -->
+        <nav class="st-navbar-nav"
+            aria-label="Main navigation">
+
+            <!-- Home -->
+            <div class="st-nav-dropdown">
+
+                <button type="button"
+                    class="st-navbar-link st-nav-dropdown-toggle"
+                    aria-expanded="false"
+                    aria-haspopup="true">
+
+                    <span>Home</span>
+
+                    <i data-lucide="chevron-down"
+                        aria-hidden="true"></i>
+
+                </button>
+
+
+                <div class="st-nav-dropdown-menu">
+
+                    <a href="./index.html"
+                        class="st-nav-dropdown-link">
+                        Home 1
+                    </a>
+
+                    <a href="./home2.html"
+                        class="st-nav-dropdown-link">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- About -->
+            <a href="./about.html"
+                class="st-navbar-link">
+                About
+            </a>
+
+
+            <!-- Services -->
+            <a href="./services.html"
+                class="st-navbar-link">
+                Services
+            </a>
+
+
+
+
+
+            <!-- Astrologers -->
+            <a href="./astrologers.html"
+                class="st-navbar-link active">
+                Astrologers
+            </a>
+
+
+            <!-- Pricing -->
+            <a href="./pricing.html"
+                class="st-navbar-link">
+                Pricing
+            </a>
+
+            <!-- Horoscope -->
+            <a href="./contact.html"
+                class="st-navbar-link">
+                Contact
+            </a>
+
+            <!-- Dashboard -->
+            <a href="./dashboard.html"
+                class="st-navbar-link">
+                Dashboard
+            </a>
+
+        </nav>
+
+
+        <!-- Navbar Actions -->
+        <div class="st-navbar-actions">
+
+            <!-- Dark Mode -->
+            <button type="button"
+                class="st-navbar-icon-btn"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+
+                <i data-lucide="moon"
+                    aria-hidden="true"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+            <button type="button"
+                class="st-navbar-icon-btn"
+                id="rtlToggle"
+                aria-label="Enable RTL"
+                title="Enable RTL">
+
+                <i data-lucide="arrow-left-right"></i>
+
+            </button>
+
+
+            <!-- Login -->
+            <a href="./login.html"
+                class="st-login-btn">
+                Login
+            </a>
+
+
+            <!-- Book Consultation -->
+            <a href="./contact.html#contact-form"
+                class="st-consultation-btn">
+                Book Consultation
+            </a>
+
+
+            <!-- Mobile Menu -->
+            <button type="button"
+                class="st-navbar-menu-btn"
+                id="mobileMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu">
+
+                <i data-lucide="menu"
+                    aria-hidden="true"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ====================================================================
+         MOBILE MENU
+         ==================================================================== -->
+
+    <div class="st-mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true">
+
+        <div class="st-mobile-menu-inner">
+
+            <nav class="st-mobile-nav"
+                aria-label="Mobile navigation">
+
+
+                <!-- Home -->
+                <div class="st-mobile-home-group">
+
+                    <button type="button"
+                        class="st-mobile-nav-link st-mobile-home-toggle"
+                        aria-expanded="false">
+
+                        <span>Home</span>
+
+                        <i data-lucide="chevron-down"
+                            aria-hidden="true"></i>
+
+                    </button>
+
+
+                    <div class="st-mobile-dropdown">
+
+                        <a href="./index.html"
+                            class="st-mobile-dropdown-link">
+                            Home 1
+                        </a>
+
+                        <a href="./home2.html"
+                            class="st-mobile-dropdown-link">
+                            Home 2
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- About -->
+                <a href="./about.html"
+                    class="st-mobile-nav-link">
+                    About
+                </a>
+
+
+                <!-- Services -->
+                <a href="./services.html"
+                    class="st-mobile-nav-link">
+                    Services
+                </a>
+
+                <!-- Astrologers -->
+                <a href="./astrologers.html"
+                    class="st-mobile-nav-link active">
+                    Astrologers
+                </a>
+
+
+                <!-- Pricing -->
+                <a href="./pricing.html"
+                    class="st-mobile-nav-link">
+                    Pricing
+                </a>
+
+                 <a href="./Contact.html"
+                    class="st-mobile-nav-link">
+                    Contact
+                </a>
+                <!-- Dashboard -->
+                <a href="./dashboard.html"
+                    class="st-mobile-nav-link">
+                    Dashboard
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Actions -->
+            <div class="st-mobile-menu-actions">
+
+                <a href="./login.html"
+                    class="st-login-btn">
+                    Login
+                </a>
+                <a href="./contact.html#contact-form"
+                    class="st-consultation-btn">
+                    Book Consultation
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="st-page">
+
+<!-- ============================================================
+     ASTROLOGERS HERO
+     ============================================================ -->
+
+<section class="ag-astrologers-hero" aria-labelledby="ag-astrologers-hero-title">
+
+  <div class="ag-astrologers-hero-overlay" aria-hidden="true"></div>
+
+  <div class="ag-astrologers-hero-container">
+
+    <div class="ag-astrologers-hero-content">
+
+      <p class="st-section-label ag-astrologers-hero-label">
+        OUR ASTROLOGERS
+      </p>
+
+      <h1 id="ag-astrologers-hero-title" class="st-section-title ag-astrologers-hero-title">
+        Meet the guides
+        <span>behind your cosmic journey.</span>
+      </h1>
+
+      <p class="st-section-description ag-astrologers-hero-description">
+        Connect with experienced astrologers who bring knowledge,
+        intuition, and a thoughtful approach to every reading. Find
+        someone whose expertise speaks to the questions that matter
+        most to you.
+      </p>
+
+      <div class="ag-astrologers-hero-actions">
+
+        <a href="#astrologers" class="st-btn ag-astrologers-hero-btn">
+          Find Your Astrologer
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+        <a href="#how-it-works" class="st-btn ag-astrologers-hero-btn-secondary">
+          How It Works
+          <i data-lucide="arrow-down"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="ag-astrologers-hero-visual">
+
+      <div class="ag-astrologers-hero-image-wrap">
+
+        <div class="ag-astrologers-hero-image-frame" aria-hidden="true"></div>
+
+        <div class="ag-astrologers-hero-image-holder">
+          <img
+            src="./images/astrologer-hero.png"
+            alt="AstroGuide astrologer providing a personal consultation"
+            class="ag-astrologers-hero-image"
+          >
+        </div>
+
+      </div>
+
+      <div class="ag-astrologers-hero-badge">
+        <i data-lucide="sparkles"></i>
+        <div>
+          <strong>Personal Guidance</strong>
+          <span>Thoughtful. Individual. Human.</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ============================================================
+     SECTION 2 — THE RIGHT CONNECTION
+     ============================================================ -->
+
+<section class="ag-astrologers-connection" aria-labelledby="ag-astrologers-connection-title">
+
+  <div class="ag-astrologers-connection-container">
+
+    <div class="ag-astrologers-connection-content">
+
+      <div class="ag-astrologers-connection-heading">
+        <span class="ag-astrologers-connection-number">01</span>
+
+        <p class="st-section-label ag-astrologers-connection-label">
+          THE RIGHT CONNECTION
+        </p>
+      </div>
+
+      <h2 id="ag-astrologers-connection-title"
+          class="st-section-title ag-astrologers-connection-title">
+        Astrology is personal.
+        <span>Your guide should be too.</span>
+      </h2>
+
+      <p class="st-section-description ag-astrologers-connection-description">
+        The most meaningful consultation begins with a conversation
+        that feels comfortable, clear, and relevant to where you are
+        today.
+      </p>
+
+      <p class="st-section-description ag-astrologers-connection-description secondary">
+        Our consultants come from different traditions and areas of
+        practice. Some focus on birth charts and Vedic astrology,
+        while others specialize in relationships, career direction,
+        timing, or personal reflection.
+      </p>
+
+      <p class="st-section-description ag-astrologers-connection-description secondary">
+        Explore their specialties, understand their approach, and
+        choose the guide whose perspective best fits the question
+        you are ready to explore.
+      </p>
+
+      <a href="#astrologers"
+         class="st-btn ag-astrologers-connection-btn">
+        Explore Specialties
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+
+    </div>
+
+
+    <div class="ag-astrologers-connection-visual">
+
+      <div class="ag-astrologers-connection-card">
+
+        <div class="ag-astrologers-connection-card-top">
+          <span class="ag-astrologers-connection-card-number">
+            01
+          </span>
+
+          <i data-lucide="compass"></i>
+        </div>
+
+        <p class="st-section-label ag-astrologers-connection-card-label">
+          START HERE
+        </p>
+
+        <h3>
+          Begin with your question.
+        </h3>
+
+        <p>
+          You don't need to know exactly what you are looking for.
+          Your question is enough to begin.
+        </p>
+
+        <div class="ag-astrologers-connection-card-line"
+             aria-hidden="true"></div>
+
+        <div class="ag-astrologers-connection-card-points">
+
+          <div class="ag-astrologers-connection-card-point">
+            <i data-lucide="heart"></i>
+            <span>Relationships</span>
+          </div>
+
+          <div class="ag-astrologers-connection-card-point">
+            <i data-lucide="briefcase-business"></i>
+            <span>Career Direction</span>
+          </div>
+
+          <div class="ag-astrologers-connection-card-point">
+            <i data-lucide="clock-3"></i>
+            <span>Timing</span>
+          </div>
+
+          <div class="ag-astrologers-connection-card-point">
+            <i data-lucide="sparkles"></i>
+            <span>Personal Growth</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ============================================================
+     SECTION 3 — FEATURED ASTROLOGERS
+     ============================================================ -->
+
+<section class="ag-astrologers-featured" id="astrologers" aria-labelledby="ag-astrologers-featured-title">
+
+  <div class="ag-astrologers-featured-container">
+
+    <div class="ag-astrologers-featured-header">
+
+      <p class="st-section-label ag-astrologers-featured-label">
+        FEATURED ASTROLOGERS
+      </p>
+
+      <h2 id="ag-astrologers-featured-title"
+          class="st-section-title ag-astrologers-featured-title">
+        Meet your guides
+        <span>Find a perspective that feels right.</span>
+      </h2>
+
+      <p class="st-section-description ag-astrologers-featured-description">
+        Different traditions, specialties, and perspectives come together
+        to create a more personal consultation.
+      </p>
+
+    </div>
+
+
+    <div class="ag-astrologers-featured-grid">
+
+      <!-- ==========================================================
+           ASTROLOGER 01
+           ========================================================== -->
+
+      <article class="ag-astrologer-card">
+
+        <div class="ag-astrologer-card-image-wrap">
+
+          <img
+            src="./images/asto2.png"
+            alt="Priya Sharma, Vedic astrology consultant"
+            class="ag-astrologer-card-image"
+          >
+
+          <span class="ag-astrologer-card-number">
+            01
+          </span>
+
+          <span class="ag-astrologer-card-specialty">
+            Vedic Astrology
+          </span>
+
+        </div>
+
+        <div class="ag-astrologer-card-content">
+
+          <div class="ag-astrologer-card-heading">
+
+            <div>
+              <h3>Priya Sharma</h3>
+              <p>15 years experience</p>
+            </div>
+
+            <div class="ag-astrologer-card-rating">
+              <i data-lucide="star"></i>
+              <span>4.9</span>
+            </div>
+
+          </div>
+
+          <p class="ag-astrologer-card-description">
+            Specializes in birth charts, life patterns, and personal
+            growth through a Vedic perspective.
+          </p>
+
+          <div class="ag-astrologer-card-tags">
+            <span>Birth Charts</span>
+            <span>Life Patterns</span>
+          </div>
+
+          <a href="./astrologer-priya.html"
+             class="ag-astrologer-card-link">
+            View Profile
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ==========================================================
+           ASTROLOGER 02
+           ========================================================== -->
+
+      <article class="ag-astrologer-card">
+
+        <div class="ag-astrologer-card-image-wrap">
+
+          <img
+            src="./images/asto1.png"
+            alt="Rajesh Verma, career astrology consultant"
+            class="ag-astrologer-card-image"
+          >
+
+          <span class="ag-astrologer-card-number">
+            02
+          </span>
+
+          <span class="ag-astrologer-card-specialty">
+            Career Guidance
+          </span>
+
+        </div>
+
+        <div class="ag-astrologer-card-content">
+
+          <div class="ag-astrologer-card-heading">
+
+            <div>
+              <h3>Rajesh Verma</h3>
+              <p>12 years experience</p>
+            </div>
+
+            <div class="ag-astrologer-card-rating">
+              <i data-lucide="star"></i>
+              <span>4.8</span>
+            </div>
+
+          </div>
+
+          <p class="ag-astrologer-card-description">
+            Helps clients reflect on vocation, professional transitions,
+            timing, and major decisions throughout their life.
+          </p>
+
+          <div class="ag-astrologer-card-tags">
+            <span>Career</span>
+            <span>Timing</span>
+          </div>
+
+          <a href="./astrologer-rajesh.html"
+             class="ag-astrologer-card-link">
+            View Profile
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ==========================================================
+           ASTROLOGER 03
+           ========================================================== -->
+
+      <article class="ag-astrologer-card">
+
+        <div class="ag-astrologer-card-image-wrap">
+
+          <img
+            src="./images/asto3.png"
+            alt="Ananya Iyer, relationship astrology consultant"
+            class="ag-astrologer-card-image"
+          >
+
+          <span class="ag-astrologer-card-number">
+            03
+          </span>
+
+          <span class="ag-astrologer-card-specialty">
+            Matchmaking
+          </span>
+
+        </div>
+
+        <div class="ag-astrologer-card-content">
+
+          <div class="ag-astrologer-card-heading">
+
+            <div>
+              <h3>Ananya Iyer</h3>
+              <p>10 years experience</p>
+            </div>
+
+            <div class="ag-astrologer-card-rating">
+              <i data-lucide="star"></i>
+              <span>5.0</span>
+            </div>
+
+          </div>
+
+          <p class="ag-astrologer-card-description">
+            Explores compatibility, communication, shared values,
+            and relationship dynamics in your life.
+          </p>
+
+          <div class="ag-astrologer-card-tags">
+            <span>Compatibility</span>
+            <span>Relationships</span>
+          </div>
+
+          <a href="./astrologer-ananya.html"
+             class="ag-astrologer-card-link">
+            View Profile
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ============================================================
+     SECTION 4 — VEDIC ASTROLOGY / JYOTISH
+     ============================================================ -->
+
+<section class="ag-astrologers-vedic" aria-labelledby="ag-astrologers-vedic-title">
+
+  <div class="ag-astrologers-vedic-container">
+
+    <div class="ag-astrologers-vedic-visual">
+
+      <div class="ag-astrologers-vedic-image-wrap">
+
+        <div class="ag-astrologers-vedic-image-frame" aria-hidden="true"></div>
+
+        <img
+          src="./images/vedic-astro.png"
+          alt="Vedic astrology consultant"
+          class="ag-astrologers-vedic-image"
+        >
+
+        <div class="ag-astrologers-vedic-badge">
+          <span>JYOTISH</span>
+          <strong>VEDIC</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="ag-astrologers-vedic-content">
+
+      <div class="ag-astrologers-vedic-heading">
+
+        <span class="ag-astrologers-vedic-number">
+          02
+        </span>
+
+        <p class="st-section-label ag-astrologers-vedic-label">
+          VEDIC SPECIALIST
+        </p>
+
+      </div>
+
+      <h2 id="ag-astrologers-vedic-title"
+          class="st-section-title ag-astrologers-vedic-title">
+        Ancient patterns.
+        <span>A modern conversation.</span>
+      </h2>
+
+      <p class="st-section-description ag-astrologers-vedic-description">
+        Our Vedic specialists draw from an established tradition while
+        keeping each consultation connected to the realities of everyday
+        life.
+      </p>
+
+
+      <div class="ag-astrologers-vedic-features">
+
+        <div class="ag-astrologers-vedic-feature">
+
+          <div class="ag-astrologers-vedic-feature-icon">
+            <i data-lucide="orbit"></i>
+          </div>
+
+          <div class="ag-astrologers-vedic-feature-content">
+            <strong>Birth Charts</strong>
+            <span>
+              Explore planetary placements and recurring patterns.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="ag-astrologers-vedic-feature">
+
+          <div class="ag-astrologers-vedic-feature-icon">
+            <i data-lucide="clock-3"></i>
+          </div>
+
+          <div class="ag-astrologers-vedic-feature-content">
+            <strong>Timing</strong>
+            <span>
+              Reflect on cycles, transitions, and important periods.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="ag-astrologers-vedic-feature">
+
+          <div class="ag-astrologers-vedic-feature-icon">
+            <i data-lucide="route"></i>
+          </div>
+
+          <div class="ag-astrologers-vedic-feature-content">
+            <strong>Life Path</strong>
+            <span>
+              Connect longer-term themes with everyday choices.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <a href="./vedic-astrology.html"
+         class="st-btn ag-astrologers-vedic-btn">
+        Explore Vedic Astrology
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ============================================================
+     SECTION 5 — RELATIONSHIP ASTROLOGY
+     ============================================================ -->
+
+<section class="ag-astrologers-relationship"
+         aria-labelledby="ag-astrologers-relationship-title">
+
+  <div class="ag-astrologers-relationship-container">
+
+    <div class="ag-astrologers-relationship-content">
+
+      <div class="ag-astrologers-relationship-heading">
+
+        <span class="ag-astrologers-relationship-number">
+          03
+        </span>
+
+        <p class="st-section-label ag-astrologers-relationship-label">
+          RELATIONSHIP SPECIALIST
+        </p>
+
+      </div>
+
+      <h2 id="ag-astrologers-relationship-title"
+          class="st-section-title ag-astrologers-relationship-title">
+        For the conversations
+        <span>that matter most.</span>
+      </h2>
+
+      <p class="st-section-description ag-astrologers-relationship-description">
+        Relationships can bring some of life's most meaningful questions.
+        Our relationship consultants create a thoughtful space to explore
+        compatibility, communication, shared values, and the patterns
+        between two people.
+      </p>
+
+      <p class="st-section-description ag-astrologers-relationship-description secondary">
+        Rather than reducing a relationship to a single answer, the
+        consultation gives you room to reflect on what you are experiencing
+        and what you want to understand.
+      </p>
+
+
+      <div class="ag-astrologers-relationship-features">
+
+        <div class="ag-astrologers-relationship-feature">
+
+          <div class="ag-astrologers-relationship-feature-icon">
+            <i data-lucide="heart"></i>
+          </div>
+
+          <div class="ag-astrologers-relationship-feature-content">
+            <strong>Compatibility</strong>
+            <span>
+              Explore the qualities and patterns that shape your connection.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="ag-astrologers-relationship-feature">
+
+          <div class="ag-astrologers-relationship-feature-icon">
+            <i data-lucide="message-circle"></i>
+          </div>
+
+          <div class="ag-astrologers-relationship-feature-content">
+            <strong>Communication</strong>
+            <span>
+              Reflect on different ways of expressing needs, feelings,
+              and expectations.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="ag-astrologers-relationship-feature">
+
+          <div class="ag-astrologers-relationship-feature-icon">
+            <i data-lucide="users"></i>
+          </div>
+
+          <div class="ag-astrologers-relationship-feature-content">
+            <strong>Relationship Dynamics</strong>
+            <span>
+              Understand recurring themes and patterns within the relationship.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <a href="./matchmaking.html"
+         class="st-btn ag-astrologers-relationship-btn">
+        Explore Matchmaking
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+
+    </div>
+
+
+    <div class="ag-astrologers-relationship-visual">
+
+      <div class="ag-astrologers-relationship-image-wrap">
+
+        <div class="ag-astrologers-relationship-image-frame"
+             aria-hidden="true"></div>
+
+        <img
+          src="./images/asto3.png"
+          alt="Relationship astrology consultation"
+          class="ag-astrologers-relationship-image"
+        >
+
+        <div class="ag-astrologers-relationship-badge">
+
+          <i data-lucide="heart-handshake"></i>
+
+          <div>
+            <span>CONNECTION</span>
+            <strong>Understanding Two Perspectives</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ============================================================
+     SECTION 6 — CAREER ASTROLOGY
+     ============================================================ -->
+
+<section class="ag-astrologers-career"
+         aria-labelledby="ag-astrologers-career-title">
+
+  <div class="ag-astrologers-career-container">
+
+    <div class="ag-astrologers-career-visual">
+
+      <div class="ag-astrologers-career-image-wrap">
+
+        <div class="ag-astrologers-career-image-frame"
+             aria-hidden="true"></div>
+
+        <img
+          src="./images/career-specalist.png"
+          alt="Career astrology consultant"
+          class="ag-astrologers-career-image"
+        >
+
+        <div class="ag-astrologers-career-badge">
+
+          <i data-lucide="compass"></i>
+
+          <div>
+            <span>DIRECTION</span>
+            <strong>For Your Next Chapter</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="ag-astrologers-career-content">
+
+      <div class="ag-astrologers-career-heading">
+
+        <span class="ag-astrologers-career-number">
+          04
+        </span>
+
+        <p class="st-section-label ag-astrologers-career-label">
+          CAREER SPECIALIST
+        </p>
+
+      </div>
+
+      <h2 id="ag-astrologers-career-title"
+          class="st-section-title ag-astrologers-career-title">
+        For the next
+        <span>professional chapter.</span>
+      </h2>
+
+      <p class="st-section-description ag-astrologers-career-description">
+        Career decisions can bring uncertainty about direction, timing,
+        strengths, and what comes next. Our career-focused consultants
+        help you step back and reflect on the professional questions
+        in front of you.
+      </p>
+
+      <p class="st-section-description ag-astrologers-career-description secondary">
+        Explore your work style, professional priorities, possible
+        transitions, and the cycles that may be meaningful to your
+        current chapter.
+      </p>
+
+
+      <div class="ag-astrologers-career-features">
+
+        <div class="ag-astrologers-career-feature">
+
+          <div class="ag-astrologers-career-feature-icon">
+            <i data-lucide="compass"></i>
+          </div>
+
+          <div class="ag-astrologers-career-feature-content">
+            <strong>Career Direction</strong>
+            <span>
+              Reflect on your professional priorities and the direction
+              you want to explore.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="ag-astrologers-career-feature">
+
+          <div class="ag-astrologers-career-feature-icon">
+            <i data-lucide="clock-3"></i>
+          </div>
+
+          <div class="ag-astrologers-career-feature-content">
+            <strong>Timing &amp; Cycles</strong>
+            <span>
+              Explore periods of transition, opportunity, and professional
+              change.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="ag-astrologers-career-feature">
+
+          <div class="ag-astrologers-career-feature-icon">
+            <i data-lucide="trending-up"></i>
+          </div>
+
+          <div class="ag-astrologers-career-feature-content">
+            <strong>Professional Growth</strong>
+            <span>
+              Connect your strengths and experiences with the next stage
+              of your working life.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <a href="./career-guidance.html"
+         class="st-btn ag-astrologers-career-btn">
+        Explore Career Guidance
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="ag-astrologers-journey" id="how-it-works" aria-labelledby="ag-astrologers-journey-title">
+  <div class="ag-astrologers-journey-container">
+
+    <div class="ag-astrologers-journey-header">
+      <p class="st-section-label ag-astrologers-journey-label">
+        YOUR JOURNEY
+      </p>
+
+      <h2 id="ag-astrologers-journey-title" class="st-section-title ag-astrologers-journey-title">
+        From question
+        <span>to conversation.</span>
+      </h2>
+
+      <p class="st-section-description ag-astrologers-journey-description">
+        Choosing an astrologer doesn't have to be complicated. Let your
+        question lead the way and take the next step when you feel ready.
+      </p>
+    </div>
+
+    <div class="ag-astrologers-journey-steps" role="tablist" aria-label="Your astrology journey">
+
+      <!-- STEP 01 -->
+      <article class="ag-astrologers-journey-step is-active" data-step="1">
+        <button
+          type="button"
+          class="ag-astrologers-journey-step-button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="journey-panel-1"
+        >
+          <div class="ag-astrologers-journey-step-top">
+            <span class="ag-astrologers-journey-number">01</span>
+
+            <div class="ag-astrologers-journey-icon">
+              <i data-lucide="message-circle-question"></i>
+            </div>
+          </div>
+
+          <div class="ag-astrologers-journey-step-content">
+            <p class="ag-astrologers-journey-step-label">
+              BEGIN
+            </p>
+
+            <h3>Start with your question</h3>
+
+            <p>
+              Think about what you would like to understand: relationships,
+              career, timing, or personal growth.
+            </p>
+          </div>
+
+          <span class="ag-astrologers-journey-step-arrow">
+            <i data-lucide="arrow-up-right"></i>
+          </span>
+        </button>
+      </article>
+
+      <!-- STEP 02 -->
+      <article class="ag-astrologers-journey-step" data-step="2">
+        <button
+          type="button"
+          class="ag-astrologers-journey-step-button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="journey-panel-2"
+        >
+          <div class="ag-astrologers-journey-step-top">
+            <span class="ag-astrologers-journey-number">02</span>
+
+            <div class="ag-astrologers-journey-icon">
+              <i data-lucide="search"></i>
+            </div>
+          </div>
+
+          <div class="ag-astrologers-journey-step-content">
+            <p class="ag-astrologers-journey-step-label">
+              EXPLORE
+            </p>
+
+            <h3>Find the right perspective</h3>
+
+            <p>
+              Explore each consultant's specialty, experience, and approach
+              before making your choice.
+            </p>
+          </div>
+
+          <span class="ag-astrologers-journey-step-arrow">
+            <i data-lucide="arrow-up-right"></i>
+          </span>
+        </button>
+      </article>
+
+      <!-- STEP 03 -->
+      <article class="ag-astrologers-journey-step" data-step="3">
+        <button
+          type="button"
+          class="ag-astrologers-journey-step-button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="journey-panel-3"
+        >
+          <div class="ag-astrologers-journey-step-top">
+            <span class="ag-astrologers-journey-number">03</span>
+
+            <div class="ag-astrologers-journey-icon">
+              <i data-lucide="calendar-check-2"></i>
+            </div>
+          </div>
+
+          <div class="ag-astrologers-journey-step-content">
+            <p class="ag-astrologers-journey-step-label">
+              CONNECT
+            </p>
+
+            <h3>Choose your session</h3>
+
+            <p>
+              Pick a convenient time and format that gives you room for a
+              meaningful conversation.
+            </p>
+          </div>
+
+          <span class="ag-astrologers-journey-step-arrow">
+            <i data-lucide="arrow-up-right"></i>
+          </span>
+        </button>
+      </article>
+
+    </div>
+
+    <!-- INTERACTIVE DETAIL -->
+    <div class="ag-astrologers-journey-detail">
+
+      <div class="ag-astrologers-journey-detail-heading">
+        <p class="st-section-label">
+          WHAT HAPPENS NEXT?
+        </p>
+
+        <span class="ag-astrologers-journey-detail-number" id="journey-detail-number">
+          01
+        </span>
+      </div>
+
+      <div class="ag-astrologers-journey-detail-content">
+        <div>
+          <h3 id="journey-detail-title">
+            Begin with what matters to you.
+          </h3>
+
+          <p id="journey-detail-text">
+            Start with the question that has been on your mind. You don't
+            need to understand astrology or know exactly which type of
+            reading you need. Your question gives us a place to begin.
+          </p>
+        </div>
+
+        <div class="ag-astrologers-journey-detail-points" id="journey-detail-points">
+          <span>
+            <i data-lucide="check"></i>
+            No prior astrology knowledge needed
+          </span>
+
+          <span>
+            <i data-lucide="check"></i>
+            Start with what matters to you
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- REASSURANCE -->
+    <div class="ag-astrologers-journey-reassurance">
+
+      <div class="ag-astrologers-journey-reassurance-item">
+        <i data-lucide="shield-check"></i>
+        <div>
+          <strong>Thoughtful guidance</strong>
+          <span>A consultation shaped around your questions.</span>
+        </div>
+      </div>
+
+      <div class="ag-astrologers-journey-reassurance-item">
+        <i data-lucide="clock-3"></i>
+        <div>
+          <strong>Choose your pace</strong>
+          <span>Find a session time that works for you.</span>
+        </div>
+      </div>
+
+      <div class="ag-astrologers-journey-reassurance-item">
+        <i data-lucide="heart"></i>
+        <div>
+          <strong>A personal conversation</strong>
+          <span>Space to ask, reflect, and understand.</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="ag-astrologers-newsletter" aria-labelledby="ag-astrologers-newsletter-title">
+  <div class="ag-astrologers-newsletter-container">
+
+    <div class="ag-astrologers-newsletter-content">
+
+      <p class="st-section-label ag-astrologers-newsletter-label">
+        STAY CONNECTED
+      </p>
+
+      <h2 id="ag-astrologers-newsletter-title" class="st-section-title ag-astrologers-newsletter-title">
+        Stay Connected
+        <span>With the Stars.</span>
+      </h2>
+
+      <p class="st-section-description ag-astrologers-newsletter-description">
+        Receive thoughtful astrology insights, horoscope updates, seasonal
+        guidance, and helpful reflections delivered to your inbox.
+      </p>
+
+      <form class="ag-astrologers-newsletter-form" novalidate>
+
+        <div class="ag-astrologers-newsletter-input-wrap">
+          <i data-lucide="mail" aria-hidden="true"></i>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            aria-label="Email address"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="st-btn ag-astrologers-newsletter-btn"
+        >
+          Subscribe
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </button>
+
+      </form>
+
+      <p
+        class="ag-astrologers-newsletter-message"
+        role="status"
+        aria-live="polite"
+      ></p>
+
+      <div class="ag-astrologers-newsletter-benefits">
+
+        <div class="ag-astrologers-newsletter-benefit">
+          <i data-lucide="sparkles"></i>
+          <span>Astrology insights</span>
+        </div>
+
+        <div class="ag-astrologers-newsletter-benefit">
+          <i data-lucide="moon"></i>
+          <span>Seasonal guidance</span>
+        </div>
+
+        <div class="ag-astrologers-newsletter-benefit">
+          <i data-lucide="star"></i>
+          <span>Horoscope updates</span>
+        </div>
+
+      </div>
+
+      <p class="ag-astrologers-newsletter-note">
+        No spam. Just thoughtful guidance from AstroGuide.
+      </p>
+
+    </div>
+
+    <div class="ag-astrologers-newsletter-orbit" aria-hidden="true">
+      <span class="ag-newsletter-orbit-ring ag-newsletter-orbit-ring-one"></span>
+      <span class="ag-newsletter-orbit-ring ag-newsletter-orbit-ring-two"></span>
+      <span class="ag-newsletter-orbit-dot ag-newsletter-orbit-dot-one"></span>
+      <span class="ag-newsletter-orbit-dot ag-newsletter-orbit-dot-two"></span>
+      <span class="ag-newsletter-orbit-star">✦</span>
+    </div>
+
+  </div>
+</section>
+</div>
+<!-- ========================================================================
+     ASTROGUIDE FOOTER
+     ======================================================================== -->
+
+<footer class="st-footer">
+
+    <div class="st-footer-inner">
+
+
+        <!-- ==================================================================
+             FOOTER MAIN
+             ================================================================== -->
+
+        <div class="st-footer-main">
+
+
+            <!-- Brand / Description -->
+            <div class="st-footer-brand">
+
+                <a href="./index.html"
+                    class="st-navbar-brand"
+                    aria-label="AstroGuide Home">
+
+                    <img src="./images/logo.png"
+                        alt="AstroGuide Logo"
+                        class="st-navbar-brand-logo">
+
+                    <span class="st-navbar-brand-name">
+                        <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+                    </span>
+
+                </a>
+
+
+                <p class="st-footer-description">
+                    Explore astrology with a thoughtful blend of celestial
+                    wisdom, personal interpretation, and meaningful guidance
+                    for the journey ahead.
+                </p>
+
+
+                <!-- Social Media -->
+                <div class="st-footer-socials"
+                    aria-label="Social media links">
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Instagram">
+
+                        <i data-lucide="instagram"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Facebook">
+
+                        <i data-lucide="facebook"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Twitter">
+
+                        <i data-lucide="twitter"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="YouTube">
+
+                        <i data-lucide="youtube"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Navigation
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html">
+                            Services
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="./astrologers.html">
+                            Astrologers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pricing.html">
+                            Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./dashboard.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Our Services -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Our Services
+                </h3>
+
+                                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./services.html#horo">
+                            Daily Horoscope
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#birth">
+                            Birth Chart
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#match">
+                            Compatibility
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#consultation">
+                            Personal Consultation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pricing.html#pricing-sessions">
+                            Astrologer Sessions
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Additional Pages -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Additional Pages
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./404.html">
+                            404 Page
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./maintenance.html">
+                            Maintenance Page
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- Contact Us -->
+            <div class="st-footer-column st-footer-contact">
+
+                <h3 class="st-footer-title">
+                    Contact Us
+                </h3>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="mail"
+                        aria-hidden="true"></i>
+
+                    <a href="mailto:hello@astroguide.com">
+                        hello@astroguide.com
+                    </a>
+
+                </div>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="phone"
+                        aria-hidden="true"></i>
+
+                    <a href="tel:+919999999999">
+                        +91 99999 99999
+                    </a>
+
+                </div>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="map-pin"
+                        aria-hidden="true"></i>
+
+                    <span>
+                        Hyderabad, India
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================================
+             FOOTER BOTTOM
+             ================================================================== -->
+
+        <div class="st-footer-bottom">
+
+            <p class="st-footer-copyright">
+                © 2026 AstroGuide. All rights reserved.
+            </p>
+
+
+            <div class="st-footer-legal">
+
+                <a href="./privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="./terms.html">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,656 @@
+
+/* ==========================================================================
+   ASTROGUIDE — MAINTENANCE PAGE
+   ========================================================================== */
+
+body.maintenance-page {
+    --maintenance-primary: #3B1F5C;
+    --maintenance-secondary: #D4AF5A;
+    --maintenance-background: #F8F1EB;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    overflow-x: hidden;
+
+    color: var(--maintenance-primary);
+    background: var(--maintenance-background);
+    font-family: "Manrope", sans-serif;
+}
+
+.maintenance-page *,
+.maintenance-page *::before,
+.maintenance-page *::after {
+    box-sizing: border-box;
+}
+
+.maintenance-page a {
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Theme and RTL Controls
+   -------------------------------------------------------------------------- */
+
+.maintenance-utilities {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.maintenance-page .maintenance-utilities .st-navbar-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.maintenance-page .maintenance-utilities .st-navbar-icon-btn svg {
+    width: 19px;
+    height: 19px;
+}
+
+/* --------------------------------------------------------------------------
+   Main Layout
+   -------------------------------------------------------------------------- */
+
+.maintenance-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 80px 24px 35px;
+}
+
+.maintenance-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Brand
+   -------------------------------------------------------------------------- */
+
+.maintenance-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 18px;
+    color: var(--maintenance-primary);
+
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+.maintenance-brand img {
+    display: block;
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.maintenance-brand-name {
+    display: inline-flex;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.maintenance-brand-astro {
+    color: var(--maintenance-primary);
+}
+
+.maintenance-brand-guide {
+    color: var(--maintenance-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Cosmic Illustration
+   -------------------------------------------------------------------------- */
+
+.maintenance-illustration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: min(100%, 390px);
+    height: 210px;
+    margin-bottom: 8px;
+}
+
+.maintenance-moon {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 112px;
+    height: 112px;
+
+    color: var(--maintenance-primary);
+    background: transparent;
+    border: 1px solid var(--maintenance-secondary);
+    border-radius: 50%;
+}
+
+.maintenance-moon svg {
+    width: 66px;
+    height: 66px;
+    stroke-width: 1.2;
+}
+
+.maintenance-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border: 1px solid var(--maintenance-secondary);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.maintenance-orbit-one {
+    width: 220px;
+    height: 100px;
+    transform: translate(-50%, -50%) rotate(-28deg);
+}
+
+.maintenance-orbit-two {
+    width: 300px;
+    height: 145px;
+    border-style: dashed;
+    transform: translate(-50%, -50%) rotate(24deg);
+}
+
+.maintenance-star {
+    position: absolute;
+    z-index: 3;
+    color: var(--maintenance-secondary);
+    line-height: 1;
+}
+
+.maintenance-star-one {
+    top: 20px;
+    left: 19%;
+    font-size: 27px;
+}
+
+.maintenance-star-two {
+    top: 26px;
+    right: 17%;
+    font-size: 31px;
+}
+
+.maintenance-star-three {
+    bottom: 18px;
+    left: 25%;
+    font-size: 21px;
+}
+
+.maintenance-star-four {
+    right: 23%;
+    bottom: 25px;
+    font-size: 25px;
+}
+
+/* --------------------------------------------------------------------------
+   Heading and Description
+   -------------------------------------------------------------------------- */
+
+.maintenance-eyebrow {
+    margin: 10px 0;
+
+    color: var(--maintenance-secondary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    line-height: 1.6;
+}
+
+.maintenance-content h1 {
+    max-width: 620px;
+    margin: 0 0 15px;
+
+    color: var(--maintenance-primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(36px, 5vw, 50px);
+    font-weight: 600;
+    line-height: 1.12;
+}
+
+.maintenance-description {
+    max-width: 510px;
+    margin: 0 0 22px;
+
+    color: var(--maintenance-primary);
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* --------------------------------------------------------------------------
+   Status
+   -------------------------------------------------------------------------- */
+
+.maintenance-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 24px;
+    padding: 10px 15px;
+
+    color: var(--maintenance-primary);
+    border: 1px solid var(--maintenance-secondary);
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.maintenance-status-dot {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+
+    background: var(--maintenance-secondary);
+    border-radius: 50%;
+}
+
+/* --------------------------------------------------------------------------
+   Home Button
+   -------------------------------------------------------------------------- */
+
+.maintenance-home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 48px;
+    padding: 12px 20px;
+
+    color: #FFFFFF;
+    background: var(--maintenance-primary);
+    border: 1px solid var(--maintenance-primary);
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.maintenance-home-btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.maintenance-home-btn:hover {
+    color: var(--maintenance-primary);
+    background: var(--maintenance-secondary);
+    border-color: var(--maintenance-secondary);
+}
+
+.maintenance-footer-note {
+    margin: 20px 0 0;
+
+    color: var(--maintenance-primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode — existing global.js adds body.dark-mode
+   -------------------------------------------------------------------------- */
+
+body.maintenance-page.dark-mode {
+    color: #FFFFFF;
+    background: #000000;
+}
+
+body.maintenance-page.dark-mode .maintenance-brand-astro {
+    color: #FFFFFF;
+}
+
+body.maintenance-page.dark-mode .maintenance-brand-guide {
+    color: var(--maintenance-secondary);
+}
+
+body.maintenance-page.dark-mode .maintenance-content h1,
+body.maintenance-page.dark-mode .maintenance-description,
+body.maintenance-page.dark-mode .maintenance-footer-note {
+    color: #FFFFFF;
+}
+
+body.maintenance-page.dark-mode .maintenance-moon {
+    color: var(--maintenance-secondary);
+    border-color: var(--maintenance-secondary);
+}
+
+body.maintenance-page.dark-mode .maintenance-status {
+    color: #FFFFFF;
+    border-color: var(--maintenance-secondary);
+}
+
+body.maintenance-page.dark-mode .maintenance-home-btn {
+    color: #FFFFFF;
+    background: var(--maintenance-primary);
+    border-color: var(--maintenance-secondary);
+}
+
+body.maintenance-page.dark-mode .maintenance-home-btn:hover {
+    color: #000000;
+    background: var(--maintenance-secondary);
+    border-color: var(--maintenance-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   RTL — existing global.js sets html[dir="rtl"]
+   -------------------------------------------------------------------------- */
+
+html[dir="rtl"] body.maintenance-page .maintenance-utilities {
+    right: auto;
+    left: 28px;
+}
+
+html[dir="rtl"] body.maintenance-page .maintenance-content {
+    direction: rtl;
+    text-align: center;
+}
+
+html[dir="rtl"] body.maintenance-page .maintenance-brand,
+html[dir="rtl"] body.maintenance-page .maintenance-brand-name {
+    direction: ltr;
+}
+
+html[dir="rtl"] body.maintenance-page .maintenance-home-btn {
+    direction: rtl;
+}
+
+html[dir="rtl"] body.maintenance-page .maintenance-home-arrow {
+    transform: scaleX(-1);
+}
+
+/* --------------------------------------------------------------------------
+   Tablet
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .maintenance-main {
+        padding: 76px 22px 28px;
+    }
+
+    .maintenance-utilities {
+        top: 18px;
+        right: 20px;
+        gap: 8px;
+    }
+
+    html[dir="rtl"] body.maintenance-page .maintenance-utilities {
+        right: auto;
+        left: 20px;
+    }
+
+    .maintenance-page .maintenance-utilities .st-navbar-icon-btn {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .maintenance-illustration {
+        height: 180px;
+    }
+
+    .maintenance-moon {
+        width: 95px;
+        height: 95px;
+    }
+
+    .maintenance-moon svg {
+        width: 56px;
+        height: 56px;
+    }
+
+    .maintenance-orbit-one {
+        width: 190px;
+        height: 85px;
+    }
+
+    .maintenance-orbit-two {
+        width: 260px;
+        height: 125px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+    .maintenance-main {
+        padding: 76px 20px 24px;
+    }
+
+    .maintenance-brand {
+        margin-bottom: 14px;
+    }
+
+    .maintenance-brand img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .maintenance-brand-name {
+        font-size: 24px;
+    }
+
+    .maintenance-illustration {
+        height: 155px;
+    }
+
+    .maintenance-moon {
+        width: 82px;
+        height: 82px;
+    }
+
+    .maintenance-moon svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .maintenance-orbit-one {
+        width: 160px;
+        height: 72px;
+    }
+
+    .maintenance-orbit-two {
+        width: 220px;
+        height: 105px;
+    }
+
+    .maintenance-content h1 {
+        font-size: clamp(32px, 8vw, 38px);
+    }
+
+    .maintenance-description {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .maintenance-status {
+        margin-bottom: 20px;
+        font-size: 11px;
+    }
+
+    .maintenance-home-btn {
+        min-height: 44px;
+        padding: 11px 16px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Short landscape screens
+   -------------------------------------------------------------------------- */
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .maintenance-main {
+        padding: 60px 24px 20px;
+    }
+
+    .maintenance-brand {
+        margin-bottom: 5px;
+    }
+
+    .maintenance-brand img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .maintenance-illustration {
+        height: 95px;
+        margin-bottom: 3px;
+    }
+
+    .maintenance-moon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .maintenance-moon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .maintenance-orbit-one {
+        width: 145px;
+        height: 55px;
+    }
+
+    .maintenance-orbit-two {
+        width: 200px;
+        height: 75px;
+    }
+
+    .maintenance-eyebrow {
+        margin: 4px 0 6px;
+    }
+
+    .maintenance-content h1 {
+        margin-bottom: 8px;
+        font-size: 30px;
+    }
+
+    .maintenance-description {
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+
+    .maintenance-status {
+        margin-bottom: 12px;
+        padding: 7px 12px;
+    }
+
+    .maintenance-footer-note {
+        margin-top: 8px;
+        font-size: 15px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .maintenance-page *,
+    .maintenance-page *::before,
+    .maintenance-page *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* ==========================================================
+   MAINTENANCE PAGE — DISABLE SCROLLING ON ALL DEVICES
+   ========================================================== */
+
+html,
+body.maintenance-page {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+
+body.maintenance-page {
+  position: fixed;
+  inset: 0;
+  box-sizing: border-box;
+}
+
+/* Keep all page content inside the visible viewport */
+body.maintenance-page *,
+body.maintenance-page *::before,
+body.maintenance-page *::after {
+  box-sizing: border-box;
+}
+
+/* Desktop and laptop */
+@media (min-width: 1025px) {
+  body.maintenance-page {
+    height: 100dvh;
+  }
+}
+
+/* Tablet and mobile portrait */
+@media (max-width: 1024px) {
+  body.maintenance-page {
+    height: 100dvh;
+    overflow: hidden !important;
+  }
+}
+
+/* Mobile landscape — short viewport */
+@media (max-height: 500px) {
+  body.maintenance-page {
+    height: 100dvh;
+    overflow: hidden !important;
+  }
+
+  body.maintenance-page .maintenance-container,
+  body.maintenance-page .maintenance-content,
+  body.maintenance-page .maintenance-visual {
+    min-height: 0;
+  }
+}

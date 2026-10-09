@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F8F1EB">
+  <title>Login | AstroGuide</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/global.css">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const themeBtn = document.getElementById("themeToggle");
+    const rtlBtn = document.getElementById("rtlToggle");
+
+    if (!themeBtn || !rtlBtn) {
+        console.error("Theme or RTL button not found. Check the button IDs.");
+        return;
+    }
+
+    // Restore saved preferences
+    let dark = false;
+    let rtl = false;
+
+    try {
+        dark = localStorage.getItem("astroguidE-theme") === "dark";
+        rtl = localStorage.getItem("astroguidE-rtl") === "true";
+    } catch (error) {}
+
+    function setTheme(isDark) {
+        document.body.classList.toggle("dark-mode", isDark);
+
+        themeBtn.innerHTML = isDark
+            ? '<i data-lucide="sun"></i>'
+            : '<i data-lucide="moon"></i>';
+
+        themeBtn.setAttribute(
+            "aria-label",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+        );
+
+        try {
+            localStorage.setItem(
+                "astroguidE-theme",
+                isDark ? "dark" : "light"
+            );
+        } catch (error) {}
+
+        if (window.lucide) window.lucide.createIcons();
+    }
+
+    function setRTL(isRTL) {
+        document.documentElement.setAttribute("dir", isRTL ? "rtl" : "ltr");
+
+        rtlBtn.innerHTML = '<i data-lucide="arrow-left-right"></i>';
+
+        rtlBtn.setAttribute(
+            "aria-label",
+            isRTL ? "Switch to LTR" : "Switch to RTL"
+        );
+
+        try {
+            localStorage.setItem("astroguidE-rtl", String(isRTL));
+        } catch (error) {}
+
+        if (window.lucide) window.lucide.createIcons();
+    }
+const password = document.getElementById("password");
+    const toggle = document.getElementById("passwordToggle");
+
+    if (!password || !toggle) return;
+
+    toggle.addEventListener("click", function () {
+        const show = password.type === "password";
+
+        password.type = show ? "text" : "password";
+        toggle.innerHTML = show
+            ? '<i data-lucide="eye-off" aria-hidden="true"></i>'
+            : '<i data-lucide="eye" aria-hidden="true"></i>';
+
+        toggle.setAttribute(
+            "aria-label",
+            show ? "Hide password" : "Show password"
+        );
+
+        if (window.lucide) lucide.createIcons();
+    });
+
+    if (window.lucide) lucide.createIcons();
+    setTheme(dark);
+    setRTL(rtl);
+
+    themeBtn.addEventListener("click", function () {
+        dark = !document.body.classList.contains("dark-mode");
+        setTheme(dark);
+    });
+
+    rtlBtn.addEventListener("click", function () {
+        rtl = document.documentElement.getAttribute("dir") !== "rtl";
+        setRTL(rtl);
+    });
+});
+</script>
+
+<body>
+  <main class="login-page">
+
+    <!-- Theme and RTL controls -->
+    <div class="utility-controls">
+      <button type="button"
+                class="st-navbar-icon-btn"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+
+                <i data-lucide="moon"
+                    aria-hidden="true"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+            <button type="button"
+                class="st-navbar-icon-btn"
+                id="rtlToggle"
+                aria-label="Enable RTL"
+                title="Enable RTL">
+
+                <i data-lucide="arrow-left-right"></i>
+
+            </button>
+
+    </div>
+
+    <!-- Login card -->
+    <section class="login-card">
+
+        <a href="./index.html"
+            id="brand"
+            class="st-navbar-brand"
+            aria-label="AstroGuide Home">
+
+            <img src="./images/logo.png"
+                alt="AstroGuide Logo"
+                class="st-navbar-brand-logo">
+
+            <span class="st-navbar-brand-name">
+                <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+            </span>
+
+        </a>
+      <div class="card-heading">
+        <p class="eyebrow">YOUR COSMIC JOURNEY</p>
+        <h1>Welcome <em>back</em></h1>
+        <p class="intro">
+          Sign in to reconnect with your personal astrological guidance.
+        </p>
+      </div>
+
+      <form class="login-form">
+
+        <label for="email">Email address</label>
+        <div class="input-wrap">
+          <i data-lucide="mail" aria-hidden="true"></i>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="password-label">
+          <label for="password">Password</label>
+          <a href="./forgot-password.html">Forgot password?</a>
+        </div>
+
+
+<div class="input-wrap password-wrap">
+    <i data-lucide="lock-keyhole" aria-hidden="true"></i>
+
+    <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        autocomplete="current-password"
+        required
+    >
+
+    <button
+        type="button"
+        class="password-toggle"
+        id="passwordToggle"
+        aria-label="Show password"
+        title="Show password"
+    >
+        <i data-lucide="eye" aria-hidden="true"></i>
+    </button>
+</div>
+
+
+        <label class="remember-row">
+          <input type="checkbox" name="remember">
+          <span class="custom-check"></span>
+          <span>Remember me</span>
+        </label>
+
+        <button class="submit-button" type="submit">
+          Sign in
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </button>
+
+      </form>
+
+      <p class="signup-prompt">
+        New to AstroGuide?
+        <a href="./signup.html">Create an account</a>
+      </p>
+
+      <div class="card-bottom">
+        <span></span>
+        <p>Guidance written in the stars</p>
+        <span></span>
+      </div>
+
+    </section>
+
+    <p class="page-note">A little clarity for the path ahead.</p>
+
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

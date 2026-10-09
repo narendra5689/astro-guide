@@ -1,0 +1,3073 @@
+/* ==========================================================================
+   ASTROGUIDE — PRICING HERO
+   ========================================================================== */
+
+.ag-pricing-hero {
+  position: relative;
+
+  height: 90vh;
+  min-height: 620px;
+  max-height: 900px;
+
+  display: flex;
+  align-items: center;
+
+  background-image: url("../images/pricing-hero.png");
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   OVERLAY
+   ========================================================================== */
+
+.ag-pricing-hero-overlay {
+  display: none;
+}
+
+/* ==========================================================================
+   HERO CONTAINER
+   ========================================================================== */
+
+.ag-pricing-hero-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 40px));
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   HERO CONTENT
+   ========================================================================== */
+
+.ag-pricing-hero-content {
+  width: 100%;
+  max-width: 820px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  opacity: 0;
+
+  transform: translateY(35px);
+
+  animation:
+    agPricingHeroContentReveal
+    0.9s
+    ease-out
+    0.15s
+    forwards;
+}
+
+/* ==========================================================================
+   LABEL
+   ========================================================================== */
+
+.ag-pricing-hero-label {
+  margin: 0 0 16px;
+
+  color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   TITLE
+   ========================================================================== */
+
+.ag-pricing-hero-title {
+  margin: 0;
+
+  color: #ffffff;
+}
+
+.ag-pricing-hero-title span {
+  display: block;
+
+  color: var(--secondary-color);
+
+  font-family: var(--accent-font);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   DESCRIPTION
+   ========================================================================== */
+
+.ag-pricing-hero-description {
+  max-width: 680px;
+
+  margin: 24px auto 0;
+
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   HERO ACTIONS
+   ========================================================================== */
+
+.ag-pricing-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+/* ==========================================================================
+   PRIMARY BUTTON
+   ========================================================================== */
+
+.ag-pricing-hero-btn {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+
+  border: 1px solid var(--secondary-color);
+}
+
+.ag-pricing-hero-btn svg {
+  color: var(--secondary-color);
+  stroke: var(--secondary-color);
+
+  transition: transform 0.3s ease;
+}
+
+.ag-pricing-hero-btn:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+
+  border-color: var(--secondary-color);
+}
+
+.ag-pricing-hero-btn:hover svg {
+  color: var(--primary-color);
+  stroke: var(--primary-color);
+
+  transform: translateY(2px);
+}
+
+/* ==========================================================================
+   SECONDARY BUTTON
+   ========================================================================== */
+
+.ag-pricing-hero-btn-secondary {
+  background: transparent;
+
+  color: #ffffff;
+
+  border: 1px solid var(--secondary-color);
+}
+
+.ag-pricing-hero-btn-secondary svg {
+  color: var(--secondary-color);
+  stroke: var(--secondary-color);
+
+  transition: transform 0.3s ease;
+}
+
+.ag-pricing-hero-btn-secondary:hover {
+  background: var(--secondary-color);
+
+  color: var(--primary-color);
+
+  border-color: var(--secondary-color);
+}
+
+.ag-pricing-hero-btn-secondary:hover svg {
+  color: var(--primary-color);
+  stroke: var(--primary-color);
+
+  transform: translate(2px, -2px);
+}
+
+/* ==========================================================================
+   HERO NOTE
+   ========================================================================== */
+
+.ag-pricing-hero-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 22px;
+
+  color: #ffffff;
+
+  font-family: var(--body-font);
+  font-size: 0.78rem;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.ag-pricing-hero-note svg {
+  flex: 0 0 auto;
+
+  width: 17px;
+  height: 17px;
+
+  color: var(--secondary-color);
+  stroke: var(--secondary-color);
+}
+
+/* ==========================================================================
+   HIDDEN IMAGE VISUAL
+   ========================================================================== */
+
+.ag-pricing-hero-visual {
+  display: none;
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+@keyframes agPricingHeroContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+body.dark-mode .ag-pricing-hero {
+  background-position: center;
+}
+
+body.dark-mode .ag-pricing-hero-label {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-hero-title {
+  color: #ffffff;
+}
+
+body.dark-mode .ag-pricing-hero-description {
+  color: #ffffff;
+}
+
+body.dark-mode .ag-pricing-hero-note {
+  color: #ffffff;
+}
+
+body.dark-mode .ag-pricing-hero-btn {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+
+  border-color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-hero-btn svg {
+  color: var(--secondary-color);
+  stroke: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-hero-btn:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+body.dark-mode .ag-pricing-hero-btn:hover svg {
+  color: var(--primary-color);
+  stroke: var(--primary-color);
+}
+
+body.dark-mode .ag-pricing-hero-btn-secondary {
+  background: transparent;
+  color: #ffffff;
+
+  border-color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-hero-btn-secondary svg {
+  color: var(--secondary-color);
+  stroke: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-hero-btn-secondary:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+body.dark-mode .ag-pricing-hero-btn-secondary:hover svg {
+  color: var(--primary-color);
+  stroke: var(--primary-color);
+}
+
+/* ==========================================================================
+   RTL
+   ========================================================================== */
+
+html[dir="rtl"] .ag-pricing-hero {
+  direction: rtl;
+}
+
+html[dir="rtl"] .ag-pricing-hero-content {
+  text-align: center;
+
+  animation-name: agPricingHeroContentRevealRTL;
+}
+
+html[dir="rtl"] .ag-pricing-hero-note {
+  direction: rtl;
+}
+
+html[dir="rtl"] .ag-pricing-hero-btn-secondary:hover svg {
+  transform: translate(-2px, -2px);
+}
+
+@keyframes agPricingHeroContentRevealRTL {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .ag-pricing-hero {
+    min-height: 600px;
+  }
+
+  .ag-pricing-hero-container {
+    width: min(100% - 96px, 1180px);
+  }
+
+  .ag-pricing-hero-content {
+    max-width: 760px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .ag-pricing-hero {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+
+    padding: 88px 0 92px;
+  }
+
+  .ag-pricing-hero-container {
+    width: calc(100% - 40px);
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ag-pricing-hero-content {
+    width: 100%;
+    max-width: 700px;
+
+    text-align: center;
+  }
+
+  html[dir="rtl"] .ag-pricing-hero-content {
+    text-align: center;
+  }
+
+  .ag-pricing-hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ag-pricing-hero-actions {
+    justify-content: center;
+  }
+
+  .ag-pricing-hero-note {
+    justify-content: center;
+
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   SMALL MOBILE
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  .ag-pricing-hero {
+    padding: 72px 0 78px;
+
+    background-position: center;
+  }
+
+  .ag-pricing-hero-container {
+    width: calc(100% - 32px);
+  }
+
+  .ag-pricing-hero-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .ag-pricing-hero-actions .st-btn {
+    width: 100%;
+  }
+
+  .ag-pricing-hero-note {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  html[dir="rtl"] .ag-pricing-hero-note {
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   EXTRA SMALL
+   ========================================================================== */
+
+@media (max-width: 360px) {
+  .ag-pricing-hero {
+    padding: 64px 0 70px;
+  }
+
+  .ag-pricing-hero-container {
+    width: calc(100% - 28px);
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ag-pricing-hero-content {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .ag-pricing-hero-btn,
+  .ag-pricing-hero-btn svg,
+  .ag-pricing-hero-btn-secondary,
+  .ag-pricing-hero-btn-secondary svg {
+    transition: none;
+  }
+}
+
+/* ==========================================================================
+   ASTROGUIDE — PRICING / CHOOSE YOUR SESSION
+   ========================================================================== */
+
+.ag-pricing-sessions {
+  position: relative;
+  padding: 100px 0 105px;
+  background: #f8f1eb;
+  overflow: hidden;
+}
+
+.ag-pricing-sessions-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.ag-pricing-sessions-header {
+  max-width: 760px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.ag-pricing-sessions-label {
+  margin: 0 0 14px;
+  color: var(--primary-color);
+}
+
+.ag-pricing-sessions-title {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.ag-pricing-sessions-title span {
+  display: block;
+  color: var(--secondary-color);
+  font-family: var(--accent-font);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.ag-pricing-sessions-description {
+  max-width: 650px;
+  margin: 20px auto 0;
+  color: #000000;
+}
+
+/* ==========================================================================
+   CARDS GRID
+   ========================================================================== */
+
+.ag-pricing-sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* ==========================================================================
+   CARD
+   ========================================================================== */
+
+.ag-pricing-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 575px;
+
+  padding: 30px 28px 28px;
+
+  background: var(--primary-color);
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 12px;
+
+  box-shadow: 0 12px 30px rgba(56, 15, 82, 0.14);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.ag-pricing-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 20px 40px rgba(56, 15, 82, 0.2);
+}
+
+/* ==========================================================================
+   POPULAR CARD
+   ========================================================================== */
+
+.ag-pricing-card-popular {
+  border-width: 2px;
+  transform: translateY(-9px);
+
+  box-shadow: 0 20px 40px rgba(56, 15, 82, 0.2);
+}
+
+.ag-pricing-card-popular:hover {
+  transform: translateY(-16px);
+}
+
+.ag-pricing-popular-badge {
+  position: absolute;
+
+  top: -13px;
+  left: 50%;
+
+  padding: 5px 15px;
+
+  color: var(--primary-color);
+  background: var(--secondary-color);
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 20px;
+
+  font-family: var(--body-font);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   CARD TOP
+   ========================================================================== */
+
+.ag-pricing-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+.ag-pricing-card-number {
+  color: var(--secondary-color);
+
+  font-family: var(--heading-font);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ag-pricing-card-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--secondary-color);
+  background: transparent;
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ag-pricing-card-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.ag-pricing-card:hover .ag-pricing-card-icon {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   CARD TEXT
+   ========================================================================== */
+
+.ag-pricing-card-label {
+  margin: 0 0 8px;
+
+  color: var(--secondary-color);
+
+  font-family: var(--body-font);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+}
+
+.ag-pricing-card h3 {
+  margin: 0;
+
+  color: var(--secondary-color);
+
+  font-family: var(--heading-font);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ag-pricing-card-description {
+  min-height: 82px;
+
+  margin: 14px 0 0;
+
+  color: #ffffff;
+
+  font-family: var(--body-font);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   PRICE
+   ========================================================================== */
+
+.ag-pricing-card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+
+  margin-top: 22px;
+}
+
+.ag-pricing-card-currency {
+  color: var(--secondary-color);
+
+  font-family: var(--heading-font);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ag-pricing-card-price strong {
+  color: var(--secondary-color);
+
+  font-family: var(--heading-font);
+  font-size: 2.35rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.ag-pricing-card-duration {
+  color: #ffffff;
+
+  font-family: var(--body-font);
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   DIVIDER
+   ========================================================================== */
+
+.ag-pricing-card-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 24px 0 21px;
+
+  background: var(--secondary-color);
+
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   FEATURES
+   ========================================================================== */
+
+.ag-pricing-card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.ag-pricing-card-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  color: #ffffff;
+
+  font-family: var(--body-font);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.ag-pricing-card-features li svg {
+  flex: 0 0 auto;
+
+  width: 17px;
+  height: 17px;
+
+  margin-top: 1px;
+
+  color: var(--secondary-color);
+  stroke: var(--secondary-color);
+}
+
+/* ==========================================================================
+   CARD FOOTER
+   ========================================================================== */
+
+.ag-pricing-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  margin-top: auto;
+  padding-top: 27px;
+}
+
+.ag-pricing-card-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #ffffff;
+
+  font-family: var(--body-font);
+  font-size: 0.76rem;
+}
+
+.ag-pricing-card-time svg {
+  width: 16px;
+  height: 16px;
+
+  color: var(--secondary-color);
+  stroke: var(--secondary-color);
+}
+
+/* ==========================================================================
+   BUTTON
+   ========================================================================== */
+
+.ag-pricing-card-btn {
+  flex: 0 0 auto;
+
+  background: var(--secondary-color);
+  color: var(--primary-color);
+
+  border: 1px solid var(--secondary-color);
+}
+
+.ag-pricing-card-btn svg {
+  color: var(--primary-color);
+  stroke: var(--primary-color);
+
+  transition: transform 0.3s ease;
+}
+
+.ag-pricing-card-btn:hover {
+  background: #ffffff;
+  color: var(--primary-color);
+
+  border-color: #ffffff;
+}
+
+.ag-pricing-card-btn:hover svg {
+  color: var(--primary-color);
+  stroke: var(--primary-color);
+
+  transform: translate(2px, -2px);
+}
+
+/* ==========================================================================
+   NOTE
+   ========================================================================== */
+
+.ag-pricing-sessions-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin: 32px 0 0;
+
+  color: var(--primary-color);
+
+  font-family: var(--body-font);
+  font-size: 0.78rem;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.ag-pricing-sessions-note svg {
+  width: 17px;
+  height: 17px;
+
+  color: var(--secondary-color);
+  stroke: var(--secondary-color);
+}
+
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+body.dark-mode .ag-pricing-sessions {
+  background: #16091f;
+}
+
+body.dark-mode .ag-pricing-sessions-label {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-sessions-title {
+  color: #ffffff;
+}
+
+body.dark-mode .ag-pricing-sessions-description {
+  color: #ffffff;
+}
+
+body.dark-mode .ag-pricing-card {
+  background: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-card h3,
+body.dark-mode .ag-pricing-card-price strong,
+body.dark-mode .ag-pricing-card-currency {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-card-description,
+body.dark-mode .ag-pricing-card-features li,
+body.dark-mode .ag-pricing-card-duration,
+body.dark-mode .ag-pricing-card-time {
+  color: #ffffff;
+}
+
+body.dark-mode .ag-pricing-sessions-note {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   RTL
+   ========================================================================== */
+
+html[dir="rtl"] .ag-pricing-sessions {
+  direction: rtl;
+}
+
+html[dir="rtl"] .ag-pricing-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .ag-pricing-card-btn:hover svg {
+  transform: translate(-2px, -2px);
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .ag-pricing-sessions {
+    padding: 88px 0 92px;
+  }
+
+  .ag-pricing-sessions-grid {
+    gap: 18px;
+  }
+
+  .ag-pricing-card {
+    min-height: 565px;
+    padding: 26px 22px 25px;
+  }
+
+  .ag-pricing-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .ag-pricing-card-price strong {
+    font-size: 2.1rem;
+  }
+
+  .ag-pricing-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ag-pricing-card-btn {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .ag-pricing-sessions {
+    padding: 72px 0 78px;
+  }
+
+  .ag-pricing-sessions-header {
+    margin-bottom: 42px;
+  }
+
+  .ag-pricing-sessions-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .ag-pricing-card,
+  .ag-pricing-card-popular {
+    min-height: auto;
+    transform: none;
+  }
+
+  .ag-pricing-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .ag-pricing-card-popular:hover {
+    transform: translateY(-5px);
+  }
+
+  .ag-pricing-card-popular {
+    margin-top: 8px;
+  }
+
+  .ag-pricing-card-footer {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ag-pricing-card-btn {
+    width: auto;
+  }
+
+  .ag-pricing-sessions-note {
+    margin-top: 28px;
+  }
+}
+
+/* ==========================================================================
+   SMALL MOBILE
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  .ag-pricing-sessions {
+    padding: 64px 0 70px;
+  }
+
+  .ag-pricing-sessions-container {
+    width: calc(100% - 32px);
+  }
+
+  .ag-pricing-card {
+    padding: 24px 20px 23px;
+  }
+
+  .ag-pricing-card-top {
+    margin-bottom: 25px;
+  }
+
+  .ag-pricing-card-icon {
+    width: 47px;
+    height: 47px;
+  }
+
+  .ag-pricing-card-description {
+    min-height: 0;
+  }
+
+  .ag-pricing-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ag-pricing-card-btn {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   EXTRA SMALL
+   ========================================================================== */
+
+@media (max-width: 360px) {
+  .ag-pricing-sessions {
+    padding: 58px 0 64px;
+  }
+
+  .ag-pricing-sessions-container {
+    width: calc(100% - 28px);
+  }
+
+  .ag-pricing-card h3 {
+    font-size: 1.32rem;
+  }
+
+  .ag-pricing-card-price strong {
+    font-size: 2rem;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ag-pricing-card,
+  .ag-pricing-card-icon,
+  .ag-pricing-card-btn,
+  .ag-pricing-card-btn svg {
+    transition: none;
+  }
+}
+
+/* ==========================================================================
+   ASTROGUIDE — PRICING / FIND YOUR SESSION
+   ========================================================================== */
+
+.ag-pricing-finder {
+  position: relative;
+  padding: 100px 0 105px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.ag-pricing-finder-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.ag-pricing-finder-header {
+  max-width: 760px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.ag-pricing-finder-label {
+  margin: 0 0 14px;
+  color: var(--primary-color);
+}
+
+.ag-pricing-finder-title {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.ag-pricing-finder-title span {
+  display: block;
+  color: var(--secondary-color);
+  font-family: var(--accent-font);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.ag-pricing-finder-description {
+  max-width: 660px;
+  margin: 20px auto 0;
+  color: #000000;
+}
+
+/* ==========================================================================
+   MAIN LAYOUT
+   ========================================================================== */
+
+.ag-pricing-finder-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  gap: 55px;
+  align-items: stretch;
+}
+
+/* ==========================================================================
+   OPTIONS
+   ========================================================================== */
+
+.ag-pricing-finder-options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ag-pricing-finder-option {
+  position: relative;
+
+  width: 100%;
+  min-height: 125px;
+
+  display: grid;
+  grid-template-columns: 38px 52px minmax(0, 1fr) 38px;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 20px 22px;
+
+  color: #000000;
+  background: #f8f1eb;
+
+  border: 1px solid rgba(56, 15, 82, 0.14);
+  border-radius: 10px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ag-pricing-finder-option:hover {
+  border-color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.ag-pricing-finder-option.is-active {
+  color: #ffffff;
+  background: var(--primary-color);
+  border-color: var(--secondary-color);
+
+  box-shadow: 0 12px 28px rgba(56, 15, 82, 0.15);
+}
+
+.ag-pricing-finder-option-number {
+  color: var(--secondary-color);
+
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ag-pricing-finder-option-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--secondary-color);
+  background: transparent;
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.ag-pricing-finder-option-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.ag-pricing-finder-option.is-active
+.ag-pricing-finder-option-icon,
+.ag-pricing-finder-option:hover
+.ag-pricing-finder-option-icon {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+}
+
+.ag-pricing-finder-option-content {
+  display: block;
+  min-width: 0;
+}
+
+.ag-pricing-finder-option-content strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--primary-color);
+
+  font-family: var(--heading-font);
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.ag-pricing-finder-option.is-active
+.ag-pricing-finder-option-content strong {
+  color: var(--secondary-color);
+}
+
+.ag-pricing-finder-option-content span {
+  display: block;
+
+  color: #000000;
+
+  font-family: var(--body-font);
+  font-size: 0.79rem;
+  line-height: 1.6;
+}
+
+.ag-pricing-finder-option.is-active
+.ag-pricing-finder-option-content span {
+  color: #ffffff;
+}
+
+.ag-pricing-finder-option-arrow {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--primary-color);
+
+  border: 1px solid rgba(56, 15, 82, 0.18);
+  border-radius: 50%;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ag-pricing-finder-option-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ag-pricing-finder-option.is-active
+.ag-pricing-finder-option-arrow {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.ag-pricing-finder-option:hover
+.ag-pricing-finder-option-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* ==========================================================================
+   RESULT
+   ========================================================================== */
+
+.ag-pricing-finder-result {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 34px;
+
+  color: #ffffff;
+  background: var(--primary-color);
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 12px;
+
+  box-shadow: 0 16px 36px rgba(56, 15, 82, 0.16);
+}
+
+.ag-pricing-finder-result-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.ag-pricing-finder-result-label {
+  color: var(--secondary-color);
+
+  font-family: var(--body-font);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.ag-pricing-finder-result-number {
+  color: var(--secondary-color);
+
+  font-family: var(--heading-font);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.ag-pricing-finder-result-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  color: var(--secondary-color);
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+}
+
+.ag-pricing-finder-result-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ag-pricing-finder-result-type {
+  margin: 0 0 8px;
+
+  color: var(--secondary-color);
+
+  font-family: var(--body-font);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.ag-pricing-finder-result h3 {
+  margin: 0;
+
+  color: var(--secondary-color);
+
+  font-family: var(--heading-font);
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ag-pricing-finder-result > p:not(.ag-pricing-finder-result-type) {
+  margin: 15px 0 0;
+
+  color: #ffffff;
+
+  font-family: var(--body-font);
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.ag-pricing-finder-result-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+
+  margin-top: 25px;
+  padding-top: 20px;
+
+  border-top: 1px solid var(--secondary-color);
+}
+
+.ag-pricing-finder-result-meta span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #ffffff;
+
+  font-family: var(--body-font);
+  font-size: 0.78rem;
+}
+
+.ag-pricing-finder-result-meta svg {
+  width: 17px;
+  height: 17px;
+
+  color: var(--secondary-color);
+  stroke: var(--secondary-color);
+}
+
+.ag-pricing-finder-result-meta strong {
+  color: var(--secondary-color);
+}
+
+.ag-pricing-finder-btn {
+  width: 100%;
+  margin-top: auto;
+
+  background: var(--secondary-color);
+  color: var(--primary-color);
+
+  border: 1px solid var(--secondary-color);
+}
+
+.ag-pricing-finder-btn svg {
+  color: var(--primary-color);
+  stroke: var(--primary-color);
+
+  transition: transform 0.3s ease;
+}
+
+.ag-pricing-finder-btn:hover {
+  background: #ffffff;
+  color: var(--primary-color);
+  border-color: #ffffff;
+}
+
+.ag-pricing-finder-btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* ==========================================================================
+   NOTE
+   ========================================================================== */
+
+.ag-pricing-finder-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin: 32px 0 0;
+
+  color: var(--primary-color);
+
+  font-family: var(--body-font);
+  font-size: 0.78rem;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.ag-pricing-finder-note svg {
+  width: 17px;
+  height: 17px;
+
+  color: var(--secondary-color);
+  stroke: var(--secondary-color);
+}
+
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+body.dark-mode .ag-pricing-finder {
+  background: #16091f;
+}
+
+body.dark-mode .ag-pricing-finder-label {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-finder-title {
+  color: #ffffff;
+}
+
+body.dark-mode .ag-pricing-finder-description {
+  color: #ffffff;
+}
+
+body.dark-mode .ag-pricing-finder-option {
+  color: #ffffff;
+  background: var(--primary-color);
+  border-color: rgba(212, 175, 90, 0.4);
+}
+
+body.dark-mode .ag-pricing-finder-option-content strong {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-finder-option-content span {
+  color: #ffffff;
+}
+
+body.dark-mode .ag-pricing-finder-option.is-active {
+  background: #000000;
+  border-color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-finder-option-arrow {
+  color: var(--secondary-color);
+  border-color: rgba(212, 175, 90, 0.4);
+}
+
+body.dark-mode .ag-pricing-finder-option.is-active
+.ag-pricing-finder-option-arrow {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-finder-result {
+  background: #000000;
+}
+
+body.dark-mode .ag-pricing-finder-note {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   RTL
+   ========================================================================== */
+
+html[dir="rtl"] .ag-pricing-finder {
+  direction: rtl;
+}
+
+html[dir="rtl"] .ag-pricing-finder-option {
+  text-align: right;
+}
+
+html[dir="rtl"] .ag-pricing-finder-option:hover {
+  transform: translateX(-5px);
+}
+
+html[dir="rtl"] .ag-pricing-finder-option:hover
+.ag-pricing-finder-option-arrow {
+  transform: translate(-2px, -2px);
+}
+
+html[dir="rtl"] .ag-pricing-finder-result {
+  text-align: right;
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .ag-pricing-finder {
+    padding: 88px 0 92px;
+  }
+
+  .ag-pricing-finder-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.85fr);
+    gap: 30px;
+  }
+
+  .ag-pricing-finder-option {
+    grid-template-columns: 30px 48px minmax(0, 1fr) 34px;
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .ag-pricing-finder-option-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .ag-pricing-finder-result {
+    padding: 28px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .ag-pricing-finder {
+    padding: 72px 0 78px;
+  }
+
+  .ag-pricing-finder-container {
+    width: min(100% - 40px, 1180px);
+  }
+
+  .ag-pricing-finder-header {
+    margin-bottom: 40px;
+  }
+
+  .ag-pricing-finder-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .ag-pricing-finder-option {
+    grid-template-columns: 30px 48px minmax(0, 1fr) 34px;
+  }
+
+  .ag-pricing-finder-result {
+    min-height: 390px;
+  }
+}
+
+/* ==========================================================================
+   SMALL MOBILE
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  .ag-pricing-finder {
+    padding: 64px 0 70px;
+  }
+
+  .ag-pricing-finder-container {
+    width: calc(100% - 32px);
+  }
+
+  .ag-pricing-finder-option {
+    grid-template-columns: 28px 44px minmax(0, 1fr) 30px;
+    gap: 10px;
+    min-height: 120px;
+    padding: 17px;
+  }
+
+  .ag-pricing-finder-option-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .ag-pricing-finder-option-content strong {
+    font-size: 0.98rem;
+  }
+
+  .ag-pricing-finder-option-content span {
+    font-size: 0.74rem;
+  }
+
+  .ag-pricing-finder-option-arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .ag-pricing-finder-result {
+    padding: 25px 22px;
+  }
+
+  .ag-pricing-finder-result h3 {
+    font-size: 1.65rem;
+  }
+}
+
+/* ==========================================================================
+   EXTRA SMALL
+   ========================================================================== */
+
+@media (max-width: 360px) {
+  .ag-pricing-finder {
+    padding: 58px 0 64px;
+  }
+
+  .ag-pricing-finder-container {
+    width: calc(100% - 28px);
+  }
+
+  .ag-pricing-finder-option {
+    grid-template-columns: 25px 40px minmax(0, 1fr);
+  }
+
+  .ag-pricing-finder-option-arrow {
+    display: none;
+  }
+
+  .ag-pricing-finder-option-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ag-pricing-finder-option,
+  .ag-pricing-finder-option-icon,
+  .ag-pricing-finder-option-arrow,
+  .ag-pricing-finder-btn,
+  .ag-pricing-finder-btn svg {
+    transition: none;
+  }
+}
+body.dark-mode .ag-pricing-finder {
+  background: #21102D;
+}
+
+/* ==========================================================================
+   PRICING — WHAT'S INCLUDED
+   ========================================================================== */
+
+.ag-pricing-included {
+  padding: 110px 0;
+  background: var(--background-color);
+  overflow: hidden;
+}
+
+.ag-pricing-included-container {
+  width: min(1180px, calc(100% - 128px));
+  margin: 0 auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   HEADER
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-included-header {
+  max-width: 760px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.ag-pricing-included-label {
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+
+.ag-pricing-included-title {
+  margin: 0 0 22px;
+  color: var(--primary-color);
+}
+
+.ag-pricing-included-title span {
+  display: block;
+  color: var(--secondary-color);
+  font-family: var(--accent-font);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.ag-pricing-included-description {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #000000;
+}
+
+
+/* --------------------------------------------------------------------------
+   GRID
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-included-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+
+/* --------------------------------------------------------------------------
+   ITEM
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-included-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  min-height: 205px;
+  padding: 30px 26px;
+  background: #FFFFFF;
+  border: 1px solid var(--secondary-color);
+  border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ag-pricing-included-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(56, 15, 82, 0.12);
+}
+
+
+/* --------------------------------------------------------------------------
+   ICON
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-included-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--primary-color);
+  color: var(--secondary-color);
+
+  border-radius: 50%;
+}
+
+.ag-pricing-included-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+}
+
+
+/* --------------------------------------------------------------------------
+   CONTENT
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-included-content {
+  min-width: 0;
+}
+
+.ag-pricing-included-number {
+  display: block;
+  margin-bottom: 7px;
+
+  color: var(--secondary-color);
+
+  font-family: var(--body-font);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.ag-pricing-included-content h3 {
+  margin: 0 0 10px;
+
+  color: var(--primary-color);
+
+  font-family: var(--heading-font);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ag-pricing-included-content p {
+  margin: 0;
+
+  color: #000000;
+
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+
+/* --------------------------------------------------------------------------
+   NOTE
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-included-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 42px;
+
+  color: var(--primary-color);
+
+  font-family: var(--body-font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.ag-pricing-included-note svg {
+  width: 18px;
+  height: 18px;
+  color: var(--secondary-color);
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   DARK MODE
+   -------------------------------------------------------------------------- */
+
+body.dark-mode .ag-pricing-included {
+  background: #21102D;
+}
+
+body.dark-mode .ag-pricing-included-label {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-included-title {
+  color: #FFFFFF;
+}
+
+body.dark-mode .ag-pricing-included-description {
+  color: #FFFFFF;
+}
+
+body.dark-mode .ag-pricing-included-item {
+  background: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-included-item:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+}
+
+body.dark-mode .ag-pricing-included-icon {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+body.dark-mode .ag-pricing-included-number {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-included-content h3 {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-included-content p {
+  color: #FFFFFF;
+}
+
+body.dark-mode .ag-pricing-included-note {
+  color: #FFFFFF;
+}
+
+
+/* --------------------------------------------------------------------------
+   RTL
+   -------------------------------------------------------------------------- */
+
+html[dir="rtl"] .ag-pricing-included-item {
+  text-align: right;
+}
+
+html[dir="rtl"] .ag-pricing-included-note {
+  flex-direction: row-reverse;
+}
+
+
+/* --------------------------------------------------------------------------
+   TABLET
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+
+  .ag-pricing-included {
+    padding: 95px 0;
+  }
+
+  .ag-pricing-included-container {
+    width: min(100% - 96px, 900px);
+  }
+
+  .ag-pricing-included-header {
+    margin-bottom: 50px;
+  }
+
+  .ag-pricing-included-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+  .ag-pricing-included {
+    padding: 80px 0;
+  }
+
+  .ag-pricing-included-container {
+    width: calc(100% - 40px);
+  }
+
+  .ag-pricing-included-header {
+    margin-bottom: 38px;
+  }
+
+  .ag-pricing-included-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ag-pricing-included-item {
+    min-height: auto;
+    padding: 25px 22px;
+  }
+
+  .ag-pricing-included-note {
+    margin-top: 32px;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   SMALL MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+  .ag-pricing-included {
+    padding: 70px 0;
+  }
+
+  .ag-pricing-included-container {
+    width: calc(100% - 32px);
+  }
+
+  .ag-pricing-included-item {
+    gap: 16px;
+    padding: 22px 18px;
+  }
+
+  .ag-pricing-included-icon {
+    flex-basis: 42px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .ag-pricing-included-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .ag-pricing-included-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .ag-pricing-included-content p {
+    font-size: 0.86rem;
+  }
+
+}
+
+
+@media (max-width: 360px) {
+
+  .ag-pricing-included-container {
+    width: calc(100% - 28px);
+  }
+
+  .ag-pricing-included-item {
+    padding: 20px 16px;
+  }
+
+}
+body.dark-mode .ag-pricing-included {
+  background: #16091F;
+}
+
+/* ==========================================================================
+   PRICING — SESSION COMPARISON
+   ========================================================================== */
+
+.ag-pricing-comparison {
+  padding: 110px 0;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.ag-pricing-comparison-container {
+  width: min(1180px, calc(100% - 128px));
+  margin: 0 auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   HEADER
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-comparison-header {
+  max-width: 760px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.ag-pricing-comparison-header .st-section-label {
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+
+.ag-pricing-comparison-header .st-section-title {
+  margin: 0 0 22px;
+  color: var(--primary-color);
+}
+
+.ag-pricing-comparison-header .st-section-title span {
+  display: block;
+  color: var(--secondary-color);
+  font-family: var(--accent-font);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.ag-pricing-comparison-header .st-section-description {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #000000;
+}
+
+
+/* --------------------------------------------------------------------------
+   TABLE WRAPPER
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-comparison-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 14px;
+
+  background: var(--primary-color);
+
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* --------------------------------------------------------------------------
+   TABLE
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-comparison-table {
+  width: 100%;
+  min-width: 760px;
+
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+
+/* --------------------------------------------------------------------------
+   TABLE HEAD
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-comparison-table thead th {
+  padding: 22px 24px;
+
+  background: var(--secondary-color);
+  color: var(--primary-color);
+
+  border-bottom: 1px solid var(--secondary-color);
+
+  font-family: var(--body-font);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ag-pricing-comparison-table thead th:first-child {
+  width: 25%;
+  text-align: left;
+}
+
+
+/* --------------------------------------------------------------------------
+   TABLE BODY
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-comparison-table tbody th,
+.ag-pricing-comparison-table tbody td {
+  padding: 20px 24px;
+
+  border-bottom: 1px solid rgba(212, 175, 90, 0.45);
+
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.ag-pricing-comparison-table tbody th {
+  color: var(--secondary-color);
+  font-weight: 700;
+  text-align: left;
+}
+
+.ag-pricing-comparison-table tbody td {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.ag-pricing-comparison-table tbody tr:last-child th,
+.ag-pricing-comparison-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   CHECK / NOT INCLUDED
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-comparison-table tbody td {
+  font-size: 1rem;
+}
+
+.ag-pricing-comparison-table tbody td:has(+ td) {
+  transition: background-color 0.25s ease;
+}
+
+.ag-pricing-comparison-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* --------------------------------------------------------------------------
+   FIRST COLUMN
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-comparison-table tbody th {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+
+/* --------------------------------------------------------------------------
+   DARK MODE
+   -------------------------------------------------------------------------- */
+
+body.dark-mode .ag-pricing-comparison {
+  background: #21102D;
+}
+
+body.dark-mode .ag-pricing-comparison-header .st-section-label {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-comparison-header .st-section-title {
+  color: #FFFFFF;
+}
+
+body.dark-mode .ag-pricing-comparison-header .st-section-description {
+  color: #FFFFFF;
+}
+
+body.dark-mode .ag-pricing-comparison-table-wrap {
+  border-color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-comparison-table tbody th {
+  background: rgba(0, 0, 0, 0.12);
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-comparison-table tbody td {
+  color: #FFFFFF;
+}
+
+body.dark-mode .ag-pricing-comparison-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* --------------------------------------------------------------------------
+   RTL
+   -------------------------------------------------------------------------- */
+
+html[dir="rtl"] .ag-pricing-comparison-table thead th:first-child,
+html[dir="rtl"] .ag-pricing-comparison-table tbody th {
+  text-align: right;
+}
+
+
+/* --------------------------------------------------------------------------
+   TABLET
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+
+  .ag-pricing-comparison {
+    padding: 95px 0;
+  }
+
+  .ag-pricing-comparison-container {
+    width: min(100% - 96px, 900px);
+  }
+
+  .ag-pricing-comparison-header {
+    margin-bottom: 50px;
+  }
+
+  .ag-pricing-comparison-table {
+    min-width: 720px;
+  }
+
+  .ag-pricing-comparison-table thead th,
+  .ag-pricing-comparison-table tbody th,
+  .ag-pricing-comparison-table tbody td {
+    padding: 18px 16px;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+  .ag-pricing-comparison {
+    padding: 80px 0;
+  }
+
+  .ag-pricing-comparison-container {
+    width: calc(100% - 40px);
+  }
+
+  .ag-pricing-comparison-header {
+    margin-bottom: 38px;
+  }
+
+  .ag-pricing-comparison-table-wrap {
+    border-radius: 10px;
+  }
+
+  .ag-pricing-comparison-table {
+    min-width: 720px;
+  }
+
+  .ag-pricing-comparison-table thead th,
+  .ag-pricing-comparison-table tbody th,
+  .ag-pricing-comparison-table tbody td {
+    padding: 16px 14px;
+  }
+
+  .ag-pricing-comparison-table thead th {
+    font-size: 0.7rem;
+  }
+
+  .ag-pricing-comparison-table tbody th,
+  .ag-pricing-comparison-table tbody td {
+    font-size: 0.84rem;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   SMALL MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+  .ag-pricing-comparison {
+    padding: 70px 0;
+  }
+
+  .ag-pricing-comparison-container {
+    width: calc(100% - 32px);
+  }
+
+  .ag-pricing-comparison-table {
+    min-width: 680px;
+  }
+
+  .ag-pricing-comparison-table thead th,
+  .ag-pricing-comparison-table tbody th,
+  .ag-pricing-comparison-table tbody td {
+    padding: 15px 12px;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   VERY SMALL MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 360px) {
+
+  .ag-pricing-comparison-container {
+    width: calc(100% - 28px);
+  }
+
+}
+
+/* ==========================================================================
+   PRICING — FAQ
+   ========================================================================== */
+
+.ag-pricing-faq {
+  padding: 110px 0;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.ag-pricing-faq-container {
+  width: min(920px, calc(100% - 128px));
+  margin: 0 auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   HEADER
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-faq-header {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.ag-pricing-faq-label {
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+
+.ag-pricing-faq-title {
+  margin: 0 0 22px;
+  color: var(--primary-color);
+}
+
+.ag-pricing-faq-title span {
+  display: block;
+  color: var(--secondary-color);
+  font-family: var(--accent-font);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.ag-pricing-faq-description {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #000000;
+}
+
+
+/* --------------------------------------------------------------------------
+   FAQ LIST
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+/* --------------------------------------------------------------------------
+   FAQ ITEM
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-faq-item {
+  background: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+/* --------------------------------------------------------------------------
+   QUESTION
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-faq-question {
+  width: 100%;
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 20px 24px;
+
+  background: transparent;
+  color: var(--secondary-color);
+
+  border: 0;
+
+  font-family: var(--body-font);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.5;
+
+  text-align: left;
+  cursor: pointer;
+
+  transition: background-color 0.25s ease;
+}
+
+.ag-pricing-faq-question:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* --------------------------------------------------------------------------
+   ICON
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-faq-icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+
+  color: var(--secondary-color);
+}
+
+.ag-pricing-faq-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+
+/* --------------------------------------------------------------------------
+   ANSWER
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-faq-answer {
+  display: none;
+  padding: 0 24px 24px;
+}
+
+.ag-pricing-faq-item.is-open .ag-pricing-faq-answer {
+  display: block;
+}
+
+.ag-pricing-faq-answer p {
+  max-width: 760px;
+  margin: 0;
+
+  color: #FFFFFF;
+
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+
+/* --------------------------------------------------------------------------
+   OPEN STATE
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-faq-item.is-open .ag-pricing-faq-question {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+
+/* --------------------------------------------------------------------------
+   DARK MODE
+   -------------------------------------------------------------------------- */
+
+body.dark-mode .ag-pricing-faq {
+  background: #16091F;
+}
+
+body.dark-mode .ag-pricing-faq-label {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-faq-title {
+  color: #FFFFFF;
+}
+
+body.dark-mode .ag-pricing-faq-description {
+  color: #FFFFFF;
+}
+
+body.dark-mode .ag-pricing-faq-item {
+  background: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+
+/* --------------------------------------------------------------------------
+   RTL
+   -------------------------------------------------------------------------- */
+
+html[dir="rtl"] .ag-pricing-faq-question {
+  text-align: right;
+}
+
+
+/* --------------------------------------------------------------------------
+   TABLET
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+
+  .ag-pricing-faq {
+    padding: 95px 0;
+  }
+
+  .ag-pricing-faq-container {
+    width: min(100% - 96px, 820px);
+  }
+
+  .ag-pricing-faq-header {
+    margin-bottom: 50px;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+  .ag-pricing-faq {
+    padding: 80px 0;
+  }
+
+  .ag-pricing-faq-container {
+    width: calc(100% - 40px);
+  }
+
+  .ag-pricing-faq-header {
+    margin-bottom: 38px;
+  }
+
+  .ag-pricing-faq-list {
+    gap: 12px;
+  }
+
+  .ag-pricing-faq-question {
+    min-height: 68px;
+    padding: 17px 18px;
+    font-size: 0.9rem;
+  }
+
+  .ag-pricing-faq-answer {
+    padding: 0 18px 20px;
+  }
+
+  .ag-pricing-faq-answer p {
+    font-size: 0.85rem;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   SMALL MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+  .ag-pricing-faq {
+    padding: 70px 0;
+  }
+
+  .ag-pricing-faq-container {
+    width: calc(100% - 32px);
+  }
+
+  .ag-pricing-faq-question {
+    gap: 12px;
+    padding: 16px;
+    font-size: 0.86rem;
+  }
+
+  .ag-pricing-faq-icon {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+
+  .ag-pricing-faq-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   VERY SMALL MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 360px) {
+
+  .ag-pricing-faq-container {
+    width: calc(100% - 28px);
+  }
+
+}
+.ag-pricing-faq {
+  background: #F8F1EB;
+}
+.ag-pricing-faq-icon {
+  position: relative;
+}
+
+.ag-pricing-faq-icon .faq-minus {
+  display: none;
+}
+
+.ag-pricing-faq-item.is-open .ag-pricing-faq-icon .faq-plus {
+  display: none;
+}
+
+.ag-pricing-faq-item.is-open .ag-pricing-faq-icon .faq-minus {
+  display: block;
+}
+/* ==========================================================================
+   PRICING — NEWSLETTER
+   ========================================================================== */
+
+.ag-pricing-newsletter {
+  padding: 105px 0;
+  background: var(--primary-color);
+  overflow: hidden;
+}
+
+.ag-pricing-newsletter-container {
+  width: min(900px, calc(100% - 128px));
+  margin: 0 auto;
+}
+
+.ag-pricing-newsletter-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* --------------------------------------------------------------------------
+   CONTENT
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-newsletter-label {
+  margin-bottom: 16px;
+  color: var(--secondary-color);
+}
+
+.ag-pricing-newsletter-title {
+  margin: 0 0 22px;
+  color: #FFFFFF;
+}
+
+.ag-pricing-newsletter-title span {
+  display: block;
+  color: var(--secondary-color);
+  font-family: var(--accent-font);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.ag-pricing-newsletter-description {
+  max-width: 660px;
+  margin: 0 auto 32px;
+  color: #FFFFFF;
+}
+
+
+/* --------------------------------------------------------------------------
+   FORM
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-newsletter-form {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.ag-pricing-newsletter-input-wrap {
+  position: relative;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+}
+
+.ag-pricing-newsletter-input-wrap svg {
+  position: absolute;
+  left: 17px;
+
+  width: 19px;
+  height: 19px;
+
+  color: var(--primary-color);
+  stroke: currentColor;
+}
+
+.ag-pricing-newsletter-input-wrap input {
+  width: 100%;
+  min-height: 48px;
+
+  padding: 11px 16px 11px 48px;
+
+  background: #FFFFFF;
+  color: #000000;
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+
+  font-family: var(--body-font);
+  font-size: 0.88rem;
+
+  outline: none;
+}
+
+.ag-pricing-newsletter-input-wrap input::placeholder {
+  color: #000000;
+  opacity: 0.65;
+}
+
+.ag-pricing-newsletter-input-wrap input:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 2px rgba(212, 175, 90, 0.2);
+}
+
+
+/* --------------------------------------------------------------------------
+   BUTTON
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-newsletter-btn {
+  flex-shrink: 0;
+
+  background: var(--secondary-color);
+  color: var(--primary-color);
+
+  border: 1px solid var(--secondary-color);
+}
+
+.ag-pricing-newsletter-btn svg {
+  color: currentColor;
+  stroke: currentColor;
+}
+
+.ag-pricing-newsletter-btn:hover {
+  background: #FFFFFF;
+  color: var(--primary-color);
+  border-color: #FFFFFF;
+}
+
+
+/* --------------------------------------------------------------------------
+   NOTE
+   -------------------------------------------------------------------------- */
+
+.ag-pricing-newsletter-note {
+  margin: 16px 0 0;
+
+  color: #FFFFFF;
+
+  font-family: var(--body-font);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+/* --------------------------------------------------------------------------
+   DARK MODE
+   -------------------------------------------------------------------------- */
+
+body.dark-mode .ag-pricing-newsletter {
+  background: #16091F;
+}
+
+body.dark-mode .ag-pricing-newsletter-label {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .ag-pricing-newsletter-title {
+  color: #FFFFFF;
+}
+
+body.dark-mode .ag-pricing-newsletter-description {
+  color: #FFFFFF;
+}
+
+body.dark-mode .ag-pricing-newsletter-note {
+  color: #FFFFFF;
+}
+
+
+/* --------------------------------------------------------------------------
+   RTL
+   -------------------------------------------------------------------------- */
+
+html[dir="rtl"] .ag-pricing-newsletter-input-wrap svg {
+  left: auto;
+  right: 17px;
+}
+
+html[dir="rtl"] .ag-pricing-newsletter-input-wrap input {
+  padding-left: 16px;
+  padding-right: 48px;
+}
+
+html[dir="rtl"] .ag-pricing-newsletter-form {
+  direction: rtl;
+}
+
+
+/* --------------------------------------------------------------------------
+   TABLET
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+
+  .ag-pricing-newsletter {
+    padding: 95px 0;
+  }
+
+  .ag-pricing-newsletter-container {
+    width: min(100% - 96px, 820px);
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+  .ag-pricing-newsletter {
+    padding: 80px 0;
+  }
+
+  .ag-pricing-newsletter-container {
+    width: calc(100% - 40px);
+  }
+
+  .ag-pricing-newsletter-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ag-pricing-newsletter-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   SMALL MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+  .ag-pricing-newsletter {
+    padding: 70px 0;
+  }
+
+  .ag-pricing-newsletter-container {
+    width: calc(100% - 32px);
+  }
+
+  .ag-pricing-newsletter-input-wrap input {
+    min-height: 46px;
+    font-size: 0.84rem;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   VERY SMALL MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 360px) {
+
+  .ag-pricing-newsletter-container {
+    width: calc(100% - 28px);
+  }
+
+}
+body.dark-mode .ag-pricing-newsletter {
+  background: #21102D;
+}

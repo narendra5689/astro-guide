@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AstroGuide is temporarily undergoing maintenance. We'll be back soon.">
+    <title>Under Maintenance | AstroGuide</title>
+
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/maintenance.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./js/global.js"></script>
+</head>
+
+<body class="maintenance-page">
+
+    <main class="maintenance-main">
+
+        <div class="maintenance-utilities">
+            <button
+                type="button"
+                class="st-navbar-icon-btn"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+                <i data-lucide="moon" aria-hidden="true"></i>
+            </button>
+
+            <button
+                type="button"
+                class="st-navbar-icon-btn"
+                id="rtlToggle"
+                aria-label="Enable RTL"
+                title="Enable RTL">
+                <i data-lucide="arrow-left-right" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <section class="maintenance-content">
+
+            <div class="maintenance-illustration" aria-hidden="true">
+                <span class="maintenance-orbit maintenance-orbit-one"></span>
+                <span class="maintenance-orbit maintenance-orbit-two"></span>
+
+                <div class="maintenance-moon">
+                    <i data-lucide="moon-star"></i>
+                </div>
+
+                <span class="maintenance-star maintenance-star-one">✦</span>
+                <span class="maintenance-star maintenance-star-two">✧</span>
+                <span class="maintenance-star maintenance-star-three">✦</span>
+                <span class="maintenance-star maintenance-star-four">✧</span>
+            </div>
+
+            <p class="maintenance-eyebrow">A MOMENT UNDER THE STARS</p>
+
+            <h1>We're aligning the universe.</h1>
+
+            <p class="maintenance-description">
+                AstroGuide is undergoing a little maintenance to make your
+                experience even better. We're working behind the scenes
+                and will be back with you soon.
+            </p>
+
+
+            <a href="./index.html" class="maintenance-home-btn">
+                <i data-lucide="house" aria-hidden="true"></i>
+                <span>Back to Home</span>
+                <i class="maintenance-home-arrow" data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+
+
+        </section>
+
+    </main>
+
+    <script>
+        if (typeof lucide !== "undefined" && lucide.createIcons) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>

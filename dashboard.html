@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your personal AstroGuide dashboard for consultations, appointments, horoscope reports, and reading summaries.">
+  <title>AstroGuide | My Dashboard</title>
+  <link rel="icon" type="image/png" href="./images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="./js/dashboard.js" defer></script>
+</head>
+<body>
+  <div class="dashboard-shell">
+    <input class="sidebar-state" type="checkbox" id="sidebar-state" aria-label="Toggle navigation">
+    <label class="sidebar-scrim" for="sidebar-state" aria-label="Close navigation"></label>
+
+    <aside class="sidebar" aria-label="Dashboard navigation">
+<a href="./index.html"
+            class="st-navbar-brand"
+            aria-label="AstroGuide Home">
+
+            <img src="./images/logo.png"
+                alt="AstroGuide Logo"
+                class="st-navbar-brand-logo">
+
+            <span class="st-navbar-brand-name">
+                <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+            </span>
+
+        </a>
+
+<hr class="sidebar-divider">
+
+      <nav class="side-nav">
+        <p class="nav-caption">WORKSPACE</p>
+        <button class="nav-item active" type="button" data-section="overview"><i data-lucide="layout-dashboard"></i><span>Overview</span></button>
+        <button class="nav-item" type="button" data-section="consultations"><i data-lucide="sparkles"></i><span>Consultations</span><span class="nav-count">2</span></button>
+        <button class="nav-item" type="button" data-section="appointments"><i data-lucide="calendar-days"></i><span>Appointments</span></button>
+        <button class="nav-item" type="button" data-section="readings"><i data-lucide="book-open-text"></i><span>Reading summaries</span></button>
+        <button class="nav-item" type="button" data-section="horoscope"><i data-lucide="orbit"></i><span>Horoscope reports</span></button>
+
+        <p class="nav-caption nav-caption-spaced">YOUR ACCOUNT</p>
+        <button class="nav-item" type="button" data-section="payments"><i data-lucide="wallet"></i><span>Payment history</span></button>
+        <button class="nav-item" type="button" data-section="notifications"><i data-lucide="bell"></i><span>Notifications</span><span class="notification-dot"></span></button>
+        <button class="nav-item" type="button" data-section="profile"><i data-lucide="user-round"></i><span>Profile settings</span></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+
+        <button class="logout-button" type="button" data-logout><i data-lucide="log-out"></i><span>Log out</span></button>
+        <p class="sidebar-footnote">© <span data-current-year></span> AstroGuide</p>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left">
+          <label for="sidebar-state" class="mobile-menu icon-button" aria-label="Open navigation"><i data-lucide="menu"></i></label>
+          <div>
+            <h1 class="topbar-title" id="current-page-title">Overview</h1>
+          </div>
+        </div>
+<div class="topbar-actions">
+  <!-- Theme Toggle -->
+  <button type="button"
+          class="topbar-btn"
+          id="themeToggle"
+          data-theme-toggle
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode">
+    <i data-lucide="moon" aria-hidden="true"></i>
+  </button>
+
+  <!-- RTL Toggle -->
+  <button type="button"
+          class="topbar-btn"
+          id="rtlToggle"
+          data-rtl-toggle
+          aria-label="Toggle RTL"
+          title="Toggle RTL">
+    <i data-lucide="arrow-left-right" aria-hidden="true"></i>
+  </button>
+
+  <!-- Profile -->
+  <div class="topbar-profile">
+    <button class="topbar-btn profile-trigger"
+            type="button"
+            data-profile-toggle
+            aria-label="Open profile menu"
+            aria-expanded="false">
+      <div class="avatar avatar-sm">NN</div>
+      <span class="profile-name">Narendra Nelluri</span>
+      <i data-lucide="chevron-down" class="profile-chevron"></i>
+    </button>
+
+    <div class="profile-dropdown" data-profile-menu>
+      <button type="button" data-section-target="profile">
+        <i data-lucide="user-round"></i> My profile
+      </button>
+      <button type="button" data-logout>
+        <i data-lucide="log-out"></i> Log out
+      </button>
+    </div>
+  </div>
+</div>
+      </header>
+
+      <div class="page-content">
+        <section class="dashboard-section active" id="section-overview" data-title="Overview">
+          <div class="welcome-row">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-star">✦</span> YOUR COSMIC CHECK-IN</p>
+              <h2>Good morning, <em>Narendra.</em></h2>
+              <p class="welcome-description">Make space for clarity, reflection, and the possibilities ahead.</p>
+            </div>
+            <button class="button button-primary" type="button" data-section-target="consultations"><i data-lucide="plus"></i> Book a consultation</button>
+          </div>
+
+          <article class="daily-card">
+            <div class="daily-copy">
+              <span class="daily-label"><i data-lucide="sun"></i> YOUR DAILY INSIGHT</span>
+              <h3>Let your next step be guided by intention.</h3>
+              <p>Today is a good moment to slow down, listen carefully, and choose what aligns with the person you are becoming.</p>
+              <button class="text-link" type="button" data-section-target="horoscope">Explore your horoscope <i data-lucide="arrow-up-right"></i></button>
+            </div>
+            <div class="daily-art" aria-hidden="true">
+              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+              <div class="sun-disc">☼</div><span class="star star-one">✦</span><span class="star star-two">✧</span><span class="star star-three">✦</span><span class="star star-four">✧</span>
+            </div>
+          </article>
+
+          <div class="stats-grid">
+            <article class="stat-card"><span class="stat-icon purple"><i data-lucide="calendar-check"></i></span><div class="stat-copy"><span>Upcoming sessions</span><strong>02</strong><small class="stat-note">1 this week</small></div><span class="stat-arrow"><i data-lucide="arrow-up-right"></i></span></article>
+            <article class="stat-card"><span class="stat-icon gold"><i data-lucide="book-open"></i></span><div class="stat-copy"><span>Saved readings</span><strong>08</strong><small class="stat-note">Ready to revisit</small></div><span class="stat-arrow"><i data-lucide="arrow-up-right"></i></span></article>
+            <article class="stat-card"><span class="stat-icon ink"><i data-lucide="sparkles"></i></span><div class="stat-copy"><span>Reports available</span><strong>03</strong><small class="stat-note">Personalized for you</small></div><span class="stat-arrow"><i data-lucide="arrow-up-right"></i></span></article>
+          </div>
+
+          <div class="content-grid">
+            <section class="panel upcoming-panel">
+              <div class="panel-heading"><div><p class="eyebrow">COMING UP</p><h3>Your next sessions</h3></div><button class="text-link" type="button" data-section-target="appointments">View all <i data-lucide="arrow-up-right"></i></button></div>
+              <article class="session-row">
+                <div class="date-tile"><span>OCT</span><strong>12</strong></div>
+                <div class="session-details"><strong>Birth chart reading</strong><span>With Ananya Sharma</span><small><i data-lucide="clock-3"></i> 5:30 PM · 45 minutes</small></div>
+                <span class="status status-confirmed">Confirmed</span>
+              </article>
+              <article class="session-row">
+                <div class="date-tile"><span>OCT</span><strong>18</strong></div>
+                <div class="session-details"><strong>Career &amp; purpose</strong><span>With Rohan Mehta</span><small><i data-lucide="clock-3"></i> 11:00 AM · 30 minutes</small></div>
+                <span class="status status-pending">Upcoming</span>
+              </article>
+              <button class="panel-footer-link" type="button" data-section-target="consultations">Manage consultations <i data-lucide="arrow-right"></i></button>
+            </section>
+
+            <section class="panel moon-panel">
+              <div class="panel-heading"><div><p class="eyebrow">CELESTIAL NOTE</p><h3>In the cosmos</h3></div><span class="mini-icon"><i data-lucide="moon-star"></i></span></div>
+              <div class="moon-visual"><div class="moon-shape"></div><span class="moon-sparkle sparkle-a">✦</span><span class="moon-sparkle sparkle-b">✧</span><span class="moon-sparkle sparkle-c">✦</span></div>
+              <p class="moon-phase">WAXING CRESCENT</p>
+              <h4>A little momentum goes a long way.</h4>
+              <p class="muted-copy">Build on one small intention today. Consistency matters more than urgency.</p>
+              <button class="text-link" type="button" data-section-target="horoscope">Read your forecast <i data-lucide="arrow-up-right"></i></button>
+            </section>
+          </div>
+
+          <section class="panel recent-panel">
+            <div class="panel-heading"><div><p class="eyebrow">KEEP EXPLORING</p><h3>Recently saved readings</h3></div><button class="text-link" type="button" data-section-target="readings">All readings <i data-lucide="arrow-up-right"></i></button></div>
+            <div class="reading-list">
+              <article class="reading-item"><span class="reading-symbol">☉</span><div><strong>Your natal chart overview</strong><span>Birth chart · Saved October 03, 2026</span></div><button class="icon-button subtle-button" type="button" data-open-reading="Natal chart overview" aria-label="Open natal chart reading"><i data-lucide="arrow-up-right"></i></button></article>
+              <article class="reading-item"><span class="reading-symbol reading-symbol-gold">☾</span><div><strong>Emotional patterns &amp; the Moon</strong><span>Personal insight · Saved September 28, 2026</span></div><button class="icon-button subtle-button" type="button" data-open-reading="Emotional patterns and the Moon" aria-label="Open Moon reading"><i data-lucide="arrow-up-right"></i></button></article>
+            </div>
+          </section>
+        </section>
+
+        <section class="dashboard-section" id="section-consultations" data-title="Consultations">
+          <div class="section-intro"><div><p class="eyebrow">PERSONAL GUIDANCE</p><h2>Your consultations</h2><p>Keep your sessions, astrologer details, and next steps in one calm, organized space.</p></div><button class="button button-primary" type="button" data-toast="Astrologer discovery will be available when booking is connected."><i data-lucide="plus"></i> Find an astrologer</button></div>
+          <div class="stats-grid compact-stats">
+            <article class="stat-card"><span class="stat-icon purple"><i data-lucide="calendar-clock"></i></span><div class="stat-copy"><span>Upcoming</span><strong>02</strong><small class="stat-note">Scheduled sessions</small></div></article>
+            <article class="stat-card"><span class="stat-icon gold"><i data-lucide="check-circle-2"></i></span><div class="stat-copy"><span>Completed</span><strong>06</strong><small class="stat-note">Past consultations</small></div></article>
+            <article class="stat-card"><span class="stat-icon ink"><i data-lucide="file-text"></i></span><div class="stat-copy"><span>Reading notes</span><strong>04</strong><small class="stat-note">Saved after sessions</small></div></article>
+          </div>
+          <section class="panel consultation-panel">
+            <div class="panel-heading"><div><p class="eyebrow">YOUR SCHEDULE</p><h3>Upcoming consultations</h3><p class="panel-description">Review the session details, preparation notes, and current booking status.</p></div><span class="status status-confirmed">2 scheduled</span></div>
+            <article class="consultation-card">
+              <div class="consultation-date"><span>MON</span><strong>12</strong><small>OCT 2026</small></div>
+              <div class="consultation-main"><div class="consultation-title-row"><div><h4>Birth chart reading</h4><p>Understand the themes and patterns in your natal chart.</p></div><span class="status status-confirmed">Confirmed</span></div><div class="consultation-meta"><span><i data-lucide="user-round"></i> Ananya Sharma</span><span><i data-lucide="clock-3"></i> 5:30 PM IST</span><span><i data-lucide="video"></i> Online · 45 min</span></div><div class="consultation-actions"><button class="button button-primary button-small" type="button" data-toast="Your session details will appear here when the booking system is connected.">View session</button><button class="button button-outline button-small" type="button" data-section-target="readings">Past notes</button></div></div>
+            </article>
+            <article class="consultation-card">
+              <div class="consultation-date date-gold"><span>SUN</span><strong>18</strong><small>OCT 2026</small></div>
+              <div class="consultation-main"><div class="consultation-title-row"><div><h4>Career &amp; purpose</h4><p>Explore professional direction and the strengths you can build on.</p></div><span class="status status-pending">Upcoming</span></div><div class="consultation-meta"><span><i data-lucide="user-round"></i> Rohan Mehta</span><span><i data-lucide="clock-3"></i> 11:00 AM IST</span><span><i data-lucide="video"></i> Online · 30 min</span></div><div class="consultation-actions"><button class="button button-primary button-small" type="button" data-toast="Your session details will appear here when the booking system is connected.">View session</button><button class="button button-outline button-small" type="button" data-toast="Rescheduling requires a connected booking service.">Reschedule</button></div></div>
+            </article>
+          </section>
+          <section class="panel prep-panel"><span class="prep-icon"><i data-lucide="notebook-pen"></i></span><div><h3>Make the most of your next session</h3><p>Jot down a few questions or topics you would like to explore before meeting your astrologer.</p></div><button class="button button-outline button-small" type="button" data-section-target="profile">Update preferences</button></section>
+        </section>
+
+        <section class="dashboard-section" id="section-appointments" data-title="Appointments">
+          <div class="section-intro"><div><p class="eyebrow">YOUR CALENDAR</p><h2>Appointments</h2><p>See what is coming up and revisit the sessions you have completed.</p></div></div>
+          <section class="panel"><div class="panel-heading"><div><p class="eyebrow">OCTOBER 2026</p><h3>Scheduled sessions</h3></div><span class="status status-confirmed">2 upcoming</span></div><div class="appointment-list"><article class="appointment-line"><div class="date-tile"><span>OCT</span><strong>12</strong></div><div class="session-details"><strong>Birth chart reading</strong><span>Ananya Sharma · Online</span><small><i data-lucide="clock-3"></i> 5:30 PM IST · 45 minutes</small></div><span class="status status-confirmed">Confirmed</span></article><article class="appointment-line"><div class="date-tile"><span>OCT</span><strong>18</strong></div><div class="session-details"><strong>Career &amp; purpose</strong><span>Rohan Mehta · Online</span><small><i data-lucide="clock-3"></i> 11:00 AM IST · 30 minutes</small></div><span class="status status-pending">Upcoming</span></article></div></section>
+        </section>
+
+        <section class="dashboard-section" id="section-readings" data-title="Reading summaries">
+          <div class="section-intro"><div><p class="eyebrow">YOUR PERSONAL LIBRARY</p><h2>Reading summaries</h2><p>Return to the insights and themes you have saved along the way.</p></div></div>
+          <div class="reading-cards">
+            <article class="reading-card"><span class="reading-symbol">☉</span><p class="eyebrow">BIRTH CHART</p><h3>Your natal chart overview</h3><p>A starting point for understanding your chart's key placements and recurring themes.</p><span class="reading-date">Saved October 03, 2026</span><button class="text-link" type="button" data-open-reading="Your natal chart overview">Open summary <i data-lucide="arrow-up-right"></i></button></article>
+            <article class="reading-card"><span class="reading-symbol reading-symbol-gold">☾</span><p class="eyebrow">PERSONAL INSIGHT</p><h3>Emotional patterns &amp; the Moon</h3><p>Reflect on emotional needs, comfort, and the patterns that help you feel grounded.</p><span class="reading-date">Saved September 28, 2026</span><button class="text-link" type="button" data-open-reading="Emotional patterns and the Moon">Open summary <i data-lucide="arrow-up-right"></i></button></article>
+            <article class="reading-card"><span class="reading-symbol">↗</span><p class="eyebrow">CAREER</p><h3>Strengths &amp; direction</h3><p>A reminder of the skills, values, and questions you wanted to explore further.</p><span class="reading-date">Saved September 14, 2026</span><button class="text-link" type="button" data-open-reading="Strengths and direction">Open summary <i data-lucide="arrow-up-right"></i></button></article>
+          </div>
+        </section>
+
+        <section class="dashboard-section" id="section-horoscope" data-title="Horoscope reports">
+          <div class="section-intro"><div><p class="eyebrow">PERSONALIZED FOR YOU</p><h2>Horoscope reports</h2><p>Explore reflective guidance for the themes you are navigating.</p></div></div>
+          <div class="horoscope-feature"><div><p class="eyebrow">YOUR SUN SIGN</p><h3>Cancer</h3><p>Let intuition inform your choices, but give yourself enough time to consider the practical details too. A steady conversation may bring useful clarity.</p><span class="horoscope-date"><i data-lucide="calendar"></i> Daily reflection · October 9, 2026</span></div><div class="zodiac-mark">♋</div></div>
+          <div class="reading-cards two-cards"><article class="reading-card"><span class="stat-icon purple"><i data-lucide="heart"></i></span><p class="eyebrow">CONNECTIONS</p><h3>Love &amp; relationships</h3><p>Consider which conversations would benefit from patience, curiosity, and honest listening.</p><button class="text-link" type="button" data-toast="Your full report will be available when report content is connected.">Read report <i data-lucide="arrow-up-right"></i></button></article><article class="reading-card"><span class="stat-icon gold"><i data-lucide="compass"></i></span><p class="eyebrow">WORK &amp; PURPOSE</p><h3>Career direction</h3><p>Choose one practical action that brings a longer-term goal closer to reality.</p><button class="text-link" type="button" data-toast="Your full report will be available when report content is connected.">Read report <i data-lucide="arrow-up-right"></i></button></article></div>
+          <p class="disclaimer">Astrology content is provided for personal reflection and entertainment, not as a substitute for professional advice.</p>
+        </section>
+
+        <section class="dashboard-section" id="section-payments" data-title="Payment history">
+          <div class="section-intro"><div><p class="eyebrow">ACCOUNT ACTIVITY</p><h2>Payment history</h2><p>Review a sample of your recent consultation transactions.</p></div></div>
+          <section class="panel"><div class="panel-heading"><div><p class="eyebrow">RECENT TRANSACTIONS</p><h3>Payments</h3></div><span class="mini-icon"><i data-lucide="wallet"></i></span></div><div class="table-wrap"><table><thead><tr><th>Service</th><th>Date</th><th>Payment method</th><th>Amount</th><th>Status</th></tr></thead><tbody><tr><td><strong>Birth chart reading</strong><small>AG-1026-014</small></td><td>Oct 03, 2026</td><td>UPI</td><td>₹1,499</td><td><span class="status status-confirmed">Paid</span></td></tr><tr><td><strong>Career &amp; purpose</strong><small>AG-0926-008</small></td><td>Sep 21, 2026</td><td>Card</td><td>₹999</td><td><span class="status status-confirmed">Paid</span></td></tr><tr><td><strong>Relationship insight</strong><small>AG-0916-002</small></td><td>Sep 16, 2026</td><td>UPI</td><td>₹799</td><td><span class="status status-confirmed">Paid</span></td></tr></tbody></table></div></section>
+        </section>
+
+        <section class="dashboard-section" id="section-notifications" data-title="Notifications">
+          <div class="section-intro"><div><p class="eyebrow">STAY IN THE LOOP</p><h2>Notifications</h2><p>Helpful reminders and updates related to your AstroGuide account.</p></div><button class="button button-outline" type="button" data-mark-read>Mark all as read</button></div>
+          <section class="panel notification-list"><article class="notification-item unread"><span class="notification-icon"><i data-lucide="calendar-check"></i></span><div><strong>Your consultation is coming up</strong><p>Your birth chart reading with Ananya Sharma is scheduled for October 12 at 5:30 PM IST.</p><small>Today · Appointment reminder</small></div><span class="unread-indicator"></span></article><article class="notification-item unread"><span class="notification-icon gold"><i data-lucide="book-open"></i></span><div><strong>Your reading summary is ready</strong><p>Your natal chart overview is saved in your Reading Summaries section.</p><small>October 03, 2026 · Reading update</small></div><span class="unread-indicator"></span></article><article class="notification-item"><span class="notification-icon"><i data-lucide="shield-check"></i></span><div><strong>Profile details reviewed</strong><p>Your account details are available in Profile Settings.</p><small>September 28, 2026 · Account</small></div></article></section>
+        </section>
+
+        <section class="dashboard-section" id="section-profile" data-title="Profile settings">
+          <div class="section-intro"><div><p class="eyebrow">MAKE IT YOURS</p><h2>Profile settings</h2><p>Manage the personal details used for your AstroGuide experience.</p></div></div>
+          <section class="panel profile-panel"><div class="profile-heading"><div class="avatar avatar-profile">NN</div><div><h3>Narendra Nelluri</h3><p>Member since 2026</p></div><span class="profile-badge"><i data-lucide="badge-check"></i> Personal account</span></div><form id="profile-form" class="profile-form"><label>Full name<input name="fullName" type="text" value="Narendra Nelluri" autocomplete="name" required></label><label>Email address<input name="email" type="email" value="hello@example.com" autocomplete="email" required></label><label>Date of birth<input name="birthDate" type="date" value="2005-05-24"></label><label>Preferred topic<select name="topic"><option>Birth chart</option><option>Career &amp; purpose</option><option>Relationships</option><option>Personal growth</option></select></label><label class="form-wide">What would you like to explore?<textarea name="interests" rows="3" placeholder="Share the themes you are curious about..."></textarea></label><div class="form-actions"><button class="button button-primary" type="submit">Save changes</button><button class="button button-outline" type="reset">Reset</button></div></form><p class="form-note">This demo saves preferences in your current browser only. No information is sent to a server.</p></section>
+        </section>
+
+        <footer class="page-footer"><span>Made for reflection, not prediction.</span><span>AstroGuide <span class="footer-star">✦</span> <span data-current-year></span></span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite" data-toast-container></div>
+  <dialog class="reading-dialog" data-reading-dialog>
+    <button class="icon-button dialog-close" type="button" data-close-dialog aria-label="Close reading"><i data-lucide="x"></i></button>
+    <p class="eyebrow">YOUR SAVED INSIGHT</p><h2 data-dialog-title>Reading summary</h2>
+    <p>This summary is a place to revisit your notes, key themes, and questions from a previous session. Connect your reading service to load your personal saved content here.</p>
+    <button class="button button-primary" type="button" data-close-dialog>Close summary</button>
+  </dialog>
+</body>
+</html>

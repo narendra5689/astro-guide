@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AstroGuide | Astrology & Horoscope Guidance</title>
+
+    <meta
+        name="description"
+        content="Explore personalized astrology, birth charts, horoscopes and compatibility guidance with AstroGuide."
+    >
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/contact.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="./js/global.js"></script>
+    <script src="./js/contact.js"></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <script src="./js/pricing.js"></script>
+</head>
+
+<body>
+
+    <!-- navbar -->
+<header class="st-navbar">
+
+    <div class="st-navbar-inner">
+
+        <!-- Brand -->
+        <a href="./index.html"
+            class="st-navbar-brand"
+            aria-label="AstroGuide Home">
+
+            <img src="./images/logo.png"
+                alt="AstroGuide Logo"
+                class="st-navbar-brand-logo">
+
+            <span class="st-navbar-brand-name">
+                <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+            </span>
+
+        </a>
+
+
+        <!-- Desktop Navigation -->
+        <nav class="st-navbar-nav"
+            aria-label="Main navigation">
+
+            <!-- Home -->
+            <div class="st-nav-dropdown">
+
+                <button type="button"
+                    class="st-navbar-link st-nav-dropdown-toggle"
+                    aria-expanded="false"
+                    aria-haspopup="true">
+
+                    <span>Home</span>
+
+                    <i data-lucide="chevron-down"
+                        aria-hidden="true"></i>
+
+                </button>
+
+
+                <div class="st-nav-dropdown-menu">
+
+                    <a href="./index.html"
+                        class="st-nav-dropdown-link">
+                        Home 1
+                    </a>
+
+                    <a href="./home2.html"
+                        class="st-nav-dropdown-link">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- About -->
+            <a href="./about.html"
+                class="st-navbar-link">
+                About
+            </a>
+
+
+            <!-- Services -->
+            <a href="./services.html"
+                class="st-navbar-link">
+                Services
+            </a>
+
+
+
+
+
+            <!-- Astrologers -->
+            <a href="./astrologers.html"
+                class="st-navbar-link">
+                Astrologers
+            </a>
+
+
+            <!-- Pricing -->
+            <a href="./pricing.html"
+                class="st-navbar-link">
+                Pricing
+            </a>
+
+            <!-- Horoscope -->
+            <a href="./contact.html"
+                class="st-navbar-link active">
+                Contact
+            </a>
+
+            <!-- Dashboard -->
+            <a href="./dashboard.html"
+                class="st-navbar-link">
+                Dashboard
+            </a>
+
+        </nav>
+
+
+        <!-- Navbar Actions -->
+        <div class="st-navbar-actions">
+
+            <!-- Dark Mode -->
+            <button type="button"
+                class="st-navbar-icon-btn"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+
+                <i data-lucide="moon"
+                    aria-hidden="true"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+            <button type="button"
+                class="st-navbar-icon-btn"
+                id="rtlToggle"
+                aria-label="Enable RTL"
+                title="Enable RTL">
+
+                <i data-lucide="arrow-left-right"></i>
+
+            </button>
+
+
+            <!-- Login -->
+            <a href="./login.html"
+                class="st-login-btn">
+                Login
+            </a>
+
+
+            <!-- Book Consultation -->
+            <a href="./contact.html#contact-form"
+                class="st-consultation-btn">
+                Book Consultation
+            </a>
+
+
+            <!-- Mobile Menu -->
+            <button type="button"
+                class="st-navbar-menu-btn"
+                id="mobileMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu">
+
+                <i data-lucide="menu"
+                    aria-hidden="true"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ====================================================================
+         MOBILE MENU
+         ==================================================================== -->
+
+    <div class="st-mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true">
+
+        <div class="st-mobile-menu-inner">
+
+            <nav class="st-mobile-nav"
+                aria-label="Mobile navigation">
+
+
+                <!-- Home -->
+                <div class="st-mobile-home-group">
+
+                    <button type="button"
+                        class="st-mobile-nav-link st-mobile-home-toggle"
+                        aria-expanded="false">
+
+                        <span>Home</span>
+
+                        <i data-lucide="chevron-down"
+                            aria-hidden="true"></i>
+
+                    </button>
+
+
+                    <div class="st-mobile-dropdown">
+
+                        <a href="./index.html"
+                            class="st-mobile-dropdown-link">
+                            Home 1
+                        </a>
+
+                        <a href="./home2.html"
+                            class="st-mobile-dropdown-link">
+                            Home 2
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- About -->
+                <a href="./about.html"
+                    class="st-mobile-nav-link">
+                    About
+                </a>
+
+
+                <!-- Services -->
+                <a href="./services.html"
+                    class="st-mobile-nav-link">
+                    Services
+                </a>
+
+                <!-- Astrologers -->
+                <a href="./astrologers.html"
+                    class="st-mobile-nav-link">
+                    Astrologers
+                </a>
+
+
+                <!-- Pricing -->
+                <a href="./pricing.html"
+                    class="st-mobile-nav-link">
+                    Pricing
+                </a>
+                <!-- Pricing -->
+                <a href="./contact.html"
+                    class="st-mobile-nav-link active">
+                    Contact
+                </a>
+                
+                <!-- Dashboard -->
+                <a href="./dashboard.html"
+                    class="st-mobile-nav-link">
+                    Dashboard
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Actions -->
+            <div class="st-mobile-menu-actions">
+
+                <a href="./login.html"
+                    class="st-login-btn">
+                    Login
+                </a>
+                <a href="./contact.html#contact-form"
+                    class="st-consultation-btn">
+                    Book Consultation
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="st-page">
+
+
+<!-- =========================================================
+     ASTROGUIDE — CONTACT HERO
+========================================================= -->
+<section class="ag-contact-hero" aria-labelledby="ag-contact-hero-title">
+  <div class="ag-contact-hero-inner">
+
+    <!-- Left: Hero Content -->
+    <div class="ag-contact-hero-content">
+
+      <p class="st-section-label ag-contact-hero-label">
+        LET'S CONNECT
+      </p>
+
+      <h1 id="ag-contact-hero-title" class="st-section-title ag-contact-hero-title">
+        Every journey begins
+        <span>with a conversation.</span>
+      </h1>
+
+      <p class="st-section-description ag-contact-hero-description">
+        Whether you're exploring your birth chart, seeking clarity in
+        relationships, or looking for direction in your career, we're
+        here to help you find the right guidance for your journey.
+      </p>
+
+      <div class="ag-contact-hero-actions">
+        <a href="#contact-form" class="st-btn ag-contact-hero-btn">
+          Book a Consultation
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </a>
+
+        <a href="#contact-details" class="st-btn ag-contact-hero-btn-secondary">
+          Contact Our Team
+          <i data-lucide="message-circle" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="ag-contact-hero-trust">
+        <span class="ag-contact-hero-trust-icon">
+          <i data-lucide="sparkles" aria-hidden="true"></i>
+        </span>
+
+        <p>
+          Personalised guidance
+          <span aria-hidden="true">·</span>
+          Thoughtful conversations
+          <span aria-hidden="true">·</span>
+          A space to explore
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Right: Hero Image Card -->
+    <div class="ag-contact-hero-visual">
+
+      <div class="ag-contact-hero-image-card">
+
+        <div class="ag-contact-hero-image-holder">
+          <img
+            src="./images/contact-hero.png"
+            alt="A welcoming space for personal astrology guidance"
+            class="ag-contact-hero-image"
+            fetchpriority="high"
+          >
+        </div>
+
+        <div class="ag-contact-hero-image-frame" aria-hidden="true"></div>
+
+        <div class="ag-contact-hero-image-caption">
+          <span class="ag-contact-hero-caption-icon">
+            <i data-lucide="moon-star" aria-hidden="true"></i>
+          </span>
+
+          <div class="ag-contact-hero-caption-content">
+            <span class="ag-contact-hero-caption-label">
+              YOUR JOURNEY
+            </span>
+            <p>Find clarity. Follow your path.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Floating Information Card -->
+      <div class="ag-contact-hero-floating-card">
+        <span class="ag-contact-hero-floating-icon">
+          <i data-lucide="heart-handshake" aria-hidden="true"></i>
+        </span>
+
+        <div>
+          <strong>Personal Guidance</strong>
+          <span>Thoughtful, one-to-one conversations</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Scroll Indicator -->
+  <a href="#contact-details" class="ag-contact-hero-scroll">
+    <span>SCROLL TO CONNECT</span>
+    <i data-lucide="arrow-down" aria-hidden="true"></i>
+  </a>
+
+</section>
+
+<!-- =========================================================
+     ASTROGUIDE — GET IN TOUCH
+========================================================= -->
+<section class="ag-contact-details" id="contact-details"
+  aria-labelledby="ag-contact-details-title">
+
+  <div class="ag-contact-details-container">
+
+    <!-- Section Header -->
+    <div class="ag-contact-details-header">
+      <p class="st-section-label ag-contact-details-label">
+        GET IN TOUCH
+      </p>
+
+      <h2 id="ag-contact-details-title"
+        class="st-section-title ag-contact-details-title">
+        Let's find the
+        <span>right guidance for you.</span>
+      </h2>
+
+      <p class="st-section-description ag-contact-details-description">
+        Have a question about our consultations or need help choosing
+        a session? Reach out to our team and we'll help you understand
+        the next steps on your astrology journey.
+      </p>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="ag-contact-details-layout">
+
+      <!-- Left: Contact Information -->
+      <div class="ag-contact-details-content">
+
+        <div class="ag-contact-details-intro">
+          <span class="ag-contact-details-intro-line"></span>
+          <p>WE'RE HERE TO HELP</p>
+        </div>
+
+        <h3 class="ag-contact-details-subtitle">
+          Your questions deserve
+          <span>a thoughtful response.</span>
+        </h3>
+
+        <p class="ag-contact-details-text">
+          Whether you're planning your first reading, have questions
+          about a booking, or want to learn more about our services,
+          we're here to make connecting with AstroGuide simple.
+        </p>
+
+        <!-- Contact Items -->
+        <div class="ag-contact-details-list">
+
+          <a href="mailto:hello@astroguide.com"
+            class="ag-contact-details-item">
+
+            <span class="ag-contact-details-icon">
+              <i data-lucide="mail" aria-hidden="true"></i>
+            </span>
+
+            <span class="ag-contact-details-item-content">
+              <span class="ag-contact-details-item-label">
+                EMAIL US
+              </span>
+              <strong>hello@astroguide.com</strong>
+              <span class="ag-contact-details-item-description">
+                Questions and general enquiries
+              </span>
+            </span>
+
+            <i class="ag-contact-details-arrow"
+              data-lucide="arrow-up-right"
+              aria-hidden="true"></i>
+          </a>
+
+          <a href="#contact-form"
+            class="ag-contact-details-item">
+
+            <span class="ag-contact-details-icon">
+              <i data-lucide="calendar-days" aria-hidden="true"></i>
+            </span>
+
+            <span class="ag-contact-details-item-content">
+              <span class="ag-contact-details-item-label">
+                BOOK A SESSION
+              </span>
+              <strong>Schedule a consultation</strong>
+              <span class="ag-contact-details-item-description">
+                Find a session suited to your questions
+              </span>
+            </span>
+
+            <i class="ag-contact-details-arrow"
+              data-lucide="arrow-up-right"
+              aria-hidden="true"></i>
+          </a>
+
+          <div class="ag-contact-details-item">
+
+            <span class="ag-contact-details-icon">
+              <i data-lucide="messages-square"
+                aria-hidden="true"></i>
+            </span>
+
+            <span class="ag-contact-details-item-content">
+              <span class="ag-contact-details-item-label">
+                PERSONAL GUIDANCE
+              </span>
+              <strong>We're ready to listen</strong>
+              <span class="ag-contact-details-item-description">
+                Tell us what you'd like help exploring
+              </span>
+            </span>
+
+            <span class="ag-contact-details-static-arrow">
+              <i data-lucide="arrow-up-right"
+                aria-hidden="true"></i>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Service Highlights -->
+        <div class="ag-contact-details-highlights">
+
+          <div class="ag-contact-details-highlight">
+            <i data-lucide="check-circle-2"
+              aria-hidden="true"></i>
+            <span>Personalised guidance</span>
+          </div>
+
+          <div class="ag-contact-details-highlight">
+            <i data-lucide="check-circle-2"
+              aria-hidden="true"></i>
+            <span>Experienced astrologers</span>
+          </div>
+
+          <div class="ag-contact-details-highlight">
+            <i data-lucide="check-circle-2"
+              aria-hidden="true"></i>
+            <span>Thoughtful conversations</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right: Location Panel -->
+      <div class="ag-contact-location">
+
+        <div class="ag-contact-location-map">
+
+          <!-- Replace this placeholder with your actual map embed
+               once a verified office location is available. -->
+
+          <div class="ag-contact-location-placeholder">
+
+            <div class="ag-contact-location-orbit">
+              <span class="ag-contact-location-orbit-dot"></span>
+            </div>
+
+            <div class="ag-contact-location-marker">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+            </div>
+
+            <p class="ag-contact-location-eyebrow">
+              CONNECT WITH ASTROGUIDE
+            </p>
+
+            <h3>
+              Your journey,
+              <span>our guidance.</span>
+            </h3>
+
+            <p class="ag-contact-location-description">
+              Connect with our team to explore your consultation
+              options and find the guidance you're looking for.
+            </p>
+
+            <a href="#contact-form"
+              class="st-btn ag-contact-location-btn">
+              Request a Consultation
+              <i data-lucide="arrow-up-right"
+                aria-hidden="true"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Location Panel Footer -->
+        <div class="ag-contact-location-footer">
+
+          <span class="ag-contact-location-footer-icon">
+            <i data-lucide="compass" aria-hidden="true"></i>
+          </span>
+
+          <div>
+            <span class="ag-contact-location-footer-label">
+              YOUR NEXT STEP
+            </span>
+            <p>Start a conversation with AstroGuide.</p>
+          </div>
+
+          <i class="ag-contact-location-footer-arrow"
+            data-lucide="arrow-up-right"
+            aria-hidden="true"></i>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     ASTROGUIDE — WHY ASTROGUIDE
+========================================================= -->
+<section class="ag-contact-why" aria-labelledby="ag-contact-why-title">
+  <div class="ag-contact-why-container">
+
+    <div class="ag-contact-why-header">
+      <p class="st-section-label ag-contact-why-label">
+        WHY ASTROGUIDE
+      </p>
+
+      <h2 id="ag-contact-why-title" class="st-section-title ag-contact-why-title">
+        Guidance that begins
+        <span>with understanding.</span>
+      </h2>
+
+      <p class="st-section-description ag-contact-why-description">
+        Every question is personal. We create space for thoughtful
+        conversations, meaningful astrological insights, and guidance
+        shaped around the things that matter to you.
+      </p>
+    </div>
+
+    <div class="ag-contact-why-grid">
+
+      <!-- Card 1 -->
+      <article class="ag-contact-why-card">
+        <div class="ag-contact-why-card-top">
+          <span class="ag-contact-why-number">01</span>
+          <span class="ag-contact-why-icon">
+            <i data-lucide="user-round" aria-hidden="true"></i>
+          </span>
+        </div>
+
+        <h3>Personalised Guidance</h3>
+
+        <p>
+          Your experiences and questions deserve individual attention.
+          Explore astrological themes in the context of your own journey
+          rather than a one-size-fits-all reading.
+        </p>
+
+        <div class="ag-contact-why-card-footer">
+          <span>YOUR JOURNEY</span>
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="ag-contact-why-card">
+        <div class="ag-contact-why-card-top">
+          <span class="ag-contact-why-number">02</span>
+          <span class="ag-contact-why-icon">
+            <i data-lucide="book-open" aria-hidden="true"></i>
+          </span>
+        </div>
+
+        <h3>Thoughtful Interpretation</h3>
+
+        <p>
+          Traditional astrological knowledge meets a grounded,
+          considered approach to help you explore patterns, reflect
+          on possibilities, and ask better questions.
+        </p>
+
+        <div class="ag-contact-why-card-footer">
+          <span>DEEPER INSIGHT</span>
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="ag-contact-why-card">
+        <div class="ag-contact-why-card-top">
+          <span class="ag-contact-why-number">03</span>
+          <span class="ag-contact-why-icon">
+            <i data-lucide="messages-square" aria-hidden="true"></i>
+          </span>
+        </div>
+
+        <h3>A Supportive Conversation</h3>
+
+        <p>
+          Bring the questions that matter to you into a welcoming
+          conversation where you can explore your concerns and
+          consider your next steps at your own pace.
+        </p>
+
+        <div class="ag-contact-why-card-footer">
+          <span>SPACE TO EXPLORE</span>
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="ag-contact-why-note">
+      <span class="ag-contact-why-note-icon">
+        <i data-lucide="sparkles" aria-hidden="true"></i>
+      </span>
+
+      <p>
+        Astrology offers perspective. Your choices and your journey
+        remain uniquely yours.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     ASTROGUIDE — MAP & CONTACT FORM
+========================================================= -->
+<section class="ag-contact-form-section" id="contact-form"
+  aria-labelledby="ag-contact-form-title">
+
+  <div class="ag-contact-form-container">
+
+    <!-- Section Heading -->
+    <div class="ag-contact-form-header">
+      <p class="st-section-label ag-contact-form-label">
+        LET'S START A CONVERSATION
+      </p>
+
+      <h2 id="ag-contact-form-title"
+        class="st-section-title ag-contact-form-heading">
+        We're here to
+        <span>listen and guide.</span>
+      </h2>
+
+      <p class="st-section-description ag-contact-form-intro">
+        Tell us what you would like to explore. Send us your enquiry
+        and we'll help you find the right AstroGuide consultation.
+      </p>
+    </div>
+
+    <!-- Two-column layout -->
+    <div class="ag-contact-form-layout">
+
+      <!-- LEFT: MAP -->
+      <div class="ag-contact-map-column">
+
+        <div class="ag-contact-map-heading">
+          <span class="ag-contact-map-heading-icon">
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+          </span>
+
+          <div>
+            <span class="ag-contact-map-eyebrow">FIND US</span>
+            <h3>Connect with AstroGuide</h3>
+          </div>
+        </div>
+
+        <div class="ag-contact-map-frame">
+
+          <!-- Replace the query with your verified office address.
+               This is a map embed, not a confirmed office location. -->
+          <iframe
+            title="Map showing Hyderabad, Telangana"
+            src="https://maps.google.com/maps?q=Hyderabad%2C%20Telangana%2C%20India&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+
+          <a
+            class="ag-contact-map-open"
+            href="https://www.google.com/maps/search/?api=1&query=Hyderabad%2C%20Telangana%2C%20India"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i data-lucide="external-link" aria-hidden="true"></i>
+            Open in Maps
+          </a>
+
+        </div>
+
+        <div class="ag-contact-map-info">
+
+          <div class="ag-contact-map-info-icon">
+            <i data-lucide="compass" aria-hidden="true"></i>
+          </div>
+
+          <div class="ag-contact-map-info-content">
+            <span>LOCATION</span>
+            <strong>Hyderabad, Telangana, India</strong>
+            <p>Update this location if your office is elsewhere.</p>
+          </div>
+
+        </div>
+
+        <div class="ag-contact-map-note">
+          <i data-lucide="sparkles" aria-hidden="true"></i>
+          <p>
+            Prefer connecting online? Send an enquiry and we'll help
+            you explore the available consultation options.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: CONTACT FORM -->
+      <div class="ag-contact-form-column">
+
+        <div class="ag-contact-form-card">
+
+          <div class="ag-contact-form-card-header">
+            <span class="ag-contact-form-step">YOUR ENQUIRY</span>
+
+            <h3>How can we help you?</h3>
+
+            <p>
+              Share a few details below so we can better understand
+              what you're looking for.
+            </p>
+          </div>
+
+          <form class="ag-contact-form" id="ag-contact-enquiry-form">
+
+            <!-- Name -->
+            <div class="ag-contact-field">
+              <label for="ag-contact-name">Full Name</label>
+
+              <div class="ag-contact-input-wrap">
+                <i data-lucide="user-round" aria-hidden="true"></i>
+
+                <input
+                  type="text"
+                  id="ag-contact-name"
+                  name="name"
+                  placeholder="Enter your full name"
+                  autocomplete="name"
+                  required>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="ag-contact-field">
+              <label for="ag-contact-email">Email Address</label>
+
+              <div class="ag-contact-input-wrap">
+                <i data-lucide="mail" aria-hidden="true"></i>
+
+                <input
+                  type="email"
+                  id="ag-contact-email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  autocomplete="email"
+                  required>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="ag-contact-field">
+              <label for="ag-contact-phone">
+                Phone Number <span>(Optional)</span>
+              </label>
+
+              <div class="ag-contact-input-wrap">
+                <i data-lucide="phone" aria-hidden="true"></i>
+
+                <input
+                  type="tel"
+                  id="ag-contact-phone"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  autocomplete="tel">
+              </div>
+            </div>
+
+            <!-- Topic -->
+            <div class="ag-contact-field">
+              <label for="ag-contact-topic">What would you like help with?</label>
+
+              <div class="ag-contact-select-wrap">
+                <i data-lucide="layers" aria-hidden="true"></i>
+
+                <select id="ag-contact-topic" name="topic" required>
+                  <option value="" selected disabled>
+                    Select a topic
+                  </option>
+                  <option value="birth-chart">Birth Chart Reading</option>
+                  <option value="relationship">Relationship Astrology</option>
+                  <option value="career">Career Guidance</option>
+                  <option value="personal-consultation">Personal Consultation</option>
+                  <option value="booking">Existing Booking</option>
+                  <option value="general">General Enquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="ag-contact-field ag-contact-field-message">
+              <label for="ag-contact-message">Your Message</label>
+
+              <textarea
+                id="ag-contact-message"
+                name="message"
+                rows="4"
+                placeholder="Tell us a little about your questions or requirements..."
+                required></textarea>
+            </div>
+
+            <!-- Privacy -->
+            <label class="ag-contact-consent">
+              <input type="checkbox" name="consent" required>
+
+              <span>
+                I agree to be contacted regarding my enquiry and
+                acknowledge the
+                <a href="./privacy-policy.html">Privacy Policy</a>.
+              </span>
+            </label>
+
+            <!-- Submit -->
+            <button type="submit" class="st-btn ag-contact-submit">
+              Send Your Enquiry
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </button>
+
+            <p class="ag-contact-form-footnote">
+              <i data-lucide="lock-keyhole" aria-hidden="true"></i>
+              Your details should be handled in accordance with our privacy policy.
+            </p>
+
+            <!-- Status message -->
+            <p
+              class="ag-contact-form-status"
+              id="ag-contact-form-status"
+              role="status"
+              aria-live="polite">
+            </p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="ag-contact-faq" id="contact-faq" aria-labelledby="ag-contact-faq-title">
+  <div class="ag-contact-faq-container">
+
+    <div class="ag-contact-faq-header">
+      <p class="st-section-label ag-contact-faq-label">COMMON QUESTIONS</p>
+
+      <h2 class="st-section-title ag-contact-faq-title" id="ag-contact-faq-title">
+        A few things you may <span>want to know.</span>
+      </h2>
+
+      <p class="st-section-description ag-contact-faq-description">
+        Find answers to common questions about contacting AstroGuide,
+        choosing a consultation, and getting started with your journey.
+      </p>
+    </div>
+
+    <div class="ag-contact-faq-layout">
+
+      <div class="ag-contact-faq-aside">
+        <div class="ag-contact-faq-aside-icon">
+          <i data-lucide="messages-square" aria-hidden="true"></i>
+        </div>
+
+        <span class="ag-contact-faq-aside-label">NEED A LITTLE MORE CLARITY?</span>
+
+        <h3>We're happy to <span>help you.</span></h3>
+
+        <p>
+          Every question matters. If you cannot find the answer you're
+          looking for, send us a message and our team will help you
+          understand your options.
+        </p>
+
+        <a href="#contact-form" class="st-btn ag-contact-faq-contact-btn">
+          Ask Us a Question
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="ag-contact-faq-list" data-faq-accordion>
+
+        <article class="ag-contact-faq-item is-open">
+          <h3>
+            <button class="ag-contact-faq-question"
+                    type="button"
+                    id="ag-contact-faq-question-1"
+                    aria-expanded="true"
+                    aria-controls="ag-contact-faq-answer-1">
+              <span>How can I book an astrology consultation?</span>
+              <span class="ag-contact-faq-toggle" aria-hidden="true">
+                <i data-lucide="plus"></i>
+              </span>
+            </button>
+          </h3>
+          <div class="ag-contact-faq-answer"
+               id="ag-contact-faq-answer-1"
+               role="region"
+               aria-labelledby="ag-contact-faq-question-1">
+            <div class="ag-contact-faq-answer-inner">
+              Visit our pricing or services page to explore available
+              consultations. You can also use the contact form to tell
+              us what kind of guidance you're looking for.
+            </div>
+          </div>
+        </article>
+
+        <article class="ag-contact-faq-item">
+          <h3>
+            <button class="ag-contact-faq-question"
+                    type="button"
+                    id="ag-contact-faq-question-2"
+                    aria-expanded="false"
+                    aria-controls="ag-contact-faq-answer-2">
+              <span>What information should I share for a birth chart reading?</span>
+              <span class="ag-contact-faq-toggle" aria-hidden="true">
+                <i data-lucide="plus"></i>
+              </span>
+            </button>
+          </h3>
+          <div class="ag-contact-faq-answer"
+               id="ag-contact-faq-answer-2"
+               role="region"
+               aria-labelledby="ag-contact-faq-question-2"
+               hidden>
+            <div class="ag-contact-faq-answer-inner">
+              Birth chart readings generally use your date of birth,
+              birth time, and birthplace. An accurate birth time can
+              help with interpreting time-sensitive chart details.
+            </div>
+          </div>
+        </article>
+
+        <article class="ag-contact-faq-item">
+          <h3>
+            <button class="ag-contact-faq-question"
+                    type="button"
+                    id="ag-contact-faq-question-3"
+                    aria-expanded="false"
+                    aria-controls="ag-contact-faq-answer-3">
+              <span>Which consultation is right for me?</span>
+              <span class="ag-contact-faq-toggle" aria-hidden="true">
+                <i data-lucide="plus"></i>
+              </span>
+            </button>
+          </h3>
+          <div class="ag-contact-faq-answer"
+               id="ag-contact-faq-answer-3"
+               role="region"
+               aria-labelledby="ag-contact-faq-question-3"
+               hidden>
+            <div class="ag-contact-faq-answer-inner">
+              Choose a birth chart reading for broader chart insights,
+              relationship astrology for compatibility questions, or
+              career guidance for professional concerns. If you're
+              unsure, select General Enquiry in the contact form.
+            </div>
+          </div>
+        </article>
+
+        <article class="ag-contact-faq-item">
+          <h3>
+            <button class="ag-contact-faq-question"
+                    type="button"
+                    id="ag-contact-faq-question-4"
+                    aria-expanded="false"
+                    aria-controls="ag-contact-faq-answer-4">
+              <span>Can I contact AstroGuide about an existing booking?</span>
+              <span class="ag-contact-faq-toggle" aria-hidden="true">
+                <i data-lucide="plus"></i>
+              </span>
+            </button>
+          </h3>
+          <div class="ag-contact-faq-answer"
+               id="ag-contact-faq-answer-4"
+               role="region"
+               aria-labelledby="ag-contact-faq-question-4"
+               hidden>
+            <div class="ag-contact-faq-answer-inner">
+              Yes. Choose Existing Booking in the contact form and
+              include your booking details and question. Please avoid
+              sharing payment credentials or other sensitive information.
+            </div>
+          </div>
+        </article>
+
+        <article class="ag-contact-faq-item">
+          <h3>
+            <button class="ag-contact-faq-question"
+                    type="button"
+                    id="ag-contact-faq-question-5"
+                    aria-expanded="false"
+                    aria-controls="ag-contact-faq-answer-5">
+              <span>Is astrology a replacement for professional advice?</span>
+              <span class="ag-contact-faq-toggle" aria-hidden="true">
+                <i data-lucide="plus"></i>
+              </span>
+            </button>
+          </h3>
+          <div class="ag-contact-faq-answer"
+               id="ag-contact-faq-answer-5"
+               role="region"
+               aria-labelledby="ag-contact-faq-question-5"
+               hidden>
+            <div class="ag-contact-faq-answer-inner">
+              No. Astrology can offer a perspective for personal
+              reflection, but it should not replace qualified medical,
+              mental health, legal, or financial advice.
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="ag-contact-newsletter" id="contact-newsletter"
+         aria-labelledby="ag-contact-newsletter-title">
+  <div class="ag-contact-newsletter-container">
+
+    <div class="ag-contact-newsletter-card">
+
+      <div class="ag-contact-newsletter-decoration" aria-hidden="true">
+        <span class="ag-contact-newsletter-star ag-contact-newsletter-star-one">
+          <i data-lucide="sparkles"></i>
+        </span>
+        <span class="ag-contact-newsletter-star ag-contact-newsletter-star-two">
+          <i data-lucide="moon-star"></i>
+        </span>
+        <span class="ag-contact-newsletter-orbit"></span>
+      </div>
+
+      <div class="ag-contact-newsletter-content">
+        <span class="ag-contact-newsletter-label">
+          <i data-lucide="mail" aria-hidden="true"></i>
+          A LITTLE GUIDANCE IN YOUR INBOX
+        </span>
+
+        <h2 class="st-section-title ag-contact-newsletter-title"
+            id="ag-contact-newsletter-title">
+          Make space for <span>new perspectives.</span>
+        </h2>
+
+        <p class="st-section-description ag-contact-newsletter-description">
+          Receive thoughtful astrology insights, celestial updates, and
+          reflections to help you explore your journey with greater clarity.
+        </p>
+
+        <form class="ag-contact-newsletter-form"
+              id="ag-contact-newsletter-form">
+
+          <label class="ag-contact-newsletter-sr-only"
+                 for="ag-contact-newsletter-email">
+            Email address
+          </label>
+
+          <div class="ag-contact-newsletter-input-wrap">
+            <i data-lucide="mail" aria-hidden="true"></i>
+            <input
+              type="email"
+              id="ag-contact-newsletter-email"
+              name="email"
+              placeholder="Enter your email address"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <button type="submit" class="st-btn ag-contact-newsletter-submit">
+            Subscribe
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </button>
+        </form>
+
+        <p class="ag-contact-newsletter-consent">
+          <i data-lucide="shield-check" aria-hidden="true"></i>
+          <span>
+            By subscribing, you agree to receive emails from AstroGuide.
+            You can unsubscribe at any time.
+            <a href="./privacy-policy.html">Privacy Policy</a>
+          </span>
+        </p>
+
+        <p class="ag-contact-newsletter-status"
+           id="ag-contact-newsletter-status"
+           role="status"
+           aria-live="polite"></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+</div>
+<!-- ========================================================================
+     ASTROGUIDE FOOTER
+     ======================================================================== -->
+
+<footer class="st-footer">
+
+    <div class="st-footer-inner">
+
+
+        <!-- ==================================================================
+             FOOTER MAIN
+             ================================================================== -->
+
+        <div class="st-footer-main">
+
+
+            <!-- Brand / Description -->
+            <div class="st-footer-brand">
+
+                <a href="./index.html"
+                    class="st-navbar-brand"
+                    aria-label="AstroGuide Home">
+
+                    <img src="./images/logo.png"
+                        alt="AstroGuide Logo"
+                        class="st-navbar-brand-logo">
+
+                    <span class="st-navbar-brand-name">
+                        <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+                    </span>
+
+                </a>
+
+
+                <p class="st-footer-description">
+                    Explore astrology with a thoughtful blend of celestial
+                    wisdom, personal interpretation, and meaningful guidance
+                    for the journey ahead.
+                </p>
+
+
+                <!-- Social Media -->
+                <div class="st-footer-socials"
+                    aria-label="Social media links">
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Instagram">
+
+                        <i data-lucide="instagram"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Facebook">
+
+                        <i data-lucide="facebook"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Twitter">
+
+                        <i data-lucide="twitter"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="YouTube">
+
+                        <i data-lucide="youtube"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Navigation
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html">
+                            Services
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="./astrologers.html">
+                            Astrologers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pricing.html">
+                            Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./dashboard.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Our Services -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Our Services
+                </h3>
+
+                                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./services.html#horo">
+                            Daily Horoscope
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#birth">
+                            Birth Chart
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#match">
+                            Compatibility
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#consultation">
+                            Personal Consultation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pricing.html#pricing-sessions">
+                            Astrologer Sessions
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Additional Pages -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Additional Pages
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./404.html">
+                            404 Page
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./maintenance.html">
+                            Maintenance Page
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact Us -->
+            <div class="st-footer-column st-footer-contact">
+
+                <h3 class="st-footer-title">
+                    Contact Us
+                </h3>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="mail"
+                        aria-hidden="true"></i>
+
+                    <a href="mailto:hello@astroguide.com">
+                        hello@astroguide.com
+                    </a>
+
+                </div>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="phone"
+                        aria-hidden="true"></i>
+
+                    <a href="tel:+919999999999">
+                        +91 99999 99999
+                    </a>
+
+                </div>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="map-pin"
+                        aria-hidden="true"></i>
+
+                    <span>
+                        Hyderabad, India
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================================
+             FOOTER BOTTOM
+             ================================================================== -->
+
+        <div class="st-footer-bottom">
+
+            <p class="st-footer-copyright">
+                © 2026 AstroGuide. All rights reserved.
+            </p>
+
+
+            <div class="st-footer-legal">
+
+                <a href="./privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="./terms.html">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+
+  </body>
+</html>

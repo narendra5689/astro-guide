@@ -1,0 +1,1634 @@
+/* ==========================================================================
+   ASTROGUIDE — HOME 1
+   Cleaned & Organized + Dark Mode (White + Gold text / Purple + Black backgrounds)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. HERO
+   ========================================================================== */
+
+.ag-home1-hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 620px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--black-color);
+}
+.ag-about-story-title {
+    margin: 0;
+
+    color: var(--primary-color);
+
+      font-family: var(--accent-font);
+        font-style: italic;
+        font-weight: 500;
+    font-size: clamp(2.3rem, 4vw, 3.8rem);
+    font-weight: 600;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.02em;
+}
+
+.ag-about-story-title span {
+    display: block;
+
+    color: var(--secondary-color);
+
+    font-family: var(--accent-font);
+    font-style: italic;
+    font-weight: 500;
+}
+.ag-home1-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/home1-hero.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ag-home1-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--black-color);
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.ag-home1-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: min(calc(100% - (var(--page-padding-x) * 2)), var(--container-width));
+  height: 100%;
+  margin-inline: auto;
+}
+
+.ag-home1-hero-content {
+  width: min(760px, 100%);
+  text-align: start;
+}
+
+.ag-home1-hero-eyebrow {
+  margin: 0 0 22px;
+  color: var(--secondary-color);
+  font-family: var(--body-font);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.ag-home1-hero-title {
+  display: flex;
+  flex-direction: column;
+  margin: 0;        
+  font-family: var(--accent-font);
+        font-style: italic;
+        font-weight: 500;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+.ag-home1-hero-title-line {
+  display: block;
+  color: var(--white-color);
+}
+
+.ag-home1-hero-title-highlight {
+  display: block;
+  color: var(--secondary-color);
+  font-family: var(--accent-font);
+  font-size: 1.12em;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.ag-home1-hero-description {
+  max-width: 650px;
+  margin: 30px 0 0;
+  color: var(--white-color);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.ag-home1-hero-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 34px;
+}
+
+.ag-home1-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 14px 24px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  font-family: var(--body-font);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color var(--transition-normal),
+              border-color var(--transition-normal),
+              color var(--transition-normal),
+              transform var(--transition-normal);
+}
+
+.ag-home1-hero-btn svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-hero-btn:hover {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.ag-home1-hero-btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* Hero animations */
+.ag-home1-hero-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: agHome1HeroReveal 0.9s ease forwards;
+}
+
+.ag-home1-hero-delay-one   { animation-delay: 0.15s; }
+.ag-home1-hero-delay-two   { animation-delay: 0.3s; }
+.ag-home1-hero-delay-three { animation-delay: 0.45s; }
+.ag-home1-hero-delay-four  { animation-delay: 0.6s; }
+
+@keyframes agHome1HeroReveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ==========================================================================
+   2. ASTROLOGY REVEAL
+   ========================================================================== */
+
+.ag-home1-astrology-reveal {
+  position: relative;
+  width: 100%;
+  padding-block: 88px;
+  background: #F8F1EB;
+  overflow: hidden;
+}
+
+.ag-home1-astrology-container {
+  width: min(calc(100% - (var(--page-padding-x) * 2)), var(--container-width));
+  margin-inline: auto;
+}
+
+.ag-home1-astrology-header {
+  max-width: 820px;
+  margin-inline: auto;
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.ag-home1-astrology-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #D4AF5A;
+  font-family: var(--body-font);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ag-home1-astrology-header h2 {
+  margin: 0;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.ag-home1-astrology-header > p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  color: var(--primary-color);
+  font-size: 0.96rem;
+  line-height: 1.8;
+}
+
+.ag-home1-astrology-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 72px;
+}
+
+.ag-home1-astrology-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  aspect-ratio: 1 / 0.88;
+}
+
+.ag-home1-astrology-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.ag-home1-astrology-image-wrapper:hover .ag-home1-astrology-image {
+  transform: scale(1.025);
+}
+
+.ag-home1-astrology-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ag-home1-astrology-small-label {
+  margin-bottom: 16px;
+  color: #D4AF5A;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.ag-home1-astrology-text h3 {
+  max-width: 600px;
+  margin: 0;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.12;
+}
+
+.ag-home1-astrology-text > p {
+  max-width: 620px;
+  margin: 24px 0 0;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.ag-home1-astrology-points {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 28px;
+  gap: 14px;
+}
+
+.ag-home1-astrology-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.ag-home1-astrology-point-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border-radius: 50%;
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-astrology-point:hover .ag-home1-astrology-point-icon {
+  transform: translateY(-5px) rotate(-6deg);
+}
+
+.ag-home1-astrology-point-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ag-home1-astrology-point h4 {
+  margin: 1px 0 4px;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.ag-home1-astrology-point p {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.ag-home1-astrology-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  margin-top: 30px;
+  padding: 13px 22px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.ag-home1-astrology-btn:hover {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.ag-home1-astrology-btn svg {
+  width: 17px;
+  height: 17px;
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-astrology-btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+
+/* ==========================================================================
+   3. ZODIAC + VIEW MORE / VIEW LESS
+   ========================================================================== */
+
+.ag-home1-zodiac {
+  position: relative;
+  width: 100%;
+  padding: 96px var(--section-padding-x);
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.ag-home1-zodiac-container {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+}
+
+.ag-home1-zodiac-header {
+  max-width: 820px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.ag-home1-zodiac-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #D4AF5A;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ag-home1-zodiac-header h2 {
+  margin: 0;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.ag-home1-zodiac-header p {
+  max-width: 720px;
+  margin: 22px auto 0;
+  color: var(--black-color);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.ag-home1-zodiac-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.ag-home1-zodiac-card {
+  position: relative;
+  min-width: 0;
+  padding: 30px 24px;
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 175, 90, 0.35);
+  border-radius: var(--radius-large);
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(56, 15, 82, 0.04);
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-zodiac-card:hover {
+  transform: translateY(-7px);
+}
+
+.ag-home1-zodiac-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 20px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-zodiac-card:hover .ag-home1-zodiac-icon {
+  transform: translateY(-4px) rotate(-7deg);
+}
+
+.ag-home1-zodiac-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ag-home1-zodiac-date {
+  display: block;
+  margin-bottom: 8px;
+  color: #D4AF5A;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.ag-home1-zodiac-card h3 {
+  margin: 0;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.ag-home1-zodiac-card p {
+  margin: 14px 0 0;
+  color: var(--black-color);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* View More / View Less */
+.ag-zodiac-extra {
+  display: none;
+}
+
+.ag-home1-zodiac.is-expanded .ag-zodiac-extra {
+  display: block;
+}
+
+.ag-zodiac-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.ag-zodiac-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 12px 28px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.ag-zodiac-toggle-btn:hover {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.ag-zodiac-toggle-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-zodiac.is-expanded .ag-zodiac-toggle-icon {
+  transform: rotate(180deg);
+}
+
+
+/* ==========================================================================
+   4. BIRTH CHART
+   ========================================================================== */
+
+.ag-home1-birth-chart {
+  position: relative;
+  width: 100%;
+  padding: 96px var(--section-padding-x);
+  background: #FBF6F0;
+  overflow: hidden;
+}
+
+.ag-home1-birth-chart-container {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+}
+
+.ag-home1-birth-chart-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 80px;
+}
+
+.ag-home1-birth-chart-text {
+  max-width: 650px;
+}
+
+.ag-home1-birth-chart-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #D4AF5A;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ag-home1-birth-chart-text h2 {
+  margin: 0;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.ag-home1-birth-chart-intro {
+  margin: 24px 0 0;
+  color: var(--black-color);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.ag-home1-birth-chart-points {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 38px;
+}
+
+.ag-home1-birth-chart-point {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 17px;
+}
+
+.ag-home1-birth-chart-point-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-birth-chart-point:hover .ag-home1-birth-chart-point-icon {
+  transform: translateY(-4px) rotate(-7deg);
+}
+
+.ag-home1-birth-chart-point-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.ag-home1-birth-chart-point-content h3 {
+  margin: 0;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.ag-home1-birth-chart-point-content p {
+  margin: 7px 0 0;
+  color: var(--black-color);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.ag-home1-birth-chart-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  margin-top: 38px;
+  padding: 12px 23px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.ag-home1-birth-chart-btn:hover {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.ag-home1-birth-chart-btn svg {
+  width: 17px;
+  height: 17px;
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-birth-chart-btn:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.ag-home1-birth-chart-visual {
+  position: relative;
+}
+
+.ag-home1-birth-chart-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--radius-large);
+}
+
+.ag-home1-birth-chart-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.ag-home1-birth-chart-image-wrapper:hover .ag-home1-birth-chart-image {
+  transform: scale(1.025);
+}
+
+.ag-home1-birth-chart-caption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  margin: -32px 24px 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 16px 20px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--radius-medium);
+}
+
+.ag-home1-birth-chart-caption-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.ag-home1-birth-chart-caption-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ag-home1-birth-chart-caption strong {
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ag-home1-birth-chart-caption span {
+  font-size: 0.75rem;
+}
+
+
+/* ==========================================================================
+   5. SERVICES
+   ========================================================================== */
+
+.ag-home1-services {
+  position: relative;
+  width: 100%;
+  padding: 96px var(--section-padding-x);
+  background: #F7F2FA;
+  overflow: hidden;
+}
+
+.ag-home1-services-container {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+}
+
+.ag-home1-services-header {
+  max-width: 820px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.ag-home1-services-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #D4AF5A;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ag-home1-services-header h2 {
+  margin: 0;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.ag-home1-services-header p {
+  max-width: 720px;
+  margin: 22px auto 0;
+  color: var(--black-color);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.ag-home1-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ag-home1-service-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  padding: 30px 26px;
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 175, 90, 0.35);
+  border-radius: var(--radius-large);
+  box-shadow: 0 8px 24px rgba(56, 15, 82, 0.04);
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-service-card:hover {
+  transform: translateY(-8px);
+}
+
+.ag-home1-service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.ag-home1-service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-service-card:hover .ag-home1-service-icon {
+  transform: translateY(-4px) rotate(-7deg);
+}
+
+.ag-home1-service-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ag-home1-service-number {
+  color: #D4AF5A;
+  font-family: var(--accent-font);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.ag-home1-service-card h3 {
+  margin: 0;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.ag-home1-service-card p {
+  margin: 16px 0 0;
+  color: var(--black-color);
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.ag-home1-service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding-top: 28px;
+  color: var(--primary-color);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color var(--transition-normal), transform var(--transition-normal);
+}
+
+.ag-home1-service-link:hover {
+  color: var(--secondary-color);
+  transform: translateX(3px);
+}
+
+.ag-home1-service-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-service-link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+
+/* ==========================================================================
+   6. HOW IT WORKS — TIMELINE
+   ========================================================================== */
+
+.ag-home1-how-it-works {
+  position: relative;
+  width: 100%;
+  padding: 96px var(--section-padding-x);
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.ag-home1-how-container {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+}
+
+.ag-home1-how-header {
+  max-width: 820px;
+  margin: 0 auto 68px;
+  text-align: center;
+}
+
+.ag-home1-how-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #D4AF5A;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ag-home1-how-header h2 {
+  margin: 0;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.ag-home1-how-header p {
+  max-width: 720px;
+  margin: 22px auto 0;
+  color: var(--black-color);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+/* Timeline */
+.ag-timeline {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px 0 10px;
+}
+
+.ag-timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: var(--secondary-color);
+  transform: translateX(-50%);
+}
+
+.ag-timeline-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 56px;
+}
+
+.ag-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.ag-timeline-dot {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-left: -24px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+  border-radius: 50%;
+  font-family: var(--accent-font);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.ag-timeline-card {
+  width: calc(50% - 48px);
+  padding: 28px 26px;
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 175, 90, 0.35);
+  border-radius: var(--radius-large);
+  box-shadow: 0 8px 24px rgba(56, 15, 82, 0.04);
+  transition: transform var(--transition-normal);
+}
+
+.ag-timeline-card:hover {
+  transform: translateY(-6px);
+}
+
+.ag-timeline-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
+}
+
+.ag-timeline-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.ag-timeline-card-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #D4AF5A;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.ag-timeline-card h3 {
+  margin: 0 0 12px;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+.ag-timeline-card p {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.ag-timeline-left {
+  justify-content: flex-start;
+}
+
+.ag-timeline-left .ag-timeline-card {
+  margin-right: auto;
+}
+
+.ag-timeline-right {
+  justify-content: flex-end;
+}
+
+.ag-timeline-right .ag-timeline-card {
+  margin-left: auto;
+}
+
+
+/* ==========================================================================
+   7. ASTROLOGERS
+   ========================================================================== */
+
+.ag-home1-astrologers {
+  position: relative;
+  width: 100%;
+  padding: 96px var(--section-padding-x);
+  background: #F8F1EB;
+  overflow: hidden;
+}
+
+.ag-home1-astrologers-container {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+}
+
+.ag-home1-astrologers-header {
+  max-width: 820px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.ag-home1-astrologers-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #D4AF5A;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ag-home1-astrologers-header h2 {
+  margin: 0;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.ag-home1-astrologers-header p {
+  max-width: 720px;
+  margin: 22px auto 0;
+  color: var(--black-color);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.ag-home1-astrologers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.ag-home1-astrologer-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 175, 90, 0.35);
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(56, 15, 82, 0.04);
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-astrologer-card:hover {
+  transform: translateY(-8px);
+}
+
+.ag-home1-astrologer-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 4.3;
+  overflow: hidden;
+  background: var(--primary-color);
+}
+
+.ag-home1-astrologer-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform var(--transition-slow);
+}
+
+.ag-home1-astrologer-card:hover .ag-home1-astrologer-image {
+  transform: scale(1.025);
+}
+
+.ag-home1-astrologer-content {
+  padding: 28px 26px 30px;
+}
+
+.ag-home1-astrologer-specialty {
+  display: block;
+  margin-bottom: 10px;
+  color: #D4AF5A;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.ag-home1-astrologer-content h3 {
+  margin: 0;
+  color: #380f52;
+  font-family: var(--heading-font);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.ag-home1-astrologer-content > p {
+  margin: 14px 0 0;
+  color: var(--black-color);
+  font-size: 0.86rem;
+  line-height: 1.75;
+}
+
+.ag-home1-astrologer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 20px;
+}
+
+.ag-home1-astrologer-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--black-color);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.ag-home1-astrologer-meta svg {
+  width: 15px;
+  height: 15px;
+  color: var(--secondary-color);
+}
+
+.ag-home1-astrologer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 24px;
+  color: var(--primary-color);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color var(--transition-normal), transform var(--transition-normal);
+}
+
+.ag-home1-astrologer-link:hover {
+  color: var(--secondary-color);
+  transform: translateX(3px);
+}
+
+.ag-home1-astrologer-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-astrologer-link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+
+/* ==========================================================================
+   8. NEWSLETTER
+   ========================================================================== */
+
+.ag-home1-newsletter {
+  position: relative;
+  width: 100%;
+  padding: 88px var(--section-padding-x);
+  background: #F8F1EB;
+  overflow: hidden;
+}
+
+.ag-home1-newsletter-container {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+}
+
+.ag-home1-newsletter-content {
+  padding: 64px 72px;
+  text-align: center;
+  background: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--radius-large);
+}
+
+.ag-home1-newsletter-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #D4AF5A;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ag-home1-newsletter-content h2 {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--white-color);
+  font-family: var(--heading-font);
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.ag-home1-newsletter-content > p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  color: var(--white-color);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.ag-home1-newsletter-form {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 680px;
+  margin: 32px auto 0;
+  gap: 10px;
+}
+
+.ag-home1-newsletter-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.ag-home1-newsletter-input-wrapper > svg {
+  position: absolute;
+  left: 17px;
+  width: 18px;
+  height: 18px;
+  color: var(--secondary-color);
+  pointer-events: none;
+}
+
+.ag-home1-newsletter-input-wrapper input {
+  width: 100%;
+  min-height: 52px;
+  padding: 13px 17px 13px 48px;
+  color: var(--black-color);
+  background: var(--white-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 12px;
+  outline: none;
+  font-size: 0.86rem;
+}
+
+.ag-home1-newsletter-input-wrapper input:focus {
+  box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+.ag-home1-newsletter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 142px;
+  min-height: 52px;
+  padding: 13px 22px;
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 12px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.ag-home1-newsletter-btn:hover {
+  color: var(--white-color);
+  background: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.ag-home1-newsletter-btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-normal);
+}
+
+.ag-home1-newsletter-btn:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.ag-home1-newsletter-note {
+  display: block;
+  max-width: 620px;
+  margin: 14px auto 0;
+  color: var(--white-color);
+  font-size: 0.68rem;
+  line-height: 1.6;
+}
+
+
+/* ==========================================================================
+   DARK MODE
+   Text → White + Gold only
+   Backgrounds → Black + Purple variations
+   ========================================================================== */
+
+/* Section backgrounds */
+body.dark-mode .ag-home1-astrology-reveal {
+  background: #16091F;
+}
+
+body.dark-mode .ag-home1-zodiac {
+  background: #0F0A12;
+}
+
+body.dark-mode .ag-home1-birth-chart {
+  background: #1A1220;
+}
+
+body.dark-mode .ag-home1-services {
+  background: #16091F;
+}
+
+body.dark-mode .ag-home1-how-it-works {
+  background: #0F0A12;
+}
+
+body.dark-mode .ag-home1-astrologers {
+  background: #1A1220;
+}
+
+body.dark-mode .ag-home1-newsletter {
+  background: #0F0A12;
+}
+
+/* Cards */
+body.dark-mode .ag-home1-zodiac-card,
+body.dark-mode .ag-home1-service-card,
+body.dark-mode .ag-home1-astrologer-card,
+body.dark-mode .ag-timeline-card {
+  background: #1A1220;
+  border-color: rgba(212, 175, 90, 0.3);
+  box-shadow: none;
+}
+
+/* All headings & titles → White */
+body.dark-mode .ag-home1-astrology-header h2,
+body.dark-mode .ag-home1-zodiac-header h2,
+body.dark-mode .ag-home1-birth-chart-text h2,
+body.dark-mode .ag-home1-services-header h2,
+body.dark-mode .ag-home1-how-header h2,
+body.dark-mode .ag-home1-astrologers-header h2,
+body.dark-mode .ag-home1-astrology-text h3,
+body.dark-mode .ag-home1-zodiac-card h3,
+body.dark-mode .ag-home1-service-card h3,
+body.dark-mode .ag-home1-astrologer-content h3,
+body.dark-mode .ag-timeline-card h3,
+body.dark-mode .ag-home1-birth-chart-point-content h3,
+body.dark-mode .ag-home1-astrology-point h4 {
+  color: #FFFFFF;
+}
+
+/* All body text → White */
+body.dark-mode .ag-home1-astrology-header > p,
+body.dark-mode .ag-home1-zodiac-header p,
+body.dark-mode .ag-home1-birth-chart-intro,
+body.dark-mode .ag-home1-services-header p,
+body.dark-mode .ag-home1-how-header p,
+body.dark-mode .ag-home1-astrologers-header p,
+body.dark-mode .ag-home1-astrology-text > p,
+body.dark-mode .ag-home1-zodiac-card p,
+body.dark-mode .ag-home1-service-card p,
+body.dark-mode .ag-home1-astrologer-content > p,
+body.dark-mode .ag-timeline-card p,
+body.dark-mode .ag-home1-birth-chart-point-content p,
+body.dark-mode .ag-home1-astrologer-meta span,
+body.dark-mode .ag-home1-astrology-point p {
+  color: #FFFFFF;
+}
+
+/* Labels, dates, numbers, accents → Gold */
+body.dark-mode .ag-home1-astrology-label,
+body.dark-mode .ag-home1-astrology-small-label,
+body.dark-mode .ag-home1-zodiac-label,
+body.dark-mode .ag-home1-birth-chart-label,
+body.dark-mode .ag-home1-services-label,
+body.dark-mode .ag-home1-how-label,
+body.dark-mode .ag-home1-astrologers-label,
+body.dark-mode .ag-home1-newsletter-label,
+body.dark-mode .ag-home1-zodiac-date,
+body.dark-mode .ag-home1-service-number,
+body.dark-mode .ag-home1-astrologer-specialty,
+body.dark-mode .ag-timeline-card-label,
+body.dark-mode .ag-home1-astrologer-meta svg {
+  color: #D4AF5A;
+}
+
+/* Links */
+body.dark-mode .ag-home1-service-link,
+body.dark-mode .ag-home1-astrologer-link {
+  color: #FFFFFF;
+}
+
+body.dark-mode .ag-home1-service-link:hover,
+body.dark-mode .ag-home1-astrologer-link:hover {
+  color: #D4AF5A;
+}
+
+/* Hero overlay */
+body.dark-mode .ag-home1-hero-overlay {
+  opacity: 0.55;
+}
+
+/* Newsletter box */
+body.dark-mode .ag-home1-newsletter-content {
+  background: #380f52;
+}
+
+
+/* ==========================================================================
+   RTL
+   ========================================================================== */
+
+html[dir="rtl"] .ag-home1-hero-content,
+html[dir="rtl"] .ag-home1-astrology-text,
+html[dir="rtl"] .ag-home1-birth-chart-text {
+  text-align: right;
+}
+
+html[dir="rtl"] .ag-home1-hero-btn svg,
+html[dir="rtl"] .ag-home1-astrology-btn svg,
+html[dir="rtl"] .ag-home1-birth-chart-btn svg,
+html[dir="rtl"] .ag-home1-service-link svg,
+html[dir="rtl"] .ag-home1-astrologer-link svg,
+html[dir="rtl"] .ag-home1-newsletter-btn svg {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .ag-home1-hero-btn:hover svg,
+html[dir="rtl"] .ag-home1-astrology-btn:hover svg,
+html[dir="rtl"] .ag-home1-birth-chart-btn:hover svg,
+html[dir="rtl"] .ag-home1-service-link:hover svg,
+html[dir="rtl"] .ag-home1-astrologer-link:hover svg,
+html[dir="rtl"] .ag-home1-newsletter-btn:hover svg {
+  transform: scaleX(-1) translate(2px, -2px);
+}
+
+html[dir="rtl"] .ag-home1-newsletter-input-wrapper > svg {
+  left: auto;
+  right: 17px;
+}
+
+html[dir="rtl"] .ag-home1-newsletter-input-wrapper input {
+  padding-right: 48px;
+  padding-left: 17px;
+  text-align: right;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (min-width: 1600px) {
+  .ag-home1-hero-container { width: min(calc(100% - 128px), 1600px); }
+  .ag-home1-hero-content { width: 820px; }
+  .ag-home1-hero-title { font-size: clamp(5rem, 6.2vw, 7.5rem); }
+}
+
+@media (max-width: 1365px) {
+  .ag-home1-zodiac-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .ag-home1-services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1024px) {
+  .ag-home1-astrology-content { gap: 44px; }
+  .ag-home1-zodiac-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ag-home1-birth-chart-content { gap: 42px; }
+  .ag-home1-services-grid { gap: 18px; }
+  .ag-home1-astrologers-grid {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .ag-home1-astrologer-card {
+    display: grid;
+    grid-template-columns: 42% minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .ag-home1-hero { min-height: 600px; }
+  .ag-home1-astrology-content { grid-template-columns: 1fr; }
+  .ag-home1-zodiac-grid { grid-template-columns: 1fr; }
+  .ag-home1-birth-chart-content { grid-template-columns: 1fr; }
+  .ag-home1-services-grid { grid-template-columns: 1fr; }
+  .ag-home1-service-card { min-height: auto; }
+  .ag-home1-astrologer-card { display: block; }
+
+  /* Timeline mobile */
+  .ag-timeline-line { left: 24px; }
+  .ag-timeline-dot { left: 24px; margin-left: -24px; }
+  .ag-timeline-item {
+    justify-content: flex-start !important;
+    padding-left: 64px;
+  }
+  .ag-timeline-card { width: 100%; }
+
+  .ag-home1-hero-btn,
+  .ag-home1-astrology-btn,
+  .ag-home1-birth-chart-btn,
+  .ag-zodiac-toggle-btn,
+  .ag-home1-newsletter-btn {
+    width: 100%;
+  }
+
+  .ag-home1-newsletter-form { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .ag-home1-hero-title { font-size: clamp(2.65rem, 13vw, 3.6rem); }
+  .ag-home1-zodiac-card,
+  .ag-home1-service-card { padding: 26px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ag-home1-hero-reveal,
+  .ag-home1-astrology-reveal *,
+  .ag-home1-zodiac *,
+  .ag-home1-birth-chart *,
+  .ag-home1-services *,
+  .ag-home1-how-it-works *,
+  .ag-home1-astrologers *,
+  .ag-home1-newsletter * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

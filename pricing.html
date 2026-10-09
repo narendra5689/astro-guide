@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AstroGuide | Astrology & Horoscope Guidance</title>
+
+    <meta
+        name="description"
+        content="Explore personalized astrology, birth charts, horoscopes and compatibility guidance with AstroGuide."
+    >
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/pricing.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="./js/global.js"></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <script src="./js/pricing.js"></script>
+</head>
+
+<body>
+
+    <!-- navbar -->
+<header class="st-navbar">
+
+    <div class="st-navbar-inner">
+
+        <!-- Brand -->
+        <a href="./index.html"
+            class="st-navbar-brand"
+            aria-label="AstroGuide Home">
+
+            <img src="./images/logo.png"
+                alt="AstroGuide Logo"
+                class="st-navbar-brand-logo">
+
+            <span class="st-navbar-brand-name">
+                <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+            </span>
+
+        </a>
+
+
+        <!-- Desktop Navigation -->
+        <nav class="st-navbar-nav"
+            aria-label="Main navigation">
+
+            <!-- Home -->
+            <div class="st-nav-dropdown">
+
+                <button type="button"
+                    class="st-navbar-link st-nav-dropdown-toggle"
+                    aria-expanded="false"
+                    aria-haspopup="true">
+
+                    <span>Home</span>
+
+                    <i data-lucide="chevron-down"
+                        aria-hidden="true"></i>
+
+                </button>
+
+
+                <div class="st-nav-dropdown-menu">
+
+                    <a href="./index.html"
+                        class="st-nav-dropdown-link">
+                        Home 1
+                    </a>
+
+                    <a href="./home2.html"
+                        class="st-nav-dropdown-link">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- About -->
+            <a href="./about.html"
+                class="st-navbar-link">
+                About
+            </a>
+
+
+            <!-- Services -->
+            <a href="./services.html"
+                class="st-navbar-link">
+                Services
+            </a>
+
+
+
+
+
+            <!-- Astrologers -->
+            <a href="./astrologers.html"
+                class="st-navbar-link">
+                Astrologers
+            </a>
+
+
+            <!-- Pricing -->
+            <a href="./pricing.html"
+                class="st-navbar-link active">
+                Pricing
+            </a>
+
+            <!-- Horoscope -->
+            <a href="./contact.html"
+                class="st-navbar-link">
+                Contact
+            </a>
+
+            <!-- Dashboard -->
+            <a href="./dashboard.html"
+                class="st-navbar-link">
+                Dashboard
+            </a>
+
+        </nav>
+
+
+        <!-- Navbar Actions -->
+        <div class="st-navbar-actions">
+
+            <!-- Dark Mode -->
+            <button type="button"
+                class="st-navbar-icon-btn"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+
+                <i data-lucide="moon"
+                    aria-hidden="true"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+            <button type="button"
+                class="st-navbar-icon-btn"
+                id="rtlToggle"
+                aria-label="Enable RTL"
+                title="Enable RTL">
+
+                <i data-lucide="arrow-left-right"></i>
+
+            </button>
+
+
+            <!-- Login -->
+            <a href="./login.html"
+                class="st-login-btn">
+                Login
+            </a>
+
+
+            <!-- Book Consultation -->
+            <a href="./contact.html#contact-form"
+                class="st-consultation-btn">
+                Book Consultation
+            </a>
+
+
+            <!-- Mobile Menu -->
+            <button type="button"
+                class="st-navbar-menu-btn"
+                id="mobileMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu">
+
+                <i data-lucide="menu"
+                    aria-hidden="true"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ====================================================================
+         MOBILE MENU
+         ==================================================================== -->
+
+    <div class="st-mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true">
+
+        <div class="st-mobile-menu-inner">
+
+            <nav class="st-mobile-nav"
+                aria-label="Mobile navigation">
+
+
+                <!-- Home -->
+                <div class="st-mobile-home-group">
+
+                    <button type="button"
+                        class="st-mobile-nav-link st-mobile-home-toggle"
+                        aria-expanded="false">
+
+                        <span>Home</span>
+
+                        <i data-lucide="chevron-down"
+                            aria-hidden="true"></i>
+
+                    </button>
+
+
+                    <div class="st-mobile-dropdown">
+
+                        <a href="./index.html"
+                            class="st-mobile-dropdown-link">
+                            Home 1
+                        </a>
+
+                        <a href="./home2.html"
+                            class="st-mobile-dropdown-link">
+                            Home 2
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- About -->
+                <a href="./about.html"
+                    class="st-mobile-nav-link">
+                    About
+                </a>
+
+
+                <!-- Services -->
+                <a href="./services.html"
+                    class="st-mobile-nav-link">
+                    Services
+                </a>
+
+                <!-- Astrologers -->
+                <a href="./astrologers.html"
+                    class="st-mobile-nav-link">
+                    Astrologers
+                </a>
+
+
+                <!-- Pricing -->
+                <a href="./pricing.html"
+                    class="st-mobile-nav-link active">
+                    Pricing
+                </a>
+                <a href="./Contact.html"
+                    class="st-mobile-nav-link">
+                    Contact
+                </a>
+
+                <!-- Dashboard -->
+                <a href="./dashboard.html"
+                    class="st-mobile-nav-link">
+                    Dashboard
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Actions -->
+            <div class="st-mobile-menu-actions">
+
+                <a href="./login.html"
+                    class="st-login-btn">
+                    Login
+                </a>
+                <a href="./contact.html#contact-form"
+                    class="st-consultation-btn">
+                    Book Consultation
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="st-page">
+<section class="ag-pricing-hero" aria-labelledby="ag-pricing-hero-title">
+  <div class="ag-pricing-hero-overlay" aria-hidden="true"></div>
+
+  <div class="ag-pricing-hero-container">
+
+    <div class="ag-pricing-hero-content">
+
+      <p class="st-section-label ag-pricing-hero-label">
+        PRICING &amp; SESSIONS
+      </p>
+
+      <h1 id="ag-pricing-hero-title" class="st-section-title ag-pricing-hero-title">
+        Choose the guidance
+        <span>that feels right.</span>
+      </h1>
+
+      <p class="st-section-description ag-pricing-hero-description">
+        Every question deserves thoughtful attention. Choose a session
+        designed around the area of your life you are ready to explore,
+        and connect with guidance that feels personal to your journey.
+      </p>
+
+      <div class="ag-pricing-hero-actions">
+
+        <a href="#pricing-sessions" class="st-btn ag-pricing-hero-btn">
+          Find Your Session
+          <i data-lucide="arrow-down"></i>
+        </a>
+
+        <a href="#how-pricing-works" class="st-btn ag-pricing-hero-btn-secondary">
+          How It Works
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+      </div>
+
+      <div class="ag-pricing-hero-note">
+        <i data-lucide="shield-check"></i>
+
+        <span>
+          Personal guidance. Experienced astrologers. Meaningful conversations.
+        </span>
+      </div>
+
+    </div>
+
+    <div class="ag-pricing-hero-visual">
+
+      <div class="ag-pricing-hero-image-wrap">
+
+        <div class="ag-pricing-hero-image-frame" aria-hidden="true"></div>
+
+        <div class="ag-pricing-hero-image-holder">
+          <img
+            src="./images/pricing-hero.jpg"
+            alt="Astrology consultation and personal guidance"
+            class="ag-pricing-hero-image"
+          >
+        </div>
+
+      </div>
+
+      <div class="ag-pricing-hero-card">
+
+        <div class="ag-pricing-hero-card-icon">
+          <i data-lucide="sparkles"></i>
+        </div>
+
+        <div>
+          <span>ASTROGUIDE</span>
+          <strong>Guidance for your next chapter.</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section
+  class="ag-pricing-sessions"
+  id="pricing-sessions"
+  aria-labelledby="ag-pricing-sessions-title"
+>
+  <div class="ag-pricing-sessions-container">
+
+    <div class="ag-pricing-sessions-header">
+      <p class="st-section-label ag-pricing-sessions-label">
+        CHOOSE YOUR SESSION
+      </p>
+
+      <h2
+        id="ag-pricing-sessions-title"
+        class="st-section-title ag-pricing-sessions-title"
+      >
+        Guidance shaped
+        <span>around your questions.</span>
+      </h2>
+
+      <p class="st-section-description ag-pricing-sessions-description">
+        Choose a session based on what you are ready to understand,
+        explore, or reflect on. Each consultation gives you dedicated
+        time with an experienced astrologer.
+      </p>
+    </div>
+
+    <div class="ag-pricing-sessions-grid">
+
+      <!-- ================================================================
+           BIRTH CHART
+           ================================================================ -->
+
+      <article class="ag-pricing-card">
+
+        <div class="ag-pricing-card-top">
+          <span class="ag-pricing-card-number">01</span>
+
+          <div class="ag-pricing-card-icon">
+            <i data-lucide="orbit"></i>
+          </div>
+        </div>
+
+        <p class="ag-pricing-card-label">
+          PERSONAL ASTROLOGY
+        </p>
+
+        <h3>Birth Chart Reading</h3>
+
+        <p class="ag-pricing-card-description">
+          Explore the patterns, strengths, and themes reflected in
+          your birth chart through a personal astrology reading.
+        </p>
+
+        <div class="ag-pricing-card-price">
+          <span class="ag-pricing-card-currency">₹</span>
+          <strong>1,499</strong>
+          <span class="ag-pricing-card-duration">/ session</span>
+        </div>
+
+        <div class="ag-pricing-card-divider"></div>
+
+        <ul class="ag-pricing-card-features">
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>Complete birth chart perspective</span>
+          </li>
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>Personal insights and themes</span>
+          </li>
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>Written reflection</span>
+          </li>
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>One-to-one consultation</span>
+          </li>
+
+        </ul>
+
+        <div class="ag-pricing-card-footer">
+
+          <span class="ag-pricing-card-time">
+            <i data-lucide="clock-3"></i>
+            60 minutes
+          </span>
+
+          <a
+            href="./booking.html?service=birth-chart"
+            class="st-btn ag-pricing-card-btn"
+          >
+            Book Session
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- ================================================================
+           RELATIONSHIP
+           ================================================================ -->
+
+      <article class="ag-pricing-card ag-pricing-card-popular">
+
+        <div class="ag-pricing-popular-badge">
+          MOST POPULAR
+        </div>
+
+        <div class="ag-pricing-card-top">
+          <span class="ag-pricing-card-number">02</span>
+
+          <div class="ag-pricing-card-icon">
+            <i data-lucide="heart-handshake"></i>
+          </div>
+        </div>
+
+        <p class="ag-pricing-card-label">
+          RELATIONSHIP ASTROLOGY
+        </p>
+
+        <h3>Relationship Astrology</h3>
+
+        <p class="ag-pricing-card-description">
+          Understand compatibility, communication patterns, and the
+          dynamics that shape an important relationship.
+        </p>
+
+        <div class="ag-pricing-card-price">
+          <span class="ag-pricing-card-currency">₹</span>
+          <strong>1,799</strong>
+          <span class="ag-pricing-card-duration">/ session</span>
+        </div>
+
+        <div class="ag-pricing-card-divider"></div>
+
+        <ul class="ag-pricing-card-features">
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>Compatibility perspective</span>
+          </li>
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>Communication patterns</span>
+          </li>
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>Relationship dynamics</span>
+          </li>
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>One-to-one consultation</span>
+          </li>
+
+        </ul>
+
+        <div class="ag-pricing-card-footer">
+
+          <span class="ag-pricing-card-time">
+            <i data-lucide="clock-3"></i>
+            60 minutes
+          </span>
+
+          <a
+            href="./booking.html?service=relationship"
+            class="st-btn ag-pricing-card-btn"
+          >
+            Book Session
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- ================================================================
+           CAREER
+           ================================================================ -->
+
+      <article class="ag-pricing-card">
+
+        <div class="ag-pricing-card-top">
+          <span class="ag-pricing-card-number">03</span>
+
+          <div class="ag-pricing-card-icon">
+            <i data-lucide="compass"></i>
+          </div>
+        </div>
+
+        <p class="ag-pricing-card-label">
+          CAREER ASTROLOGY
+        </p>
+
+        <h3>Career Guidance</h3>
+
+        <p class="ag-pricing-card-description">
+          Reflect on career direction, professional strengths,
+          timing, and the questions surrounding your next chapter.
+        </p>
+
+        <div class="ag-pricing-card-price">
+          <span class="ag-pricing-card-currency">₹</span>
+          <strong>1,599</strong>
+          <span class="ag-pricing-card-duration">/ session</span>
+        </div>
+
+        <div class="ag-pricing-card-divider"></div>
+
+        <ul class="ag-pricing-card-features">
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>Career direction perspective</span>
+          </li>
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>Professional strengths</span>
+          </li>
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>Timing and cycles</span>
+          </li>
+
+          <li>
+            <i data-lucide="check"></i>
+            <span>One-to-one consultation</span>
+          </li>
+
+        </ul>
+
+        <div class="ag-pricing-card-footer">
+
+          <span class="ag-pricing-card-time">
+            <i data-lucide="clock-3"></i>
+            60 minutes
+          </span>
+
+          <a
+            href="./booking.html?service=career"
+            class="st-btn ag-pricing-card-btn"
+          >
+            Book Session
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="ag-pricing-sessions-note">
+      <i data-lucide="shield-check"></i>
+
+      <span>
+        Every session is private, personal, and guided by an experienced astrologer.
+      </span>
+    </div>
+
+  </div>
+</section>
+<section
+  class="ag-pricing-finder"
+  aria-labelledby="ag-pricing-finder-title"
+>
+  <div class="ag-pricing-finder-container">
+
+    <div class="ag-pricing-finder-header">
+      <p class="st-section-label ag-pricing-finder-label">
+        FIND YOUR SESSION
+      </p>
+
+      <h2
+        id="ag-pricing-finder-title"
+        class="st-section-title ag-pricing-finder-title"
+      >
+        Not sure where
+        <span>to begin?</span>
+      </h2>
+
+      <p class="st-section-description ag-pricing-finder-description">
+        You don't need to know exactly which reading you need.
+        Start with what is on your mind and we'll point you toward
+        the session that fits your question.
+      </p>
+    </div>
+
+    <div class="ag-pricing-finder-layout">
+
+      <!-- QUESTIONS -->
+
+      <div class="ag-pricing-finder-options">
+
+        <button
+          type="button"
+          class="ag-pricing-finder-option is-active"
+          data-session="self"
+          aria-pressed="true"
+        >
+          <span class="ag-pricing-finder-option-number">01</span>
+
+          <span class="ag-pricing-finder-option-icon">
+            <i data-lucide="user-round"></i>
+          </span>
+
+          <span class="ag-pricing-finder-option-content">
+            <strong>I want to understand myself</strong>
+            <span>
+              Explore your personality, patterns, strengths, and
+              personal direction.
+            </span>
+          </span>
+
+          <span class="ag-pricing-finder-option-arrow">
+            <i data-lucide="arrow-up-right"></i>
+          </span>
+        </button>
+
+        <button
+          type="button"
+          class="ag-pricing-finder-option"
+          data-session="relationship"
+          aria-pressed="false"
+        >
+          <span class="ag-pricing-finder-option-number">02</span>
+
+          <span class="ag-pricing-finder-option-icon">
+            <i data-lucide="heart-handshake"></i>
+          </span>
+
+          <span class="ag-pricing-finder-option-content">
+            <strong>I have questions about a relationship</strong>
+            <span>
+              Explore compatibility, communication, and the dynamics
+              between two people.
+            </span>
+          </span>
+
+          <span class="ag-pricing-finder-option-arrow">
+            <i data-lucide="arrow-up-right"></i>
+          </span>
+        </button>
+
+        <button
+          type="button"
+          class="ag-pricing-finder-option"
+          data-session="career"
+          aria-pressed="false"
+        >
+          <span class="ag-pricing-finder-option-number">03</span>
+
+          <span class="ag-pricing-finder-option-icon">
+            <i data-lucide="compass"></i>
+          </span>
+
+          <span class="ag-pricing-finder-option-content">
+            <strong>I need clarity about my career</strong>
+            <span>
+              Reflect on career direction, strengths, timing, and
+              your next professional chapter.
+            </span>
+          </span>
+
+          <span class="ag-pricing-finder-option-arrow">
+            <i data-lucide="arrow-up-right"></i>
+          </span>
+        </button>
+
+      </div>
+
+      <!-- RECOMMENDATION -->
+
+      <div class="ag-pricing-finder-result">
+
+        <div class="ag-pricing-finder-result-top">
+          <span class="ag-pricing-finder-result-label">
+            RECOMMENDED FOR YOU
+          </span>
+
+          <span class="ag-pricing-finder-result-number" id="pricing-finder-number">
+            01
+          </span>
+        </div>
+
+        <div class="ag-pricing-finder-result-icon">
+          <i id="pricing-finder-icon" data-lucide="orbit"></i>
+        </div>
+
+        <p class="ag-pricing-finder-result-type" id="pricing-finder-type">
+          PERSONAL ASTROLOGY
+        </p>
+
+        <h3 id="pricing-finder-title">
+          Birth Chart Reading
+        </h3>
+
+        <p id="pricing-finder-text">
+          A personal reading that helps you explore the patterns,
+          strengths, and themes reflected in your birth chart.
+        </p>
+
+        <div class="ag-pricing-finder-result-meta">
+
+          <span>
+            <i data-lucide="clock-3"></i>
+            60 minutes
+          </span>
+
+          <span>
+            <i data-lucide="indian-rupee"></i>
+            <strong id="pricing-finder-price">1,499</strong>
+          </span>
+
+        </div>
+            <br>
+        <a
+          href="./booking.html?service=birth-chart"
+          id="pricing-finder-link"
+          class="st-btn ag-pricing-finder-btn"
+        >
+          Explore This Session
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+<section class="ag-pricing-included" aria-labelledby="ag-pricing-included-title">
+  <div class="ag-pricing-included-container">
+
+    <div class="ag-pricing-included-header">
+      <p class="st-section-label ag-pricing-included-label">WHAT'S INCLUDED</p>
+
+      <h2 id="ag-pricing-included-title" class="st-section-title ag-pricing-included-title">
+        More than a reading.
+        <span>A thoughtful experience.</span>
+      </h2>
+
+      <p class="st-section-description ag-pricing-included-description">
+        Every AstroGuide session is designed to give you dedicated attention,
+        meaningful interpretation, and a clear space to explore what matters
+        most to you.
+      </p>
+    </div>
+
+    <div class="ag-pricing-included-grid">
+
+      <article class="ag-pricing-included-item">
+        <div class="ag-pricing-included-icon">
+          <i data-lucide="user-round"></i>
+        </div>
+        <div class="ag-pricing-included-content">
+          <span class="ag-pricing-included-number">01</span>
+          <h3>Personal Consultation</h3>
+          <p>
+            A one-to-one conversation shaped around your questions,
+            circumstances, and areas of interest.
+          </p>
+        </div>
+      </article>
+
+      <article class="ag-pricing-included-item">
+        <div class="ag-pricing-included-icon">
+          <i data-lucide="sparkles"></i>
+        </div>
+        <div class="ag-pricing-included-content">
+          <span class="ag-pricing-included-number">02</span>
+          <h3>Experienced Astrologer</h3>
+          <p>
+            Connect with an experienced astrologer who brings traditional
+            knowledge and thoughtful interpretation to your session.
+          </p>
+        </div>
+      </article>
+
+      <article class="ag-pricing-included-item">
+        <div class="ag-pricing-included-icon">
+          <i data-lucide="scroll-text"></i>
+        </div>
+        <div class="ag-pricing-included-content">
+          <span class="ag-pricing-included-number">03</span>
+          <h3>Detailed Guidance</h3>
+          <p>
+            Explore the astrological themes most relevant to your current
+            questions rather than receiving a generic reading.
+          </p>
+        </div>
+      </article>
+
+      <article class="ag-pricing-included-item">
+        <div class="ag-pricing-included-icon">
+          <i data-lucide="lock-keyhole"></i>
+        </div>
+        <div class="ag-pricing-included-content">
+          <span class="ag-pricing-included-number">04</span>
+          <h3>Private Conversation</h3>
+          <p>
+            Your session gives you a comfortable and private space to discuss
+            personal questions openly and thoughtfully.
+          </p>
+        </div>
+      </article>
+
+      <article class="ag-pricing-included-item">
+        <div class="ag-pricing-included-icon">
+          <i data-lucide="file-text"></i>
+        </div>
+        <div class="ag-pricing-included-content">
+          <span class="ag-pricing-included-number">05</span>
+          <h3>Session Summary</h3>
+          <p>
+            Keep a written reflection of the key themes and insights discussed
+            during your consultation.
+          </p>
+        </div>
+      </article>
+
+      <article class="ag-pricing-included-item">
+        <div class="ag-pricing-included-icon">
+          <i data-lucide="compass"></i>
+        </div>
+        <div class="ag-pricing-included-content">
+          <span class="ag-pricing-included-number">06</span>
+          <h3>Practical Perspective</h3>
+          <p>
+            Leave with reflections that can help you approach your next steps
+            with greater awareness and clarity.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="ag-pricing-included-note">
+      <i data-lucide="heart"></i>
+      <span>
+        Astrology offers perspective — your choices remain your own.
+      </span>
+    </div>
+
+  </div>
+</section>
+<section class="ag-pricing-comparison" aria-labelledby="ag-pricing-comparison-title">
+  <div class="ag-pricing-comparison-container">
+
+    <div class="ag-pricing-comparison-header">
+      <p class="st-section-label">SESSION COMPARISON</p>
+
+      <h2 id="ag-pricing-comparison-title" class="st-section-title">
+        Compare your options.
+        <span>Choose what feels right.</span>
+      </h2>
+
+      <p class="st-section-description">
+        Compare each session at a glance and choose the guidance
+        that best matches what you would like to explore.
+      </p>
+    </div>
+
+    <div class="ag-pricing-comparison-table-wrap">
+      <table class="ag-pricing-comparison-table">
+
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Birth Chart Reading</th>
+            <th>Relationship Astrology</th>
+            <th>Career Guidance</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <th>Consultation</th>
+            <td>60 min</td>
+            <td>60 min</td>
+            <td>60 min</td>
+          </tr>
+
+          <tr>
+            <th>Birth chart perspective</th>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+
+          <tr>
+            <th>Personal insights</th>
+            <td>✓</td>
+            <td>—</td>
+            <td>✓</td>
+          </tr>
+
+          <tr>
+            <th>Relationship compatibility</th>
+            <td>—</td>
+            <td>✓</td>
+            <td>—</td>
+          </tr>
+
+          <tr>
+            <th>Career direction</th>
+            <td>—</td>
+            <td>—</td>
+            <td>✓</td>
+          </tr>
+
+          
+
+  
+
+        </tbody>
+
+      </table>
+    </div>
+
+  </div>
+</section>
+<!-- ================================================================
+     PRICING — FAQ
+     ================================================================ -->
+
+<section class="ag-pricing-faq" aria-labelledby="ag-pricing-faq-title">
+  <div class="ag-pricing-faq-container">
+
+    <div class="ag-pricing-faq-header">
+      <p class="st-section-label ag-pricing-faq-label">
+        FREQUENTLY ASKED QUESTIONS
+      </p>
+
+      <h2 id="ag-pricing-faq-title" class="st-section-title ag-pricing-faq-title">
+        Questions before
+        <span>you begin.</span>
+      </h2>
+
+      <p class="st-section-description ag-pricing-faq-description">
+        Everything you need to know before choosing and booking
+        your astrology session with AstroGuide.
+      </p>
+    </div>
+
+    <div class="ag-pricing-faq-list">
+
+      <!-- FAQ 01 -->
+      <article class="ag-pricing-faq-item">
+        <button
+          type="button"
+          class="ag-pricing-faq-question"
+          aria-expanded="false"
+        >
+          <span>Which astrology session should I choose?</span>
+
+          <span class="ag-pricing-faq-icon">
+             <i data-lucide="plus" class="faq-plus"></i>
+            <i data-lucide="minus" class="faq-minus"></i>
+          </span>
+        </button>
+
+        <div class="ag-pricing-faq-answer">
+          <p>
+            Choose the session based on the area you would like to explore.
+            Birth Chart Reading is ideal for personal understanding,
+            Relationship Astrology focuses on compatibility and relationship
+            dynamics, while Career Guidance is designed around professional
+            direction and career-related questions.
+          </p>
+        </div>
+      </article>
+
+
+      <!-- FAQ 02 -->
+      <article class="ag-pricing-faq-item">
+        <button
+          type="button"
+          class="ag-pricing-faq-question"
+          aria-expanded="false"
+        >
+          <span>How long does a consultation last?</span>
+
+          <span class="ag-pricing-faq-icon">
+             <i data-lucide="plus" class="faq-plus"></i>
+                <i data-lucide="minus" class="faq-minus"></i>
+          </span>
+        </button>
+
+        <div class="ag-pricing-faq-answer">
+          <p>
+            Each AstroGuide consultation is designed as a focused
+            60-minute one-to-one session with an experienced astrologer.
+          </p>
+        </div>
+      </article>
+
+
+      <!-- FAQ 03 -->
+      <article class="ag-pricing-faq-item">
+        <button
+          type="button"
+          class="ag-pricing-faq-question"
+          aria-expanded="false"
+        >
+          <span>What information do I need to provide?</span>
+
+          <span class="ag-pricing-faq-icon">
+             <i data-lucide="plus" class="faq-plus"></i>
+  <i data-lucide="minus" class="faq-minus"></i>
+          </span>
+        </button>
+
+        <div class="ag-pricing-faq-answer">
+          <p>
+            You may be asked to provide details such as your date of birth,
+            time of birth, and place of birth. For relationship sessions,
+            relevant details about the other person may also be required.
+          </p>
+        </div>
+      </article>
+
+
+      <!-- FAQ 04 -->
+      <article class="ag-pricing-faq-item">
+        <button
+          type="button"
+          class="ag-pricing-faq-question"
+          aria-expanded="false"
+        >
+          <span>Is my consultation private?</span>
+
+          <span class="ag-pricing-faq-icon">
+             <i data-lucide="plus" class="faq-plus"></i>
+  <i data-lucide="minus" class="faq-minus"></i>
+          </span>
+        </button>
+
+        <div class="ag-pricing-faq-answer">
+          <p>
+            Yes. Your consultation is intended to be a private,
+            one-to-one conversation focused on your questions and
+            circumstances.
+          </p>
+        </div>
+      </article>
+
+
+      <!-- FAQ 05 -->
+      <article class="ag-pricing-faq-item">
+        <button
+          type="button"
+          class="ag-pricing-faq-question"
+          aria-expanded="false"
+        >
+          <span>Can I ask specific questions during my session?</span>
+
+          <span class="ag-pricing-faq-icon">
+             <i data-lucide="plus" class="faq-plus"></i>
+  <i data-lucide="minus" class="faq-minus"></i>
+          </span>
+        </button>
+
+        <div class="ag-pricing-faq-answer">
+          <p>
+            Absolutely. Bringing specific questions is encouraged.
+            Your astrologer can use the session to explore the areas
+            that are most meaningful to you.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+<!-- ================================================================
+     PRICING — NEWSLETTER
+     ================================================================ -->
+
+<section class="ag-pricing-newsletter" aria-labelledby="ag-pricing-newsletter-title">
+  <div class="ag-pricing-newsletter-container">
+
+    <div class="ag-pricing-newsletter-content">
+
+      <p class="st-section-label ag-pricing-newsletter-label">
+        STAY CONNECTED
+      </p>
+
+      <h2 id="ag-pricing-newsletter-title" class="st-section-title ag-pricing-newsletter-title">
+        A little guidance,
+        <span>delivered to your inbox.</span>
+      </h2>
+
+      <p class="st-section-description ag-pricing-newsletter-description">
+        Receive thoughtful astrology insights, seasonal guidance, and
+        occasional updates from AstroGuide to help you move through life
+        with greater awareness and intention.
+      </p>
+
+      <form class="ag-pricing-newsletter-form">
+
+        <div class="ag-pricing-newsletter-input-wrap">
+          <i data-lucide="mail"></i>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            aria-label="Email address"
+            required
+          >
+        </div>
+
+        <button
+          type="submit"
+          class="st-btn ag-pricing-newsletter-btn"
+        >
+          Subscribe
+          <i data-lucide="arrow-up-right"></i>
+        </button>
+
+      </form>
+
+      <p class="ag-pricing-newsletter-note">
+        No spam. Just thoughtful astrology guidance and occasional updates.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+</div>
+<!-- ========================================================================
+     ASTROGUIDE FOOTER
+     ======================================================================== -->
+
+<footer class="st-footer">
+
+    <div class="st-footer-inner">
+
+
+        <!-- ==================================================================
+             FOOTER MAIN
+             ================================================================== -->
+
+        <div class="st-footer-main">
+
+
+            <!-- Brand / Description -->
+            <div class="st-footer-brand">
+
+                <a href="./index.html"
+                    class="st-navbar-brand"
+                    aria-label="AstroGuide Home">
+
+                    <img src="./images/logo.png"
+                        alt="AstroGuide Logo"
+                        class="st-navbar-brand-logo">
+
+                    <span class="st-navbar-brand-name">
+                        <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+                    </span>
+
+                </a>
+
+
+                <p class="st-footer-description">
+                    Explore astrology with a thoughtful blend of celestial
+                    wisdom, personal interpretation, and meaningful guidance
+                    for the journey ahead.
+                </p>
+
+
+                <!-- Social Media -->
+                <div class="st-footer-socials"
+                    aria-label="Social media links">
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Instagram">
+
+                        <i data-lucide="instagram"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Facebook">
+
+                        <i data-lucide="facebook"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Twitter">
+
+                        <i data-lucide="twitter"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="YouTube">
+
+                        <i data-lucide="youtube"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Navigation
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html">
+                            Services
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="./astrologers.html">
+                            Astrologers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pricing.html">
+                            Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./dashboard.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Our Services -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Our Services
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./services.html#horo">
+                            Daily Horoscope
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#birth">
+                            Birth Chart
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#match">
+                            Compatibility
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#consultation">
+                            Personal Consultation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pricing.html#pricing-sessions">
+                            Astrologer Sessions
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Additional Pages -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Additional Pages
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./404.html">
+                            404 Page
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./maintenance.html">
+                            Maintenance Page
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- Contact Us -->
+            <div class="st-footer-column st-footer-contact">
+
+                <h3 class="st-footer-title">
+                    Contact Us
+                </h3>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="mail"
+                        aria-hidden="true"></i>
+
+                    <a href="mailto:hello@astroguide.com">
+                        hello@astroguide.com
+                    </a>
+
+                </div>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="phone"
+                        aria-hidden="true"></i>
+
+                    <a href="tel:+919999999999">
+                        +91 99999 99999
+                    </a>
+
+                </div>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="map-pin"
+                        aria-hidden="true"></i>
+
+                    <span>
+                        Hyderabad, India
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================================
+             FOOTER BOTTOM
+             ================================================================== -->
+
+        <div class="st-footer-bottom">
+
+            <p class="st-footer-copyright">
+                © 2026 AstroGuide. All rights reserved.
+            </p>
+
+
+            <div class="st-footer-legal">
+
+                <a href="./privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="./terms.html">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+
+  </body>
+</html>

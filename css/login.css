@@ -1,0 +1,951 @@
+/* =========================================
+   AstroGuide — Standalone Login Page
+   ========================================= */
+
+:root {
+  --primary: #3B1F5C;
+  --secondary: #D4AF5A;
+  --page-bg: #F8F1EB;
+  --surface: #FFFFFF;
+  --text: #292331;
+  --muted: #766E7D;
+  --field-border: #E5DDE9;
+  --shadow: 0 24px 70px rgba(59, 31, 92, 0.13);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background: var(--page-bg);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* Page layout */
+
+.login-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 70px 20px 42px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.login-page::before,
+.login-page::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(212, 175, 90, 0.28);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.login-page::before {
+  width: min(56vw, 650px);
+  aspect-ratio: 1;
+  top: -34%;
+  left: -16%;
+}
+
+.login-page::after {
+  width: min(44vw, 510px);
+  aspect-ratio: 1;
+  right: -13%;
+  bottom: -34%;
+}
+
+/* Top controls */
+
+.utility-controls {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  display: flex;
+  gap: 9px;
+  z-index: 2;
+}
+
+.icon-control {
+  min-width: 43px;
+  height: 43px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid var(--field-border);
+  border-radius: 13px;
+  background: var(--surface);
+  color: var(--primary);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(59, 31, 92, 0.06);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.icon-control svg {
+  width: 18px;
+  height: 18px;
+}
+
+.icon-control span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.icon-control:hover {
+  border-color: var(--secondary);
+  transform: translateY(-1px);
+}
+
+/* Login card */
+
+.login-card {
+  width: min(100%, 438px);
+  background: var(--surface);
+  border: 1px solid rgba(59, 31, 92, 0.08);
+  border-radius: 25px;
+  padding: 30px 36px 22px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--secondary);
+}
+
+/* Brand */
+
+#brand {
+  width: fit-content;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.brand-mark {
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+.brand-mark svg {
+  width: 23px;
+  height: 23px;
+}
+
+.brand-name {
+  display: flex;
+  align-items: baseline;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 31px;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.brand-name > span:first-child {
+  color: var(--primary);
+}
+
+.brand-gold {
+  color: var(--secondary);
+}
+
+/* Heading */
+
+.card-heading {
+  text-align: center;
+  margin-bottom: 23px;
+}
+
+.eyebrow {
+  margin: 0 0 7px;
+  color: var(--secondary);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+}
+
+h1 {
+  margin: 0;
+  color: var(--primary);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(34px, 4vw, 41px);
+  line-height: 1.02;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+h1 em {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.intro {
+  max-width: 300px;
+  margin: 10px auto 0;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+/* Form */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form > label,
+.password-label label {
+  margin-bottom: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 47px;
+  padding: 0 13px;
+  border: 1px solid var(--field-border);
+  border-radius: 12px;
+  background: var(--surface);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-wrap:focus-within {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(59, 31, 92, 0.12);
+}
+
+.input-wrap > svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  color: var(--muted);
+}
+
+.input-wrap input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 12px;
+}
+
+.input-wrap input::placeholder {
+  color: #A39AA8;
+}
+
+/* Password row */
+
+.password-label {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.password-label label {
+  margin: 0 0 7px;
+}
+
+.password-label a,
+.signup-prompt a {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.password-label a {
+  margin-bottom: 7px;
+}
+
+.password-label a:hover,
+.signup-prompt a:hover {
+  color: var(--secondary);
+}
+
+/* Remember me */
+
+.remember-row {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 9px;
+  margin: 15px 0 18px;
+  color: var(--muted);
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.remember-row input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.custom-check {
+  width: 15px;
+  height: 15px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--field-border);
+  border-radius: 4px;
+  background: var(--surface);
+}
+
+.remember-row input:checked + .custom-check {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.remember-row input:checked + .custom-check::after {
+  content: "";
+  width: 6px;
+  height: 3px;
+  border-left: 1.5px solid #FFFFFF;
+  border-bottom: 1.5px solid #FFFFFF;
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.remember-row input:focus-visible + .custom-check {
+  outline: 3px solid rgba(59, 31, 92, 0.18);
+}
+
+/* Sign-in button */
+
+.submit-button {
+  min-height: 47px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  background: var(--primary);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.submit-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.submit-button:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Bottom text */
+
+.signup-prompt {
+  margin: 17px 0 18px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.signup-prompt a {
+  margin-inline-start: 3px;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.card-bottom span {
+  width: 27px;
+  height: 1px;
+  background: var(--secondary);
+}
+
+.card-bottom p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.page-note {
+  position: absolute;
+  bottom: 13px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  color: var(--muted);
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Dark mode styles are ready to use if enabled elsewhere */
+
+body.dark-mode {
+  --page-bg: #000000;
+  --surface: #000000;
+  --text: #FFFFFF;
+  --muted: #D4AF5A;
+  --field-border: #3B1F5C;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+}
+
+body.dark-mode .login-card {
+  border-color: var(--primary);
+}
+
+body.dark-mode h1,
+body.dark-mode .brand-name > span:first-child,
+body.dark-mode .password-label a,
+body.dark-mode .signup-prompt a {
+  color: #FFFFFF;
+}
+
+body.dark-mode h1 em,
+body.dark-mode .brand-gold,
+body.dark-mode .eyebrow {
+  color: var(--secondary);
+}
+
+body.dark-mode .icon-control {
+  color: var(--secondary);
+  border-color: var(--primary);
+}
+
+body.dark-mode .input-wrap > svg {
+  color: var(--secondary);
+}
+
+body.dark-mode .login-page::before,
+body.dark-mode .login-page::after {
+  border-color: rgba(212, 175, 90, 0.2);
+}
+
+body.dark-mode .submit-button:hover {
+  color: #000000;
+}
+
+/* RTL layout */
+
+html[dir="rtl"] .utility-controls {
+  right: auto;
+  left: 24px;
+}
+
+html[dir="rtl"] .login-form > label,
+html[dir="rtl"] .password-label {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-wrap {
+  direction: rtl;
+}
+
+html[dir="rtl"] .remember-row {
+  align-self: flex-end;
+}
+
+html[dir="rtl"] #brand,
+html[dir="rtl"] .brand-name {
+  direction: ltr;
+  display: flex;
+  align-items: center;
+}
+
+html[dir="rtl"] .submit-button {
+  flex-direction: row-reverse;
+}
+
+/* Mobile */
+
+@media (max-width: 520px) {
+  .login-page {
+    padding: 74px 16px 36px;
+  }
+
+  .utility-controls {
+    top: 14px;
+    right: 15px;
+  }
+
+  html[dir="rtl"] .utility-controls {
+    left: 15px;
+    right: auto;
+  }
+
+  .login-card {
+    padding: 26px 23px 20px;
+    border-radius: 22px;
+  }
+
+  .brand {
+    margin-bottom: 18px;
+  }
+
+  .card-heading {
+    margin-bottom: 20px;
+  }
+
+  .login-page::before {
+    width: 90vw;
+    top: -17%;
+    left: -48%;
+  }
+
+  .login-page::after {
+    width: 78vw;
+    right: -42%;
+    bottom: -16%;
+  }
+}
+
+/* Short landscape displays */
+
+@media (max-height: 740px) and (min-width: 521px) {
+  .login-page {
+    padding-top: 18px;
+    padding-bottom: 28px;
+  }
+
+  .login-card {
+    padding: 22px 32px 17px;
+  }
+
+  .brand {
+    margin-bottom: 14px;
+  }
+
+  .brand-mark {
+    width: 37px;
+    height: 37px;
+    flex-basis: 37px;
+  }
+
+  .brand-name {
+    font-size: 27px;
+  }
+
+  .card-heading {
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .intro {
+    margin-top: 6px;
+  }
+
+  .input-wrap {
+    height: 42px;
+  }
+
+  .password-label {
+    margin-top: 12px;
+  }
+
+  .remember-row {
+    margin: 12px 0 14px;
+  }
+
+  .submit-button {
+    min-height: 42px;
+  }
+
+  .signup-prompt {
+    margin: 12px 0 13px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 521px) {
+  .login-page {
+    padding: 10px 18px 22px;
+  }
+
+  .login-card {
+    padding: 17px 28px 13px;
+  }
+
+  .brand {
+    margin-bottom: 10px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+
+  .brand-mark svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .brand-name {
+    font-size: 24px;
+  }
+
+  .eyebrow {
+    margin-bottom: 4px;
+    font-size: 9px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  .intro {
+    margin-top: 4px;
+    font-size: 11px;
+  }
+
+  .card-heading {
+    margin-bottom: 11px;
+  }
+
+  .login-form > label,
+  .password-label label {
+    margin-bottom: 5px;
+  }
+
+  .input-wrap {
+    height: 37px;
+  }
+
+  .password-label {
+    margin-top: 9px;
+  }
+
+  .remember-row {
+    margin: 8px 0 10px;
+  }
+
+  .submit-button {
+    min-height: 37px;
+  }
+
+  .signup-prompt {
+    margin: 8px 0 9px;
+  }
+
+  .card-bottom p {
+    font-size: 12px;
+  }
+
+  .page-note {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .login-page {
+    padding-inline: 11px;
+  }
+
+  .login-card {
+    padding-inline: 19px;
+  }
+
+  .intro {
+    font-size: 11.5px;
+  }
+
+  .utility-controls {
+    gap: 6px;
+  }
+
+  .icon-control {
+    min-width: 39px;
+    height: 39px;
+    padding-inline: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+
+
+
+/* ===== DARK MODE ===== */
+
+body.dark-mode {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+body.dark-mode .login-page {
+    background: #000000;
+}
+
+body.dark-mode .login-card {
+    background: #000000;
+    color: #FFFFFF;
+    border-color: #3B1F5C;
+}
+
+body.dark-mode h1,
+body.dark-mode .login-form label,
+body.dark-mode .brand-name span:first-child {
+    color: #FFFFFF;
+}
+
+body.dark-mode h1 em,
+body.dark-mode .brand-name .brand-gold,
+body.dark-mode .eyebrow {
+    color: #D4AF5A;
+}
+
+body.dark-mode .intro,
+body.dark-mode .signup-prompt,
+body.dark-mode .card-bottom,
+body.dark-mode .page-note,
+body.dark-mode .remember-row {
+    color: #D4AF5A;
+}
+
+body.dark-mode .input-wrap {
+    background: #000000;
+    border-color: #3B1F5C;
+}
+
+body.dark-mode .input-wrap input {
+    background: transparent;
+    color: #FFFFFF;
+}
+
+body.dark-mode .input-wrap input::placeholder {
+    color: #D4AF5A;
+}
+
+body.dark-mode .icon-control {
+    background: #000000;
+    color: #D4AF5A;
+    border-color: #3B1F5C;
+}
+
+body.dark-mode .password-label a,
+body.dark-mode .signup-prompt a {
+    color: #D4AF5A;
+}
+
+/* ===== RTL ===== */
+
+html[dir="rtl"] .utility-controls {
+    left: 24px;
+    right: auto;
+}
+
+html[dir="rtl"] .login-form > label,
+html[dir="rtl"] .password-label {
+    text-align: right;
+}
+
+html[dir="rtl"] .input-wrap {
+    direction: rtl;
+}
+
+html[dir="rtl"] .remember-row {
+    align-self: flex-end;
+}
+
+html[dir="rtl"] .brand,
+html[dir="rtl"] .brand-name {
+    direction: ltr;
+}
+
+@media (max-width: 520px) {
+    html[dir="rtl"] .utility-controls {
+        left: 15px;
+        right: auto;
+    }
+}
+
+
+
+/* Fix AstroGuide logo centering without moving it outside the card */
+
+.login-card > a#brand.st-navbar-brand {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    float: none !important;
+
+    display: flex !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    margin: 0 auto 22px !important;
+    padding: 0 !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+    direction: ltr !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+.login-card > a#brand .st-navbar-brand-logo {
+    display: block !important;
+    width: 43px !important;
+    height: 43px !important;
+    max-width: 43px !important;
+    flex: 0 0 43px !important;
+    object-fit: contain;
+}
+
+.login-card > a#brand .st-navbar-brand-name {
+    display: inline-flex !important;
+    flex: 0 1 auto !important;
+    align-items: baseline !important;
+    justify-content: center !important;
+    direction: ltr !important;
+    white-space: nowrap !important;
+}
+
+/* Keep the welcome heading centered */
+.login-card .card-heading {
+    width: 100%;
+    text-align: center !important;
+}
+
+.login-card .card-heading h1,
+.login-card .card-heading .eyebrow,
+.login-card .card-heading .intro {
+    text-align: center !important;
+}
+
+/* RTL must not change the logo's positioning */
+html[dir="rtl"] .login-card > a#brand.st-navbar-brand {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    direction: ltr !important;
+}
+
+
+/* Password visibility icon */
+.password-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.password-wrap input {
+    flex: 1;
+    min-width: 0;
+}
+
+.password-toggle {
+    display: grid;
+    place-items: center;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.password-toggle svg {
+    width: 18px;
+    height: 18px;
+}
+
+.password-toggle:hover {
+    color: var(--secondary);
+}
+
+body.dark-mode .password-toggle {
+    color: var(--secondary);
+}
+
+html[dir="rtl"] .password-wrap {
+    direction: rtl;
+}
+
+
+/* Hide eye icon until password field is active */
+.password-toggle {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* Show when password field is focused or contains text */
+.password-wrap:focus-within .password-toggle,
+.password-wrap:has(input:not(:placeholder-shown)) .password-toggle {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}

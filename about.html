@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AstroGuide | Astrology & Horoscope Guidance</title>
+
+    <meta
+        name="description"
+        content="Explore personalized astrology, birth charts, horoscopes and compatibility guidance with AstroGuide."
+    >
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/about.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <script src="./js/global.js"></script>
+</head>
+
+<body>
+
+    <!-- navbar -->
+<header class="st-navbar">
+
+    <div class="st-navbar-inner">
+
+        <!-- Brand -->
+        <a href="./index.html"
+            class="st-navbar-brand"
+            aria-label="AstroGuide Home">
+
+            <img src="./images/logo.png"
+                alt="AstroGuide Logo"
+                class="st-navbar-brand-logo">
+
+            <span class="st-navbar-brand-name">
+                <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+            </span>
+
+        </a>
+
+
+        <!-- Desktop Navigation -->
+        <nav class="st-navbar-nav"
+            aria-label="Main navigation">
+
+            <!-- Home -->
+            <div class="st-nav-dropdown">
+
+                <button type="button"
+                    class="st-navbar-link st-nav-dropdown-toggle"
+                    aria-expanded="false"
+                    aria-haspopup="true">
+
+                    <span>Home</span>
+
+                    <i data-lucide="chevron-down"
+                        aria-hidden="true"></i>
+
+                </button>
+
+
+                <div class="st-nav-dropdown-menu">
+
+                    <a href="./index.html"
+                        class="st-nav-dropdown-link">
+                        Home 1
+                    </a>
+
+                    <a href="./home2.html"
+                        class="st-nav-dropdown-link">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- About -->
+            <a href="./about.html"
+                class="st-navbar-link active">
+                About
+            </a>
+
+
+            <!-- Services -->
+            <a href="./services.html"
+                class="st-navbar-link">
+                Services
+            </a>
+
+
+
+
+
+            <!-- Astrologers -->
+            <a href="./astrologers.html"
+                class="st-navbar-link">
+                Astrologers
+            </a>
+
+
+            <!-- Pricing -->
+            <a href="./pricing.html"
+                class="st-navbar-link">
+                Pricing
+            </a>
+
+            <!-- Horoscope -->
+            <a href="./contact.html"
+                class="st-navbar-link">
+                Contact
+            </a>
+
+            <!-- Dashboard -->
+            <a href="./dashboard.html"
+                class="st-navbar-link">
+                Dashboard
+            </a>
+
+        </nav>
+
+
+        <!-- Navbar Actions -->
+        <div class="st-navbar-actions">
+
+            <!-- Dark Mode -->
+            <button type="button"
+                class="st-navbar-icon-btn"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+
+                <i data-lucide="moon"
+                    aria-hidden="true"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+            <button type="button"
+                class="st-navbar-icon-btn"
+                id="rtlToggle"
+                aria-label="Enable RTL"
+                title="Enable RTL">
+
+                <i data-lucide="arrow-left-right"></i>
+
+            </button>
+
+
+            <!-- Login -->
+            <a href="./login.html"
+                class="st-login-btn">
+                Login
+            </a>
+
+
+            <!-- Book Consultation -->
+            <a href="./contact.html#contact-form"
+                class="st-consultation-btn">
+                Book Consultation
+            </a>
+
+
+            <!-- Mobile Menu -->
+            <button type="button"
+                class="st-navbar-menu-btn"
+                id="mobileMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu">
+
+                <i data-lucide="menu"
+                    aria-hidden="true"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ====================================================================
+         MOBILE MENU
+         ==================================================================== -->
+
+    <div class="st-mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true">
+
+        <div class="st-mobile-menu-inner">
+
+            <nav class="st-mobile-nav"
+                aria-label="Mobile navigation">
+
+
+                <!-- Home -->
+                <div class="st-mobile-home-group">
+
+                    <button type="button"
+                        class="st-mobile-nav-link st-mobile-home-toggle"
+                        aria-expanded="false">
+
+                        <span>Home</span>
+
+                        <i data-lucide="chevron-down"
+                            aria-hidden="true"></i>
+
+                    </button>
+
+
+                    <div class="st-mobile-dropdown">
+
+                        <a href="./index.html"
+                            class="st-mobile-dropdown-link">
+                            Home 1
+                        </a>
+
+                        <a href="./home2.html"
+                            class="st-mobile-dropdown-link">
+                            Home 2
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- About -->
+                <a href="./about.html"
+                    class="st-mobile-nav-link active">
+                    About
+                </a>
+
+
+                <!-- Services -->
+                <a href="./services.html"
+                    class="st-mobile-nav-link">
+                    Services
+                </a>
+
+                <!-- Astrologers -->
+                <a href="./astrologers.html"
+                    class="st-mobile-nav-link">
+                    Astrologers
+                </a>
+
+
+                <!-- Pricing -->
+                <a href="./pricing.html"
+                    class="st-mobile-nav-link">
+                    Pricing
+                </a>
+                <!-- Pricing -->
+                <a href="./contact.html"
+                    class="st-mobile-nav-link ">
+                    Contact
+                </a>
+
+
+                <!-- Dashboard -->
+                <a href="./dashboard.html"
+                    class="st-mobile-nav-link">
+                    Dashboard
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Actions -->
+            <div class="st-mobile-menu-actions">
+
+                <a href="./login.html"
+                    class="st-login-btn">
+                    Login
+                </a>
+                <a href="./contact.html#contact-form"
+                    class="st-consultation-btn">
+                    Book Consultation
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="st-page">
+<section class="ag-about-hero" aria-labelledby="ag-about-hero-title">
+
+    <div class="ag-about-hero-bg" aria-hidden="true"></div>
+
+    <div class="ag-about-hero-overlay" aria-hidden="true"></div>
+
+    <div class="ag-about-hero-container">
+
+        <div class="ag-about-hero-content">
+
+            <p class="ag-about-hero-eyebrow">
+                ABOUT ASTROGUIDE
+            </p>
+
+            <h1 id="ag-about-hero-title" class="ag-about-hero-title">
+                Ancient wisdom.
+                <br>
+                <span>A clearer understanding of you.</span>
+            </h1>
+
+            <p class="ag-about-hero-description">
+                AstroGuide brings the timeless principles of Vedic astrology
+                into a simple and meaningful experience designed to help you
+                understand yourself, your patterns and the journey ahead.
+            </p>
+
+            <p class="ag-about-hero-description secondary">
+                Explore your birth chart, understand planetary influences,
+                and discover meaningful perspectives for relationships,
+                career, personal growth and the path ahead.
+            </p>
+
+            <div class="ag-about-hero-actions">
+
+                <a
+                    href="./services.html#birth"
+                    class="ag-about-hero-btn primary"
+                >
+                    Explore Your Birth Chart
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
+
+                <a
+                    href="#ag-about-story"
+                    class="ag-about-hero-btn outline"
+                >
+                    Our Story
+                    <i data-lucide="arrow-down" aria-hidden="true"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================================
+     ABOUT PAGE — SECTION 2: OUR STORY
+     ========================================================= -->
+
+<section
+    class="ag-about-story"
+    id="ag-about-story"
+    aria-labelledby="ag-about-story-title"
+>
+
+    <div class="ag-about-story-container">
+
+        <!-- IMAGE -->
+        <div class="ag-about-story-visual">
+
+            <div class="ag-about-story-image-wrap">
+                <img
+                    src="./images/birthchart.png"
+                    alt="Vedic astrology birth chart and celestial guidance"
+                    class="ag-about-story-image"
+                >
+            </div>
+
+            <div class="ag-about-story-badge">
+                <i data-lucide="sparkles" aria-hidden="true"></i>
+
+                <div>
+                    Ancient Wisdom
+                    <span>Meaningful guidance for today</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+        <div class="ag-about-story-content">
+
+            <p class="ag-about-story-label">
+                OUR STORY
+            </p>
+
+            <h2
+                id="ag-about-story-title"
+                class="ag-about-story-title"
+            >
+                Making ancient wisdom
+                <span>easier to understand.</span>
+            </h2>
+
+            <p class="ag-about-story-text">
+                AstroGuide was created with a simple idea — astrology should
+                help people understand themselves better, not leave them
+                overwhelmed by complicated terminology or confusing
+                interpretations.
+            </p>
+
+            <p class="ag-about-story-text">
+                Vedic astrology has been studied for centuries, offering
+                insight through planetary positions, zodiac signs, houses,
+                Nakshatras and planetary periods. We believe this timeless
+                knowledge can be presented in a way that feels relevant,
+                thoughtful and accessible in the modern world.
+            </p>
+
+            <p class="ag-about-story-text">
+                AstroGuide brings these traditional principles together with
+                a clear digital experience, helping you explore your birth
+                chart and discover the patterns that make your journey
+                uniquely yours.
+            </p>
+
+
+            <!-- KEY POINTS -->
+            <div class="ag-about-story-points">
+
+                <div class="ag-about-story-point">
+
+                    <div class="ag-about-story-point-icon">
+                        <i data-lucide="book-open" aria-hidden="true"></i>
+                    </div>
+
+                    <div>
+                        <strong>Rooted in Tradition</strong>
+                        <span>
+                            Inspired by the principles of Vedic astrology.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="ag-about-story-point">
+
+                    <div class="ag-about-story-point-icon">
+                        <i data-lucide="lightbulb" aria-hidden="true"></i>
+                    </div>
+
+                    <div>
+                        <strong>Made for Clarity</strong>
+                        <span>
+                            Complex concepts explained in a simple way.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================================
+     ABOUT PAGE — SECTION 3: WHAT IS VEDIC ASTROLOGY
+     ========================================================= -->
+
+<!-- =========================================================
+     SECTION 3 — VEDIC ASTROLOGY
+     ========================================================= -->
+
+<section
+    class="ag-about-vedic"
+    id="ag-about-vedic"
+    aria-labelledby="ag-about-vedic-title"
+>
+
+    <div class="ag-about-vedic-container">
+
+        <!-- Section Header -->
+        <div class="ag-about-vedic-header">
+
+            <p class="ag-about-story-label">
+                Vedic Astrology
+            </p>
+
+            <h2
+                id="ag-about-story-title"
+                class="ag-about-story-title"
+            >
+                understand the language
+                <span>Of the Stars.</span>
+            </h2>
+
+            <p class="ag-about-vedic-intro ag-reveal">
+                Vedic astrology brings together signs, planets, houses,
+                Nakshatras and planetary periods to create a deeper
+                understanding of your unique life patterns.
+            </p>
+
+        </div>
+
+
+        <!-- Astrology Cards -->
+        <div class="ag-about-vedic-grid">
+
+
+            <!-- Zodiac Signs -->
+            <article
+                class="ag-about-vedic-card ag-reveal"
+                style="--reveal-delay: 0.05s;"
+            >
+
+                <div class="ag-about-vedic-card-top">
+
+                    <span class="ag-about-vedic-number">
+                        01
+                    </span>
+
+                    <div class="ag-about-vedic-icon">
+                        <i
+                            data-lucide="circle-dot"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                </div>
+
+                <div class="ag-about-vedic-card-body">
+
+                    <h3>
+                        Zodiac Signs
+                    </h3>
+
+                    <p>
+                        The twelve signs describe different qualities,
+                        tendencies and ways of experiencing life.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Planets -->
+            <article
+                class="ag-about-vedic-card ag-reveal"
+                style="--reveal-delay: 0.1s;"
+            >
+
+                <div class="ag-about-vedic-card-top">
+
+                    <span class="ag-about-vedic-number">
+                        02
+                    </span>
+
+                    <div class="ag-about-vedic-icon">
+                        <i
+                            data-lucide="orbit"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                </div>
+
+                <div class="ag-about-vedic-card-body">
+
+                    <h3>
+                        Planets
+                    </h3>
+
+                    <p>
+                        Planetary positions represent different energies
+                        and influences within your birth chart.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Houses -->
+            <article
+                class="ag-about-vedic-card ag-reveal"
+                style="--reveal-delay: 0.15s;"
+            >
+
+                <div class="ag-about-vedic-card-top">
+
+                    <span class="ag-about-vedic-number">
+                        03
+                    </span>
+
+                    <div class="ag-about-vedic-icon">
+                        <i
+                            data-lucide="layout-grid"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                </div>
+
+                <div class="ag-about-vedic-card-body">
+
+                    <h3>
+                        Houses
+                    </h3>
+
+                    <p>
+                        The twelve houses connect astrology with areas
+                        such as career, relationships, family and growth.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Nakshatras -->
+            <article
+                class="ag-about-vedic-card ag-reveal"
+                style="--reveal-delay: 0.2s;"
+            >
+
+                <div class="ag-about-vedic-card-top">
+
+                    <span class="ag-about-vedic-number">
+                        04
+                    </span>
+
+                    <div class="ag-about-vedic-icon">
+                        <i
+                            data-lucide="sparkles"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                </div>
+
+                <div class="ag-about-vedic-card-body">
+
+                    <h3>
+                        Nakshatras
+                    </h3>
+
+                    <p>
+                        Lunar constellations add another layer of detail
+                        to personality, timing and life patterns.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Ascendant -->
+            <article
+                class="ag-about-vedic-card ag-reveal"
+                style="--reveal-delay: 0.25s;"
+            >
+
+                <div class="ag-about-vedic-card-top">
+
+                    <span class="ag-about-vedic-number">
+                        05
+                    </span>
+
+                    <div class="ag-about-vedic-icon">
+                        <i
+                            data-lucide="compass"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                </div>
+
+                <div class="ag-about-vedic-card-body">
+
+                    <h3>
+                        Ascendant
+                    </h3>
+
+                    <p>
+                        Your rising sign helps describe how you approach
+                        life and how your chart is uniquely structured.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Planetary Periods -->
+            <article
+                class="ag-about-vedic-card ag-reveal"
+                style="--reveal-delay: 0.3s;"
+            >
+
+                <div class="ag-about-vedic-card-top">
+
+                    <span class="ag-about-vedic-number">
+                        06
+                    </span>
+
+                    <div class="ag-about-vedic-icon">
+                        <i
+                            data-lucide="clock-3"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                </div>
+
+                <div class="ag-about-vedic-card-body">
+
+                    <h3>
+                        Planetary Periods
+                    </h3>
+
+                    <p>
+                        Planetary periods help explore the timing of
+                        important themes and transitions in life.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- Closing Insight -->
+        <div
+            class="ag-about-vedic-insight ag-reveal"
+            style="--reveal-delay: 0.4s;"
+        >
+
+            <div class="ag-about-vedic-insight-icon">
+                <i
+                    data-lucide="lightbulb"
+                    aria-hidden="true"
+                ></i>
+            </div>
+
+            <div class="ag-about-vedic-insight-content">
+
+                <h3>
+                    Astrology is about understanding patterns.
+                </h3>
+
+                <p>
+                    AstroGuide brings these elements together to make
+                    your chart easier to explore and understand.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================================
+     SECTION 4 — WHAT WE BELIEVE
+     ========================================================= -->
+
+<section
+    class="ag-about-beliefs"
+    id="ag-about-beliefs"
+    aria-labelledby="ag-about-beliefs-title"
+>
+
+    <div class="ag-about-beliefs-container">
+
+        <div class="ag-about-beliefs-header">
+                <p class="ag-about-story-label">
+                WHAT WE BELIEVE
+            </p>
+
+            <h2
+                id="ag-about-story-title"
+                class="ag-about-story-title"
+            >
+                Astrology should create
+                <span>clarity, not confusion.</span>
+            </h2>
+
+            <p class="ag-about-beliefs-intro ag-belief-reveal">
+                We believe astrology becomes most meaningful when it
+                helps you reflect, understand your patterns and make
+                more conscious choices in everyday life.
+            </p>
+
+        </div>
+
+
+        <div class="ag-about-beliefs-grid">
+
+            <!-- Belief 01 -->
+            <article
+                class="ag-about-belief-card ag-belief-reveal"
+                style="--belief-delay: 0.05s;"
+            >
+
+                <div class="ag-about-belief-icon">
+                    <i data-lucide="book-open" aria-hidden="true"></i>
+                </div>
+
+                <span class="ag-about-belief-number">
+                    01
+                </span>
+
+                <h3>
+                    Respect the Tradition
+                </h3>
+
+                <p>
+                    We value the depth of Vedic astrology and the
+                    traditional principles that have shaped it over
+                    generations.
+                </p>
+
+            </article>
+
+
+            <!-- Belief 02 -->
+            <article
+                class="ag-about-belief-card ag-belief-reveal"
+                style="--belief-delay: 0.15s;"
+            >
+
+                <div class="ag-about-belief-icon">
+                    <i data-lucide="lightbulb" aria-hidden="true"></i>
+                </div>
+
+                <span class="ag-about-belief-number">
+                    02
+                </span>
+
+                <h3>
+                    Make It Understandable
+                </h3>
+
+                <p>
+                    Astrology should feel approachable. We turn complex
+                    ideas into clear insights that are easier to explore
+                    and understand.
+                </p>
+
+            </article>
+
+
+            <!-- Belief 03 -->
+            <article
+                class="ag-about-belief-card ag-belief-reveal"
+                style="--belief-delay: 0.25s;"
+            >
+
+                <div class="ag-about-belief-icon">
+                    <i data-lucide="compass" aria-hidden="true"></i>
+                </div>
+
+                <span class="ag-about-belief-number">
+                    03
+                </span>
+
+                <h3>
+                    Empower Your Journey
+                </h3>
+
+                <p>
+                    Astrology can offer perspective, but your choices
+                    remain your own. Our goal is to help you move
+                    forward with greater awareness.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <div
+            class="ag-about-beliefs-statement ag-belief-reveal"
+            style="--belief-delay: 0.35s;"
+        >
+
+            <i
+                data-lucide="quote"
+                aria-hidden="true"
+            ></i>
+
+            <p>
+                Your birth chart can offer a perspective on your path,
+                but you are the one who gives that path meaning.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     SECTION 5 — OUR APPROACH
+     ========================================================= -->
+
+<section
+    class="ag-about-approach"
+    id="ag-about-approach"
+    aria-labelledby="ag-about-approach-title"
+>
+
+    <div class="ag-about-approach-container">
+
+        <!-- Image -->
+        <div
+            class="ag-about-approach-visual ag-approach-reveal"
+        >
+
+            <div class="ag-about-approach-image-wrap">
+
+                <!-- IMAGE PLACEHOLDER -->
+                <div
+                    class="ag-about-approach-image-placeholder"
+                    role="img"
+                    aria-label="Image placeholder for AstroGuide approach"
+                >
+                    <img src="./images/plamistry.png" alt="">
+
+                </div>
+
+            </div>
+
+            <div class="ag-about-approach-badge">
+
+                <i
+                    data-lucide="sparkles"
+                    aria-hidden="true"
+                ></i>
+
+                <div>
+                    <strong>
+                        Thoughtful Guidance
+                    </strong>
+
+                    <span>
+                        Traditional wisdom, clearly presented
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Content -->
+        <div class="ag-about-approach-content">
+
+            <p class="ag-about-story-label">
+                OUR APPROACH
+            </p>
+
+            <h2
+                id="ag-about-story-title"
+                class="ag-about-story-title"
+            >
+                Turning ancient knowledge into 
+                <span>meaningful insight.</span>
+            </h2>
+
+            <p class="ag-about-approach-intro ag-approach-reveal">
+                Astrology can be complex. Our approach is to preserve
+                its depth while presenting it in a way that feels
+                clear, practical and relevant to your everyday life.
+            </p>
+
+
+            <!-- Approach Points -->
+            <div class="ag-about-approach-points">
+
+                <!-- Point 01 -->
+                <article
+                    class="ag-about-approach-point ag-approach-reveal"
+                    style="--approach-delay: 0.1s;"
+                >
+
+                    <div class="ag-about-approach-point-icon">
+                        <i
+                            data-lucide="book-open"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+                    
+
+                    <div class="ag-about-approach-point-content">
+
+                        <span>
+                            01
+                        </span>
+
+                        <h3>
+                            Grounded in Tradition
+                        </h3>
+
+                        <p>
+                            We draw from established principles of
+                            Vedic astrology while keeping the experience
+                            easy to explore.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Point 02 -->
+                <article
+                    class="ag-about-approach-point ag-approach-reveal"
+                    style="--approach-delay: 0.2s;"
+                >
+
+                    <div class="ag-about-approach-point-icon">
+                        <i
+                            data-lucide="search"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                    <div class="ag-about-approach-point-content">
+
+                        <span>
+                            02
+                        </span>
+
+                        <h3>
+                            Focused on Understanding
+                        </h3>
+
+                        <p>
+                            Instead of overwhelming you with terminology,
+                            we focus on the meaning behind the patterns
+                            within your chart.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Point 03 -->
+                <article
+                    class="ag-about-approach-point ag-approach-reveal"
+                    style="--approach-delay: 0.3s;"
+                >
+
+                    <div class="ag-about-approach-point-icon">
+                        <i
+                            data-lucide="compass"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                    <div class="ag-about-approach-point-content">
+
+                        <span>
+                            03
+                        </span>
+
+                        <h3>
+                            Designed for Your Journey
+                        </h3>
+
+                        <p>
+                            Every chart is personal. Our experience is
+                            designed to help you reflect on your own
+                            path, choices and possibilities.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================================
+     SECTION 6 — OUR BEST ASTROLOGERS
+     ========================================================= -->
+
+<section
+    class="ag-about-astrologers"
+    id="ag-about-astrologers"
+    aria-labelledby="ag-about-astrologers-title"
+>
+
+    <div class="ag-about-astrologers-container">
+
+        <!-- Header -->
+         
+        <div class="ag-about-astrologers-header">
+            <p class="ag-about-story-label">
+                 OUR BEST ASTROLOGERS
+            </p>
+
+            <h2
+                id="ag-about-story-title"
+                class="ag-about-story-title"
+            >
+                Guidance from experienced
+                <span>astrology practitioners.</span>
+            </h2>
+
+
+            <p class="ag-about-astrologers-intro ag-astrologer-reveal">
+                Meet the experienced practitioners who bring knowledge,
+                thoughtful interpretation and a personal approach to
+                every consultation.
+            </p>
+
+        </div>
+
+
+        <!-- Astrologer Grid -->
+        <div class="ag-about-astrologers-grid">
+
+
+            <!-- Astrologer 01 -->
+            <article
+                class="ag-about-astrologer-card ag-astrologer-reveal"
+                style="--astrologer-delay: 0.05s;"
+            >
+
+                <div class="ag-about-astrologer-image">
+
+                    <!-- IMAGE PLACEHOLDER -->
+                    <div class="ag-about-astrologer-image-placeholder">
+                        <img src="./images/ananya-aier.png" alt="" class="ag-about-astrologer-photo">
+                    </div>
+
+                    <span class="ag-about-astrologer-status">
+                        Available
+                    </span>
+
+                </div>
+
+                <div class="ag-about-astrologer-content">
+
+                    <div class="ag-about-astrologer-top">
+
+                        <div>
+                            <span class="ag-about-astrologer-role">
+                                VEDIC ASTROLOGER
+                            </span>
+
+                            <h3>
+                                Ananya Sharma
+                            </h3>
+                        </div>
+
+                        <div class="ag-about-astrologer-rating">
+                            <i
+                                data-lucide="star"
+                                aria-hidden="true"
+                            ></i>
+                            <span>4.9</span>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Specializes in birth charts, relationships and
+                        personal guidance through Vedic astrology.
+                    </p>
+
+                    <div class="ag-about-astrologer-meta">
+
+                        <span>
+                            <i data-lucide="briefcase"></i>
+                            12+ Years
+                        </span>
+
+                        <span>
+                            <i data-lucide="languages"></i>
+                            English · Hindi
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="./contact.html"
+                        class="ag-about-astrologer-link"
+                    >
+                        View Profile
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Astrologer 02 -->
+            <article
+                class="ag-about-astrologer-card ag-astrologer-reveal"
+                style="--astrologer-delay: 0.12s;"
+            >
+
+                <div class="ag-about-astrologer-image">
+
+                    <!-- IMAGE PLACEHOLDER -->
+                    <div class="ag-about-astrologer-image-placeholder">
+                        <img src="./images/rahul.png" alt="" class="ag-about-astrologer-photo">
+                    </div>
+
+                    <span class="ag-about-astrologer-status">
+                        Available
+                    </span>
+
+                </div>
+
+                <div class="ag-about-astrologer-content">
+
+                    <div class="ag-about-astrologer-top">
+
+                        <div>
+                            <span class="ag-about-astrologer-role">
+                                VEDIC ASTROLOGER
+                            </span>
+
+                            <h3>
+                                Rahul Mehta
+                            </h3>
+                        </div>
+
+                        <div class="ag-about-astrologer-rating">
+                            <i
+                                data-lucide="star"
+                                aria-hidden="true"
+                            ></i>
+                            <span>4.8</span>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Focuses on career guidance,marriages, planetary periods
+                        and important life transitions.
+                    </p>
+
+                    <div class="ag-about-astrologer-meta">
+
+                        <span>
+                            <i data-lucide="briefcase"></i>
+                            10+ Years
+                        </span>
+
+                        <span>
+                            <i data-lucide="languages"></i>
+                            English · Hindi
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="./contact.html"
+                        class="ag-about-astrologer-link"
+                    >
+                        View Profile
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Astrologer 03 -->
+            <article
+                class="ag-about-astrologer-card ag-astrologer-reveal"
+                style="--astrologer-delay: 0.19s;"
+            >
+
+                <div class="ag-about-astrologer-image">
+
+                    <!-- IMAGE PLACEHOLDER -->
+                    <div class="ag-about-astrologer-image-placeholder">
+                        <img src="./images/meera.png" alt="" class="ag-about-astrologer-photo">
+                    </div>
+
+                    <span class="ag-about-astrologer-status">
+                        Available
+                    </span>
+
+                </div>
+
+                <div class="ag-about-astrologer-content">
+
+                    <div class="ag-about-astrologer-top">
+
+                        <div>
+                            <span class="ag-about-astrologer-role">
+                                VEDIC ASTROLOGER
+                            </span>
+
+                            <h3>
+                                Meera Iyer
+                            </h3>
+                        </div>
+
+                        <div class="ag-about-astrologer-rating">
+                            <i
+                                data-lucide="star"
+                                aria-hidden="true"
+                            ></i>
+                            <span>4.9</span>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Specializes in relationships, emotional patterns
+                        and deeper birth-chart interpretation in the life.
+                    </p>
+
+                    <div class="ag-about-astrologer-meta">
+
+                        <span>
+                            <i data-lucide="briefcase"></i>
+                            11+ Years
+                        </span>
+
+                        <span>
+                            <i data-lucide="languages"></i>
+                            English · Tamil
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="./contact.html"
+                        class="ag-about-astrologer-link"
+                    >
+                        View Profile
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Astrologer 04 -->
+            <article
+                class="ag-about-astrologer-card ag-astrologer-reveal"
+                style="--astrologer-delay: 0.26s;"
+            >
+
+                <div class="ag-about-astrologer-image">
+
+                    <!-- IMAGE PLACEHOLDER -->
+                    <div class="ag-about-astrologer-image-placeholder">
+                        <img src="./images/arjun.png" alt="" class="ag-about-astrologer-photo">
+                    </div>
+
+                    <span class="ag-about-astrologer-status">
+                        Available
+                    </span>
+
+                </div>
+
+                <div class="ag-about-astrologer-content">
+
+                    <div class="ag-about-astrologer-top">
+
+                        <div>
+                            <span class="ag-about-astrologer-role">
+                                VEDIC ASTROLOGER
+                            </span>
+
+                            <h3>
+                                Arjun Rao
+                            </h3>
+                        </div>
+
+                        <div class="ag-about-astrologer-rating">
+                            <i
+                                data-lucide="star"
+                                aria-hidden="true"
+                            ></i>
+                            <span>4.8</span>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Works with career, finance and planetary timing
+                        to provide practical astrological perspectives.
+                    </p>
+
+                    <div class="ag-about-astrologer-meta">
+
+                        <span>
+                            <i data-lucide="briefcase"></i>
+                            9+ Years
+                        </span>
+
+                        <span>
+                            <i data-lucide="languages"></i>
+                            English · Telugu
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="./contact.html"
+                        class="ag-about-astrologer-link"
+                    >
+                        View Profile
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+    </div>
+
+</section>
+<!-- ============================================================
+     NEWSLETTER
+     ============================================================ -->
+
+<section class="ag-about-newsletter" id="ag-about-newsletter" aria-labelledby="ag-about-newsletter-title">
+
+    <div class="ag-about-newsletter-container">
+
+        <div class="ag-about-newsletter-icon" aria-hidden="true">
+            <i data-lucide="mail"></i>
+        </div>
+
+        <div class="ag-about-newsletter-content">
+
+            <p class="ag-about-newsletter-label">
+                STAY CONNECTED
+            </p>
+
+            <h2 id="ag-about-newsletter-title" class="ag-about-newsletter-title">
+                Keep discovering
+                <span>what the stars reveal.</span>
+            </h2>
+
+            <p class="ag-about-newsletter-description">
+                Receive thoughtful astrology insights, helpful guidance,
+                and updates from AstroGuide directly in your inbox.
+            </p>
+
+        </div>
+
+        <form class="ag-about-newsletter-form">
+
+            <div class="ag-about-newsletter-input-wrap">
+
+                <i data-lucide="mail" aria-hidden="true"></i>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    aria-label="Email address"
+                    required
+                >
+
+            </div>
+
+            <button type="submit" class="ag-about-newsletter-button">
+                Subscribe
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </button>
+
+        </form>
+
+        <p class="ag-about-newsletter-note">
+            <i data-lucide="shield-check" aria-hidden="true"></i>
+            We respect your privacy. No spam, ever.
+        </p>
+
+    </div>
+
+</section>
+</div>
+<!-- ========================================================================
+     ASTROGUIDE FOOTER
+     ======================================================================== -->
+
+<footer class="st-footer">
+
+    <div class="st-footer-inner">
+
+
+        <!-- ==================================================================
+             FOOTER MAIN
+             ================================================================== -->
+
+        <div class="st-footer-main">
+
+
+            <!-- Brand / Description -->
+            <div class="st-footer-brand">
+
+                <a href="./index.html"
+                    class="st-navbar-brand"
+                    aria-label="AstroGuide Home">
+
+                    <img src="./images/logo.png"
+                        alt="AstroGuide Logo"
+                        class="st-navbar-brand-logo">
+
+                    <span class="st-navbar-brand-name">
+                        <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+                    </span>
+
+                </a>
+
+
+                <p class="st-footer-description">
+                    Explore astrology with a thoughtful blend of celestial
+                    wisdom, personal interpretation, and meaningful guidance
+                    for the journey ahead.
+                </p>
+
+
+                <!-- Social Media -->
+                <div class="st-footer-socials"
+                    aria-label="Social media links">
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Instagram">
+
+                        <i data-lucide="instagram"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Facebook">
+
+                        <i data-lucide="facebook"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Twitter">
+
+                        <i data-lucide="twitter"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="YouTube">
+
+                        <i data-lucide="youtube"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Navigation
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html">
+                            Services
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="./astrologers.html">
+                            Astrologers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pricing.html">
+                            Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./dashboard.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Our Services -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Our Services
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./horoscope.html">
+                            Daily Horoscope
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./birth-chart.html">
+                            Birth Chart
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./compatibility.html">
+                            Compatibility
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#consultation">
+                            Personal Consultation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./astrologers.html">
+                            Astrologer Sessions
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Additional Pages -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Additional Pages
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./404.html">
+                            404 Page
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./maintenance.html">
+                            Maintenance Page
+                        </a>
+                    </li>
+
+                   
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact Us -->
+            <div class="st-footer-column st-footer-contact">
+
+                <h3 class="st-footer-title">
+                    Contact Us
+                </h3>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="mail"
+                        aria-hidden="true"></i>
+
+                    <a href="mailto:hello@astroguide.com">
+                        hello@astroguide.com
+                    </a>
+
+                </div>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="phone"
+                        aria-hidden="true"></i>
+
+                    <a href="tel:+919999999999">
+                        +91 99999 99999
+                    </a>
+
+                </div>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="map-pin"
+                        aria-hidden="true"></i>
+
+                    <span>
+                        Hyderabad, India
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================================
+             FOOTER BOTTOM
+             ================================================================== -->
+
+        <div class="st-footer-bottom">
+
+            <p class="st-footer-copyright">
+                © 2026 AstroGuide. All rights reserved.
+            </p>
+
+
+            <div class="st-footer-legal">
+
+                <a href="./privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="./terms.html">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AstroGuide | Astrology & Horoscope Guidance</title>
+
+    <meta
+        name="description"
+        content="Explore personalized astrology, birth charts, horoscopes and compatibility guidance with AstroGuide."
+    >
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/services.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+    <script src="./js/services.js"></script>
+    <script src="./js/global.js"></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+    <!-- navbar -->
+<header class="st-navbar">
+
+    <div class="st-navbar-inner">
+
+        <!-- Brand -->
+        <a href="./index.html"
+            class="st-navbar-brand"
+            aria-label="AstroGuide Home">
+
+            <img src="./images/logo.png"
+                alt="AstroGuide Logo"
+                class="st-navbar-brand-logo">
+
+            <span class="st-navbar-brand-name">
+                <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+            </span>
+
+        </a>
+
+
+        <!-- Desktop Navigation -->
+        <nav class="st-navbar-nav"
+            aria-label="Main navigation">
+
+            <!-- Home -->
+            <div class="st-nav-dropdown">
+
+                <button type="button"
+                    class="st-navbar-link st-nav-dropdown-toggle"
+                    aria-expanded="false"
+                    aria-haspopup="true">
+
+                    <span>Home</span>
+
+                    <i data-lucide="chevron-down"
+                        aria-hidden="true"></i>
+
+                </button>
+
+
+                <div class="st-nav-dropdown-menu">
+
+                    <a href="./index.html"
+                        class="st-nav-dropdown-link">
+                        Home 1
+                    </a>
+
+                    <a href="./home2.html"
+                        class="st-nav-dropdown-link">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- About -->
+            <a href="./about.html"
+                class="st-navbar-link">
+                About
+            </a>
+
+
+            <!-- Services -->
+            <a href="./services.html"
+                class="st-navbar-link active">
+                Services
+            </a>
+
+
+
+
+
+            <!-- Astrologers -->
+            <a href="./astrologers.html"
+                class="st-navbar-link">
+                Astrologers
+            </a>
+
+
+            <!-- Pricing -->
+            <a href="./pricing.html"
+                class="st-navbar-link">
+                Pricing
+            </a>
+
+            <!-- Horoscope -->
+            <a href="./contact.html"
+                class="st-navbar-link">
+                Contact
+            </a>
+
+            <!-- Dashboard -->
+            <a href="./dashboard.html"
+                class="st-navbar-link">
+                Dashboard
+            </a>
+
+        </nav>
+
+
+        <!-- Navbar Actions -->
+        <div class="st-navbar-actions">
+
+            <!-- Dark Mode -->
+            <button type="button"
+                class="st-navbar-icon-btn"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+
+                <i data-lucide="moon"
+                    aria-hidden="true"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+            <button type="button"
+                class="st-navbar-icon-btn"
+                id="rtlToggle"
+                aria-label="Enable RTL"
+                title="Enable RTL">
+
+                <i data-lucide="arrow-left-right"></i>
+
+            </button>
+
+
+            <!-- Login -->
+            <a href="./login.html"
+                class="st-login-btn">
+                Login
+            </a>
+
+
+            <!-- Book Consultation -->
+            <a href="./contact.html#contact-form"
+                class="st-consultation-btn">
+                Book Consultation
+            </a>
+
+
+            <!-- Mobile Menu -->
+            <button type="button"
+                class="st-navbar-menu-btn"
+                id="mobileMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu">
+
+                <i data-lucide="menu"
+                    aria-hidden="true"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ====================================================================
+         MOBILE MENU
+         ==================================================================== -->
+
+    <div class="st-mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true">
+
+        <div class="st-mobile-menu-inner">
+
+            <nav class="st-mobile-nav"
+                aria-label="Mobile navigation">
+
+
+                <!-- Home -->
+                <div class="st-mobile-home-group">
+
+                    <button type="button"
+                        class="st-mobile-nav-link st-mobile-home-toggle"
+                        aria-expanded="false">
+
+                        <span>Home</span>
+
+                        <i data-lucide="chevron-down"
+                            aria-hidden="true"></i>
+
+                    </button>
+
+
+                    <div class="st-mobile-dropdown">
+
+                        <a href="./index.html"
+                            class="st-mobile-dropdown-link">
+                            Home 1
+                        </a>
+
+                        <a href="./home2.html"
+                            class="st-mobile-dropdown-link">
+                            Home 2
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- About -->
+                <a href="./about.html"
+                    class="st-mobile-nav-link">
+                    About
+                </a>
+
+
+                <!-- Services -->
+                <a href="./services.html"
+                    class="st-mobile-nav-link active">
+                    Services
+                </a>
+
+
+                <!-- Astrologers -->
+                <a href="./astrologers.html"
+                    class="st-mobile-nav-link">
+                    Astrologers
+                </a>
+
+
+                <!-- Pricing -->
+                <a href="./pricing.html"
+                    class="st-mobile-nav-link">
+                    Pricing
+                </a>
+               <a href="./Contact.html"
+                    class="st-mobile-nav-link">
+                    Contact
+                </a>
+
+                <!-- Dashboard -->
+                <a href="./dashboard.html"
+                    class="st-mobile-nav-link">
+                    Dashboard
+                </a>
+
+            </nav>
+
+
+            <!-- Mobile Actions -->
+            <div class="st-mobile-menu-actions">
+
+                <a href="./login.html"
+                    class="st-login-btn">
+                    Login
+                </a>
+                <a href="./contact.html#contact-form"
+                    class="st-consultation-btn">
+                    Book Consultation
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="st-page">
+
+    <!-- ============================================================
+     ASTROGUIDE — SERVICES HERO
+     ============================================================ -->
+
+<!-- ============================================================
+     SERVICES — HERO
+     ============================================================ -->
+
+<section
+    class="ag-services-hero"
+    aria-labelledby="ag-services-hero-title"
+>
+
+    <!-- Background overlay -->
+    <div class="ag-services-hero-overlay" aria-hidden="true"></div>
+
+    <div class="ag-services-hero-container">
+
+        <!-- ====================================================
+             LEFT CONTENT
+             ==================================================== -->
+
+        <div class="ag-services-hero-content">
+
+            <p class="ag-services-hero-label">
+                ASTROGUIDE SERVICES
+            </p>
+
+            <h1
+                id="ag-services-hero-title"
+                class="ag-services-hero-title"
+            >
+                Guidance for every
+                <span>chapter of your journey.</span>
+            </h1>
+
+            <p class="ag-services-hero-description">
+                Explore personalized astrology services designed to help
+                you understand your birth chart, relationships, career,
+                life patterns and the timing of important decisions.
+            </p>
+
+            <p class="ag-services-hero-description secondary">
+                Discover meaningful perspectives through Vedic astrology
+                and gain greater clarity about yourself, your choices
+                and the journey ahead.
+            </p>
+
+            <div class="ag-services-hero-actions">
+
+                <a
+                    href="./birth-chart.html"
+                    class="ag-services-hero-button primary"
+                >
+                    Explore Your Birth Chart
+
+                    <i
+                        data-lucide="arrow-up-right"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+                <a
+                    href="#ag-services-list"
+                    class="ag-services-hero-button outline"
+                >
+                    Explore Services
+
+                    <i
+                        data-lucide="arrow-down"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ====================================================
+             RIGHT IMAGE CARD
+             ==================================================== -->
+
+<div class="ag-services-hero-visual">
+
+    <div class="ag-services-hero-image-card">
+
+        <div class="ag-services-hero-image-holder">
+            <img
+                src="./images/services-hero.png"
+                alt="Astrology consultation"
+                class="ag-services-hero-image"
+            >
+        </div>
+
+        <div
+            class="ag-services-hero-image-frame"
+            aria-hidden="true">
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+<!-- ============================================================
+     SECTION 2 — BIRTH CHART READING
+     ============================================================ -->
+
+<section
+    class="ag-service-birth-chart"
+    id="birth"
+    aria-labelledby="ag-service-birth-chart-title"
+>
+
+    <div class="ag-service-birth-chart-container">
+
+        <!-- ====================================================
+             LEFT IMAGE
+             ==================================================== -->
+
+        <div class="ag-service-birth-chart-visual">
+
+            <div class="ag-service-birth-chart-image-wrap">
+
+                <img
+                    src="./images/birthchart2.png"
+                    alt="Vedic birth chart consultation"
+                    class="ag-service-birth-chart-image"
+                >
+
+                <div
+                    class="ag-service-birth-chart-image-frame"
+                    aria-hidden="true">
+                </div>
+
+            </div>
+
+
+            <!-- Floating Icon -->
+
+            <div
+                class="ag-service-birth-chart-floating-icon"
+                aria-hidden="true"
+            >
+                <i data-lucide="orbit"></i>
+            </div>
+
+        </div>
+
+
+        <!-- ====================================================
+             RIGHT CONTENT
+             ==================================================== -->
+
+        <div class="ag-service-birth-chart-content">
+
+            <div class="ag-service-birth-chart-heading">
+
+                <div class="ag-service-birth-chart-number">
+                    01
+                </div>
+
+                <p class="st-section-label ag-service-birth-chart-label">
+                    ASTROLOGY BIRTH CHART &amp; TAROT CARDS
+                </p>
+
+            </div>
+
+
+            <h2
+                id="ag-service-birth-chart-title"
+                class="st-section-title ag-service-birth-chart-title"
+            >
+                Birth Chart Reading
+                <span>Your cosmic blueprint</span>
+            </h2>
+            
+
+
+            <p class="st-section-description ag-service-birth-chart-description">
+                A birth chart reading gives you a wider view of the patterns,
+                motivations, strengths, and emotional tendencies reflected in
+                your chart. Instead of focusing on a single placement, we
+                explore how the different pieces work together.
+            </p>
+
+            <p class="st-section-description ag-service-birth-chart-description secondary">
+                Your session becomes a calm conversation about the areas of
+                life you want to understand more clearly, with space to ask
+                questions and reflect on what resonates with you.
+            </p>
+
+
+            <!-- ==================================================
+                 FEATURES
+                 ================================================== -->
+
+            <div class="ag-service-birth-chart-features">
+
+                <!-- Feature 01 -->
+
+                <div class="ag-service-birth-chart-feature">
+
+                    <div class="ag-service-birth-chart-feature-icon">
+                        <i data-lucide="scan"></i>
+                    </div>
+
+                    <div class="ag-service-birth-chart-feature-content">
+
+                        <strong>
+                            Complete chart perspective
+                        </strong>
+
+                        <span>
+                            Explore the major themes and placements within
+                            your natal chart.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Feature 02 -->
+
+                <div class="ag-service-birth-chart-feature">
+
+                    <div class="ag-service-birth-chart-feature-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+
+                    <div class="ag-service-birth-chart-feature-content">
+
+                        <strong>
+                            Personal insights
+                        </strong>
+
+                        <span>
+                            Connect astrological themes with your questions
+                            and lived experience.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Feature 03 -->
+
+                <div class="ag-service-birth-chart-feature">
+
+                    <div class="ag-service-birth-chart-feature-icon">
+                        <i data-lucide="notebook-pen"></i>
+                    </div>
+
+                    <div class="ag-service-birth-chart-feature-content">
+
+                        <strong>
+                            Written reflection
+                        </strong>
+
+                        <span>
+                            Revisit important observations after your
+                            consultation.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 BUTTON
+                 ================================================== -->
+
+            <a
+                href="./birth-chart.html"
+                class="st-btn ag-service-birth-chart-btn"
+            >
+                Explore Birth Chart
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ============================================================
+     SECTION 3 — MATCHMAKING
+     ============================================================ -->
+
+<section
+    class="ag-service-matchmaking"
+    id="match"
+    aria-labelledby="ag-service-matchmaking-title"
+>
+
+    <div class="ag-service-matchmaking-container">
+
+        <!-- ====================================================
+             LEFT CONTENT
+             ==================================================== -->
+
+        <div class="ag-service-matchmaking-content">
+
+            <div class="ag-service-matchmaking-heading">
+
+                <span class="ag-service-matchmaking-number">
+                    02
+                </span>
+
+                <p class="st-section-label ag-service-matchmaking-label">
+                    RELATIONSHIP ASTROLOGY
+                </p>
+
+            </div>
+
+
+            <h2
+                id="ag-service-matchmaking-title"
+                class="st-section-title ag-service-matchmaking-title"
+            >
+                Matchmaking
+                <span>Two charts, one conversation</span>
+            </h2>
+
+
+            <p class="st-section-description ag-service-matchmaking-description">
+                Relationship astrology offers another perspective on
+                connection. By looking at two charts together, we can
+                explore communication patterns, emotional needs, shared
+                strengths, and areas where understanding may take more
+                intention.
+            </p>
+
+
+            <p class="st-section-description ag-service-matchmaking-description secondary">
+                The goal is not to define a relationship for you, but to
+                create useful questions and a deeper understanding of how
+                two people may experience connection differently.
+            </p>
+
+
+            <!-- ==================================================
+                 FEATURES
+                 ================================================== -->
+
+            <div class="ag-service-matchmaking-features">
+
+                <!-- Feature 01 -->
+
+                <div class="ag-service-matchmaking-feature">
+
+                    <div class="ag-service-matchmaking-feature-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+
+                    <div class="ag-service-matchmaking-feature-content">
+
+                        <strong>
+                            Compatibility perspective
+                        </strong>
+
+                        <span>
+                            Explore the dynamics created when two
+                            individual charts meet.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Feature 02 -->
+
+                <div class="ag-service-matchmaking-feature">
+
+                    <div class="ag-service-matchmaking-feature-icon">
+                        <i data-lucide="message-circle"></i>
+                    </div>
+
+                    <div class="ag-service-matchmaking-feature-content">
+
+                        <strong>
+                            Communication patterns
+                        </strong>
+
+                        <span>
+                            Consider different emotional and
+                            conversational tendencies.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Feature 03 -->
+
+                <div class="ag-service-matchmaking-feature">
+
+                    <div class="ag-service-matchmaking-feature-icon">
+                        <i data-lucide="sprout"></i>
+                    </div>
+
+                    <div class="ag-service-matchmaking-feature-content">
+
+                        <strong>
+                            Areas for growth
+                        </strong>
+
+                        <span>
+                            Identify themes that may benefit from
+                            patience and conscious communication.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="./compatibility.html"
+                class="st-btn ag-service-matchmaking-btn"
+            >
+                Explore Compatibility
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- ====================================================
+             RIGHT IMAGE
+             ==================================================== -->
+
+        <div class="ag-service-matchmaking-visual">
+
+            <div class="ag-service-matchmaking-image-wrap">
+
+                <img
+                    src="./images/releation.png"
+                    alt="Relationship astrology consultation"
+                    class="ag-service-matchmaking-image"
+                >
+
+                <div
+                    class="ag-service-matchmaking-image-frame"
+                    aria-hidden="true">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ============================================================
+     SECTION 4 — CAREER GUIDANCE
+     ============================================================ -->
+
+<section
+  class="ag-service-career"
+  id="career"
+  aria-labelledby="ag-service-career-title"
+>
+
+  <div class="ag-service-career-container">
+
+    <!-- ========================================================
+         LEFT IMAGE
+         ======================================================== -->
+
+    <div class="ag-service-career-visual">
+
+      <div class="ag-service-career-image-wrap">
+
+        <img
+          src="./images/career.png"
+          alt="Career astrology guidance consultation"
+          class="ag-service-career-image"
+        >
+
+        <div
+          class="ag-service-career-image-frame"
+          aria-hidden="true"
+        ></div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ========================================================
+         RIGHT CONTENT
+         ======================================================== -->
+
+    <div class="ag-service-career-content">
+
+      <div class="ag-service-career-heading">
+
+        <span class="ag-service-career-number">
+          03
+        </span>
+
+        <p class="st-section-label ag-service-career-label">
+          CAREER ASTROLOGY
+        </p>
+
+      </div>
+
+
+      <h2
+        id="ag-service-career-title"
+        class="st-section-title ag-service-career-title"
+      >
+        Career Guidance
+        <span>A clearer direction for your work</span>
+      </h2>
+
+
+      <p class="st-section-description ag-service-career-description">
+        Career astrology offers a reflective way to understand the
+        strengths, motivations, and patterns that may influence your
+        professional journey. Your birth chart can provide another
+        perspective when you are exploring what feels meaningful to you.
+      </p>
+
+      <p class="st-section-description ag-service-career-description secondary">
+        Whether you are considering a new opportunity, feeling uncertain
+        about your current direction, or simply looking for greater
+        clarity, the session gives you space to explore your questions
+        thoughtfully.
+      </p>
+
+
+      <!-- ======================================================
+           FEATURES
+           ====================================================== -->
+
+      <div class="ag-service-career-features">
+
+        <!-- Feature 01 -->
+        <div class="ag-service-career-feature">
+
+          <div class="ag-service-career-feature-icon">
+            <i data-lucide="compass"></i>
+          </div>
+
+          <div class="ag-service-career-feature-content">
+
+            <strong>
+              Career direction
+            </strong>
+
+            <span>
+              Explore themes connected to your strengths, interests,
+              and professional direction.
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Feature 02 -->
+        <div class="ag-service-career-feature">
+
+          <div class="ag-service-career-feature-icon">
+            <i data-lucide="briefcase-business"></i>
+          </div>
+
+          <div class="ag-service-career-feature-content">
+
+            <strong>
+              Professional strengths
+            </strong>
+
+            <span>
+              Reflect on natural abilities and working patterns that
+              may shape your professional experience.
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Feature 03 -->
+        <div class="ag-service-career-feature">
+
+          <div class="ag-service-career-feature-icon">
+            <i data-lucide="route"></i>
+          </div>
+
+          <div class="ag-service-career-feature-content">
+
+            <strong>
+              Thoughtful next steps
+            </strong>
+
+            <span>
+              Gain perspective that can help you approach career
+              decisions with greater awareness and confidence.
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ======================================================
+           BUTTON
+           ====================================================== -->
+
+      <a
+        href="./career-guidance.html"
+        class="st-btn ag-service-career-btn"
+      >
+        Explore Career Guidance
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="ag-service-personal" aria-labelledby="ag-service-personal-title">
+  <div class="ag-service-personal-container">
+
+    <div class="ag-service-personal-content">
+
+      <div class="ag-service-personal-heading">
+        <span class="ag-service-personal-number">04</span>
+
+        <p class="st-section-label ag-service-personal-label">
+          PERSONAL ASTROLOGY
+        </p>
+      </div>
+
+      <h2 id="ag-service-personal-title" class="st-section-title ag-service-personal-title">
+        Personal Consultation
+        <span>Space to explore what matters to you</span>
+      </h2>
+
+      <p class="st-section-description ag-service-personal-description">
+        Sometimes you need more than a general reading. A personal consultation
+        gives you dedicated space to bring your own questions, concerns, and
+        experiences into the conversation.
+      </p>
+
+      <p class="st-section-description ag-service-personal-description secondary">
+        Together, we explore the themes reflected in your birth chart and
+        connect them with the questions that matter most to you right now.
+      </p>
+
+      <div class="ag-service-personal-features">
+
+        <div class="ag-service-personal-feature">
+
+          <div class="ag-service-personal-feature-icon">
+            <i data-lucide="message-circle"></i>
+          </div>
+
+          <div class="ag-service-personal-feature-content">
+            <strong>Your questions</strong>
+
+            <span>
+              Bring the personal questions and situations you would like
+              greater perspective on.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="ag-service-personal-feature">
+
+          <div class="ag-service-personal-feature-icon">
+            <i data-lucide="sparkles"></i>
+          </div>
+
+          <div class="ag-service-personal-feature-content">
+            <strong>Personal perspective</strong>
+
+            <span>
+              Explore astrological themes through a reading shaped around
+              your individual circumstances.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="ag-service-personal-feature">
+
+          <div class="ag-service-personal-feature-icon">
+            <i data-lucide="heart-handshake"></i>
+          </div>
+
+          <div class="ag-service-personal-feature-content">
+            <strong>Supportive guidance</strong>
+
+            <span>
+              Leave with a clearer perspective and practical reflections
+              you can carry forward.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <a
+        href="./contact.html"
+        class="st-btn ag-service-personal-btn"
+      >
+        Book a Consultation
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+
+    </div>
+
+
+    <div class="ag-service-personal-visual">
+
+      <div class="ag-service-personal-image-wrap">
+
+        <div
+          class="ag-service-personal-image-shadow"
+          aria-hidden="true"
+        ></div>
+
+        <div class="ag-service-personal-image-holder">
+
+          <img
+            src="./images/personal.png"
+            alt="Personal astrology consultation"
+            class="ag-service-personal-image"
+          >
+
+        </div>
+
+        <div
+          class="ag-service-personal-image-line"
+          aria-hidden="true"
+        ></div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ==========================================================
+     HOROSCOPE SECTION
+     ========================================================== -->
+
+<section class="ag-services-horoscope ag-horo" id="horo" aria-labelledby="ag-services-horoscope-title">
+
+  <div class="ag-services-horoscope-container">
+
+    <!-- Section Header -->
+    <div class="ag-services-horoscope-header">
+
+      <p class="st-section-label ag-services-horoscope-label">
+        DAILY HOROSCOPE
+      </p>
+
+      <h2
+        id="ag-services-horoscope-title"
+        class="st-section-title ag-services-horoscope-title"
+      >
+        Discover what the stars
+        <span>have in store for you</span>
+      </h2>
+
+      <p class="st-section-description ag-services-horoscope-description">
+        Select your zodiac sign to explore today's astrological guidance
+        and discover the themes that may shape your day.
+      </p>
+
+    </div>
+
+
+    <!-- Zodiac Selector -->
+    <div class="ag-services-zodiac-grid" role="tablist" aria-label="Zodiac signs">
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item active"
+        data-zodiac="aries"
+        role="tab"
+        aria-selected="true"
+      >
+        <i data-lucide="zodiac-aries"></i>
+        <span>Aries</span>
+      </button>
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item"
+        data-zodiac="taurus"
+        role="tab"
+        aria-selected="false"
+      >
+        <i data-lucide="zodiac-taurus"></i>
+        <span>Taurus</span>
+      </button>
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item"
+        data-zodiac="gemini"
+        role="tab"
+        aria-selected="false"
+      >
+        <i data-lucide="zodiac-gemini"></i>
+        <span>Gemini</span>
+      </button>
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item"
+        data-zodiac="cancer"
+        role="tab"
+        aria-selected="false"
+      >
+        <i data-lucide="zodiac-cancer"></i>
+        <span>Cancer</span>
+      </button>
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item"
+        data-zodiac="leo"
+        role="tab"
+        aria-selected="false"
+      >
+        <i data-lucide="zodiac-leo"></i>
+        <span>Leo</span>
+      </button>
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item"
+        data-zodiac="virgo"
+        role="tab"
+        aria-selected="false"
+      >
+        <i data-lucide="zodiac-virgo"></i>
+        <span>Virgo</span>
+      </button>
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item"
+        data-zodiac="libra"
+        role="tab"
+        aria-selected="false"
+      >
+        <i data-lucide="zodiac-libra"></i>
+        <span>Libra</span>
+      </button>
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item"
+        data-zodiac="scorpio"
+        role="tab"
+        aria-selected="false"
+      >
+        <i data-lucide="zodiac-scorpio"></i>
+        <span>Scorpio</span>
+      </button>
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item"
+        data-zodiac="sagittarius"
+        role="tab"
+        aria-selected="false"
+      >
+        <i data-lucide="zodiac-sagittarius"></i>
+        <span>Sagittarius</span>
+      </button>
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item"
+        data-zodiac="capricorn"
+        role="tab"
+        aria-selected="false"
+      >
+        <i data-lucide="zodiac-capricorn"></i>
+        <span>Capricorn</span>
+      </button>
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item"
+        data-zodiac="aquarius"
+        role="tab"
+        aria-selected="false"
+      >
+        <i data-lucide="zodiac-aquarius"></i>
+        <span>Aquarius</span>
+      </button>
+
+      <button
+        type="button"
+        class="ag-services-zodiac-item"
+        data-zodiac="pisces"
+        role="tab"
+        aria-selected="false"
+      >
+        <i data-lucide="zodiac-pisces"></i>
+        <span>Pisces</span>
+      </button>
+
+    </div>
+
+
+    <!-- Horoscope Card -->
+    <div class="ag-services-horoscope-card">
+
+      <!-- Left 25% -->
+      <div class="ag-services-horoscope-symbol">
+
+        <div class="ag-services-horoscope-symbol-inner">
+
+          <i
+            id="ag-horoscope-icon"
+            data-lucide="zodiac-aries"
+          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zodiac-aries preview-icon"><path d="M12 7.5a4.5 4.5 0 1 1 5 4.5"/><path d="M7 12a4.5 4.5 0 1 1 5-4.5V21"/></svg></i>
+
+          <span id="ag-horoscope-sign">
+            Aries
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Right 75% -->
+      <div class="ag-services-horoscope-content" id="ag-horoscope-content">
+
+        <div class="ag-services-horoscope-content-header">
+
+          <div>
+            <p class="ag-services-horoscope-date">
+              TODAY'S HOROSCOPE
+            </p>
+
+            <h3 id="ag-horoscope-title">
+              Aries
+            </h3>
+          </div>
+
+        </div>
+
+
+        <p
+          id="ag-horoscope-description"
+          class="ag-services-horoscope-main-text"
+        >
+          Today encourages you to focus your energy on what truly matters.
+          Trust your instincts while giving yourself enough time to think
+          before making an important decision.
+        </p>
+
+
+        <div class="ag-services-horoscope-details">
+
+          <div class="ag-services-horoscope-detail">
+
+            <div class="ag-services-horoscope-detail-icon">
+              <i data-lucide="heart"></i>
+            </div>
+
+            <div>
+              <strong>Love</strong>
+              <span id="ag-horoscope-love">
+                Open communication can bring greater understanding to your
+                relationships today.
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="ag-services-horoscope-detail">
+
+            <div class="ag-services-horoscope-detail-icon">
+              <i data-lucide="briefcase-business"></i>
+            </div>
+
+            <div>
+              <strong>Career</strong>
+              <span id="ag-horoscope-career">
+                A focused approach will help you make meaningful progress.
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="ag-services-horoscope-detail">
+
+            <div class="ag-services-horoscope-detail-icon">
+              <i data-lucide="wallet"></i>
+            </div>
+
+            <div>
+              <strong>Finance</strong>
+              <span id="ag-horoscope-finance">
+                Consider your priorities carefully before making a financial
+                commitment.
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="ag-services-horoscope-detail">
+
+            <div class="ag-services-horoscope-detail-icon">
+              <i data-lucide="sparkles"></i>
+            </div>
+
+            <div>
+              <strong>Wellness</strong>
+              <span id="ag-horoscope-wellness">
+                Give yourself space to slow down and restore your energy.
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ==========================================================
+     DAILY RHYTHM
+     ========================================================== -->
+
+<section class="ag-daily-rhythm" aria-labelledby="ag-daily-rhythm-title">
+
+  <div class="ag-daily-rhythm-container">
+
+    <div class="ag-daily-rhythm-header">
+
+      <p class="st-section-label ag-daily-rhythm-label">
+        DAILY RHYTHM
+      </p>
+
+      <h2
+        id="ag-daily-rhythm-title"
+        class="st-section-title ag-daily-rhythm-title"
+      >
+        Move Through the Day
+        <span>With Intention</span>
+      </h2>
+
+      <p class="st-section-description ag-daily-rhythm-description">
+        Think of the day as a sequence of moments rather than a single
+        prediction. Each phase offers a different opportunity to pause,
+        act, connect, and reset.
+      </p>
+
+    </div>
+
+
+    <!-- Timeline -->
+
+    <div class="ag-daily-rhythm-timeline">
+
+      <div
+        class="ag-daily-rhythm-line"
+        aria-hidden="true"
+      ></div>
+
+
+      <!-- Morning -->
+
+      <article class="ag-daily-rhythm-item">
+
+        <div class="ag-daily-rhythm-content">
+
+          <p class="ag-daily-rhythm-period">
+            Morning
+          </p>
+
+          <h3>
+            Set Your Direction
+          </h3>
+
+          <p>
+            Begin slowly. Identify the one intention you want
+            to carry through the rest of the day.
+          </p>
+
+        </div>
+
+        <div class="ag-daily-rhythm-marker">
+
+          <i data-lucide="sunrise"></i>
+
+        </div>
+
+      </article>
+
+
+      <!-- Afternoon -->
+
+      <article class="ag-daily-rhythm-item">
+
+        <div class="ag-daily-rhythm-marker">
+
+          <i data-lucide="sun"></i>
+
+        </div>
+
+        <div class="ag-daily-rhythm-content">
+
+          <p class="ag-daily-rhythm-period">
+            Afternoon
+          </p>
+
+          <h3>
+            Take Focused Action
+          </h3>
+
+          <p>
+            Use your strongest momentum on work that deserves
+            your attention and creativity.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- Evening -->
+
+      <article class="ag-daily-rhythm-item">
+
+        <div class="ag-daily-rhythm-content">
+
+          <p class="ag-daily-rhythm-period">
+            Evening
+          </p>
+
+          <h3>
+            Reconnect
+          </h3>
+
+          <p>
+            Step away from pressure and make room for conversation,
+            reflection, or simple enjoyment.
+          </p>
+
+        </div>
+
+        <div class="ag-daily-rhythm-marker">
+
+          <i data-lucide="sunset"></i>
+
+        </div>
+
+      </article>
+
+
+      <!-- Night -->
+
+      <article class="ag-daily-rhythm-item">
+
+        <div class="ag-daily-rhythm-marker">
+
+          <i data-lucide="moon"></i>
+
+        </div>
+
+        <div class="ag-daily-rhythm-content">
+
+          <p class="ag-daily-rhythm-period">
+            Night
+          </p>
+
+          <h3>
+            Release the Day
+          </h3>
+
+          <p>
+            Let unfinished thoughts rest. A quieter mind can make
+            tomorrow's direction easier to recognize.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ==========================================================
+     NEWSLETTER
+     ========================================================== -->
+
+<section class="ag-services-newsletter" aria-labelledby="ag-services-newsletter-title">
+
+  <div class="ag-services-newsletter-container">
+
+    <div class="ag-services-newsletter-content">
+
+      <p class="st-section-label ag-services-newsletter-label">
+        STAY CONNECTED
+      </p>
+
+      <h2
+        id="ag-services-newsletter-title"
+        class="st-section-title ag-services-newsletter-title"
+      >
+        A little guidance,
+        <span>delivered to your inbox.</span>
+      </h2>
+
+      <p class="st-section-description ag-services-newsletter-description">
+        Receive thoughtful astrology insights, seasonal guidance, and
+        updates from AstroGuide to help you move through life with
+        greater awareness and intention.
+      </p>
+
+      <form class="ag-services-newsletter-form">
+
+        <div class="ag-services-newsletter-input-wrap">
+
+          <i data-lucide="mail"></i>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            aria-label="Email address"
+            required
+          >
+
+        </div>
+
+        <button
+          type="submit"
+          class="st-btn ag-services-newsletter-btn"
+        >
+          Subscribe
+          <i data-lucide="arrow-up-right"></i>
+        </button>
+
+      </form>
+
+      <p class="ag-services-newsletter-note">
+        No spam. Just thoughtful astrology guidance and occasional updates.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+</div>
+<!-- ========================================================================
+     ASTROGUIDE FOOTER
+     ======================================================================== -->
+
+<footer class="st-footer">
+
+    <div class="st-footer-inner">
+
+
+        <!-- ==================================================================
+             FOOTER MAIN
+             ================================================================== -->
+
+        <div class="st-footer-main">
+
+
+            <!-- Brand / Description -->
+            <div class="st-footer-brand">
+
+                <a href="./index.html"
+                    class="st-navbar-brand"
+                    aria-label="AstroGuide Home">
+
+                    <img src="./images/logo.png"
+                        alt="AstroGuide Logo"
+                        class="st-navbar-brand-logo">
+
+                    <span class="st-navbar-brand-name">
+                        <span class="st-brand-astro">Astro</span><span class="st-brand-guide">Guide</span>
+                    </span>
+
+                </a>
+
+
+                <p class="st-footer-description">
+                    Explore astrology with a thoughtful blend of celestial
+                    wisdom, personal interpretation, and meaningful guidance
+                    for the journey ahead.
+                </p>
+
+
+                <!-- Social Media -->
+                <div class="st-footer-socials"
+                    aria-label="Social media links">
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Instagram">
+
+                        <i data-lucide="instagram"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Facebook">
+
+                        <i data-lucide="facebook"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="Twitter">
+
+                        <i data-lucide="twitter"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        class="st-footer-social"
+                        aria-label="YouTube">
+
+                        <i data-lucide="youtube"
+                            aria-hidden="true"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Navigation
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html">
+                            Services
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="./astrologers.html">
+                            Astrologers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pricing.html">
+                            Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./dashboard.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Our Services -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Our Services
+                </h3>
+
+                                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./services.html#horo">
+                            Daily Horoscope
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#birth">
+                            Birth Chart
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#match">
+                            Compatibility
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./services.html#consultation">
+                            Personal Consultation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pricing.html#pricing-sessions">
+                            Astrologer Sessions
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <!-- Additional Pages -->
+            <div class="st-footer-column">
+
+                <h3 class="st-footer-title">
+                    Additional Pages
+                </h3>
+
+                <ul class="st-footer-links">
+
+                    <li>
+                        <a href="./404.html">
+                            404 Page
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./maintenance.html">
+                            Maintenance Page
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact Us -->
+            <div class="st-footer-column st-footer-contact">
+
+                <h3 class="st-footer-title">
+                    Contact Us
+                </h3>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="mail"
+                        aria-hidden="true"></i>
+
+                    <a href="mailto:hello@astroguide.com">
+                        hello@astroguide.com
+                    </a>
+
+                </div>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="phone"
+                        aria-hidden="true"></i>
+
+                    <a href="tel:+919999999999">
+                        +91 99999 99999
+                    </a>
+
+                </div>
+
+
+                <div class="st-footer-contact-item">
+
+                    <i data-lucide="map-pin"
+                        aria-hidden="true"></i>
+
+                    <span>
+                        Hyderabad, India
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================================
+             FOOTER BOTTOM
+             ================================================================== -->
+
+        <div class="st-footer-bottom">
+
+            <p class="st-footer-copyright">
+                © 2026 AstroGuide. All rights reserved.
+            </p>
+
+
+            <div class="st-footer-legal">
+
+                <a href="./privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="./terms.html">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Zodiac View More / View Less
+    const zodiacSection = document.querySelector('.ag-home1-zodiac');
+    const toggleBtn = document.getElementById('zodiacToggleBtn');
+    const toggleText = toggleBtn?.querySelector('.ag-zodiac-toggle-text');
+
+    if (toggleBtn && zodiacSection) {
+      toggleBtn.addEventListener('click', function () {
+        const isExpanded = zodiacSection.classList.toggle('is-expanded');
+        toggleBtn.setAttribute('aria-expanded', isExpanded);
+        toggleText.textContent = isExpanded ? 'View Less' : 'View More';
+      });
+    }
+
+    // Re-init Lucide icons after any dynamic changes if needed
+    if (window.lucide) lucide.createIcons();
+  });
+</script>
+  </body>
+</html>
