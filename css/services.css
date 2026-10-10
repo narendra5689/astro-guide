@@ -4348,7 +4348,7 @@ html[dir="rtl"] .ag-service-personal-content {
 
 .ag-services-horoscope-label {
   margin-bottom: 16px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ag-services-horoscope-title {
@@ -4933,7 +4933,7 @@ html[dir="rtl"] .ag-services-horoscope-detail {
 
 .ag-daily-rhythm-label {
   margin-bottom: 16px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ag-daily-rhythm-title {

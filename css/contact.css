@@ -46,7 +46,7 @@
 
 .ag-contact-hero-label {
   margin: 0 0 18px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ag-contact-hero-title {
@@ -1020,7 +1020,7 @@ html[dir="rtl"] .ag-contact-hero-actions {
 
 .ag-contact-details-label {
   margin: 0 0 16px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ag-contact-details-title {
@@ -1858,7 +1858,7 @@ html[dir="rtl"] .ag-contact-location-placeholder {
 
 .ag-contact-why-label {
   margin: 0 0 16px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ag-contact-why-title {
@@ -2301,7 +2301,7 @@ html[dir="rtl"] .ag-contact-why-card:hover .ag-contact-why-card-footer svg {
 
 .ag-contact-form-label {
   margin: 0 0 16px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .ag-contact-form-heading {

@@ -1628,3 +1628,25 @@ html[dir="rtl"] .ag-home1-newsletter-input-wrapper input {
     transition: none !important;
   }
 }
+
+.st-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--secondary-color);
+  font-family: var(--body-font);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.st-section-label::before,
+.st-section-label::after {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--secondary-color);
+}
