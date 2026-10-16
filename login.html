@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <script src="./js/auth.js"></script>
   <link rel="stylesheet" href="./css/login.css">
   <link rel="stylesheet" href="./css/global.css">
   <link rel="icon" type="image/png" href="images/logo.png">
@@ -169,99 +169,5 @@
 
   </main>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const themeBtn = document.getElementById("themeToggle");
-      const rtlBtn = document.getElementById("rtlToggle");
-
-      if (!themeBtn || !rtlBtn) {
-        console.error("Theme or RTL button not found. Check the button IDs.");
-        return;
-      }
-
-      // Restore saved preferences
-      let dark = false;
-      let rtl = false;
-
-      try {
-        dark = localStorage.getItem("astroguidE-theme") === "dark";
-        rtl = localStorage.getItem("astroguidE-rtl") === "true";
-      } catch (error) {}
-
-      function setTheme(isDark) {
-        document.body.classList.toggle("dark-mode", isDark);
-
-        themeBtn.innerHTML = isDark
-          ? '<i data-lucide="sun"></i>'
-          : '<i data-lucide="moon"></i>';
-
-        themeBtn.setAttribute(
-          "aria-label",
-          isDark ? "Switch to light mode" : "Switch to dark mode"
-        );
-
-        try {
-          localStorage.setItem(
-            "astroguidE-theme",
-            isDark ? "dark" : "light"
-          );
-        } catch (error) {}
-
-        if (window.lucide) window.lucide.createIcons();
-      }
-
-      function setRTL(isRTL) {
-        document.documentElement.setAttribute("dir", isRTL ? "rtl" : "ltr");
-
-        rtlBtn.innerHTML = '<i data-lucide="arrow-left-right"></i>';
-
-        rtlBtn.setAttribute(
-          "aria-label",
-          isRTL ? "Switch to LTR" : "Switch to RTL"
-        );
-
-        try {
-          localStorage.setItem("astroguidE-rtl", String(isRTL));
-        } catch (error) {}
-
-        if (window.lucide) window.lucide.createIcons();
-      }
-
-      const password = document.getElementById("password");
-      const toggle = document.getElementById("passwordToggle");
-
-      if (password && toggle) {
-        toggle.addEventListener("click", function () {
-          const show = password.type === "password";
-
-          password.type = show ? "text" : "password";
-          toggle.innerHTML = show
-            ? '<i data-lucide="eye-off" aria-hidden="true"></i>'
-            : '<i data-lucide="eye" aria-hidden="true"></i>';
-
-          toggle.setAttribute(
-            "aria-label",
-            show ? "Hide password" : "Show password"
-          );
-
-          if (window.lucide) lucide.createIcons();
-        });
-      }
-
-      if (window.lucide) lucide.createIcons();
-      setTheme(dark);
-      setRTL(rtl);
-
-      themeBtn.addEventListener("click", function () {
-        dark = !document.body.classList.contains("dark-mode");
-        setTheme(dark);
-      });
-
-      rtlBtn.addEventListener("click", function () {
-        rtl = document.documentElement.getAttribute("dir") !== "rtl";
-        setRTL(rtl);
-      });
-    });
-  </script>
 </body>
 </html>
